@@ -1,0 +1,66 @@
+.Servicios{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.Servicios__div1{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Servicios__div1 h2{
+    font-size: 35px;
+    color: #00244a;
+}
+.Servicios__div1 a{
+    text-decoration: none;
+    color: #01346B;
+}
+.Container__CardServices{
+    display: flex;
+    padding: 10px;
+    justify-content: left;
+    gap: 20px;
+    align-items: center;
+    width: 95%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.Container__CardServices::-webkit-scrollbar{
+    display: none;
+}
+.CardServiciosBackground{
+    height: 101%;
+    width: 0.5cm;
+    background: blue;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.CardServices{
+    display: flex;
+    align-items: center;
+    height: 5cm;
+    width: 12cm;
+    border: 1px solid #8080805f;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 5px #8988881d;
+
+}
+.CardServices img{
+    height: 110px;
+}
+
+
+.CardContent{
+    width: 10cm;
+    padding: 5px;
+};
+.CardContent h3{
+    margin: 0;
+}
