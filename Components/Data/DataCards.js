@@ -1,0 +1,73 @@
+const DataCards = [
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://index.gob.do/wp-content/uploads/2022/06/Captura-de-Pantalla-2022-03-17-a-las-15.49.23.png',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRshKpMwrRb76Z356Ss1O1wKSM8oty5qgOlg&s',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://sb.gob.do/media/1ieai5cz/jce.png',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRny3fXCrD8b7zCK4Uqjeog_GN9lOXnKWqRPQ&s',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://transparencia.gabsocial.gob.do/Content/images/LogoVersion_02-1.png',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjZc_p-IkDBTQLvBsIXahBnvpXeka_dHV2A&s',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Ministerios_RD-Interior.jpg',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://be.nortic.ogtic.gob.do/organizationsImages/ADESS.png',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'https://inposdom.gob.do/wp-content/uploads/2022/02/inposdomviejo2.png',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+        borderleftColor: '',
+        logoInstitucion: 'animal-9262352_1280.jpg',
+        AltImg: 'img',
+        NameInstitucion: 'Lorem Title',
+        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    }
+]
+export default DataCards;
