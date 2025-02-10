@@ -1,0 +1,72 @@
+.Novedades{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    
+    
+}
+
+.Novedades__div1{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    h3{
+        font-size: 30px;
+    }
+    a{
+        text-decoration: none;
+    }
+
+}
+.Novedades__div2{
+   display: flex;
+    padding: 10px;
+    justify-content: left;
+    gap: 20px;
+    align-items: center;
+    width: 95%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+   
+    
+}
+.NvModal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2cm;
+    width: 12.5cm;
+    padding: 20px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+.Novedades__Cards{
+    width: 14.25cm;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px;
+   
+
+    
+}
+.Novedades__Cards img{
+    height: 8cm;
+    width: 14.25cm;
+    border-radius: 20px;
+}
