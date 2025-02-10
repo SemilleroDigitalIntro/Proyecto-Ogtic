@@ -35,7 +35,7 @@ export default function Servicios() {
 
 
   return (
-    <section className='Servicios'>
+    <section className='Servicios' id='Servicios'>
         <div className='Servicios__div1'>
             <h2>Servicios gubernamentales por institución</h2>
             <a href="">Ver todos los servicios<i class='bx bx-right-arrow-alt'></i></a>
