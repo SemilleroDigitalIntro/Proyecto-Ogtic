@@ -26,7 +26,7 @@ export default function Novedades() {
 
 
   return (
-    <section className='Novedades'>
+    <section className='Novedades' id='Novedades'>
       <div className='Novedades__div1'>
         <h3>Novedades</h3>
         <a href="">Ver todas las novedades<i class='bx bx-right-arrow-alt'></i></a>
