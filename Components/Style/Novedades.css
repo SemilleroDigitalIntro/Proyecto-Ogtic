@@ -23,6 +23,7 @@
     }
     a{
         text-decoration: none;
+        color: blue;
     }
 
 }
@@ -46,16 +47,16 @@
     justify-content: center;
     align-items: center;
     height: 2cm;
-    width: 12.5cm;
+    width: 13.15cm;
     padding: 20px;
-    background: white;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin-bottom: 5px;
+    background: #ffffffaf;
+    border: 1px solid gray;
+    border-radius: 10px;
 }
 .Novedades__Cards{
     width: 14.25cm;
-    border: 1px solid black;
+    border: none ;
+    box-shadow: 1px 1px 5px 5px #8080801f;
     position: relative;
     display: flex;
     justify-content: center;
