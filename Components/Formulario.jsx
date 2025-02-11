@@ -69,5 +69,5 @@ export default function Form() {
         
         
     </section>
-  )
+  );
 };

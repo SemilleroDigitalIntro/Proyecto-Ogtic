@@ -2,7 +2,7 @@ import React from 'react';
 import './Style/Header.less';
 
 
-let Nav;
+export let ShowLogin;
 export default function Header() {
 
 
@@ -21,20 +21,36 @@ export default function Header() {
   const Home = () =>{
     scroll(0,0)
   };
+  
+  const Login = () =>{
+   if(ShowLogin == undefined){
+    document.getElementById('Login').style.display = 'flex' ;
+    ShowLogin = 1;
+    alert(ShowLogin)
+   }else if(ShowLogin == 1){
+    document.getElementById('Login').style.display = 'none';
+    ShowLogin = 2;
+   }else if(ShowLogin == 2){
+    document.getElementById('Login').style.display = 'flex';
+    ShowLogin = 1;
+   }else{
+    alert('existe un error')
+   };
+  };
 
   return (
     <section className='Sheader'>
         <div className='Sheader__logo'>
-
+          <img src="nashla/logoproyecto1.png" alt="logo Web" />
         </div>
         <nav className='Sheader__Nav'>
           <a onClick={Home}>Home</a>
           <a onClick={Servicios}>Servicios</a>
           <a onClick={Novedades}>Novedades</a>
           <a onClick={Sobrenosotros}>Sobre nosotros</a>
-          <a href="">Ubicaciones</a>
+          <a>Ubicaciones</a>
         </nav>
-        <button className='BtnHeader'>Iniciar sesion</button>
+        <button onClick={Login} className='BtnHeader'>Agenda tu cita</button>
     </section>
   )
 }
