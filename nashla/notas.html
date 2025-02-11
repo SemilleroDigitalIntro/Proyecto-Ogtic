@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container_form">
+        <div class="logo_form">
+            <img src="logoproyecto1.png">
+        </div> <h1 class="title --form">Agenda tu cita</h1>
+
+
+
+        <div class="container_personaldata">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+            </div>
+            <div>
+                <h1 class="title --personaldata">Datos personales</h1>
+            </div>
+            
+        </div>
+
+
+        <div class="container_form_personaldata">
+            <form id="form__personaldata"  action="">
+                <div class="container__input">
+                    <h4>Nombre  <strong>*</strong></h4>
+                    <input class="input --name" type="text" required placeholder="Escribe aquí">
+                </div>
+            </form>
+            <form id="form__personaldata"  action=""></form>
+                <div  class="container__input">
+                    <h4>Apellido  <strong>*</strong></h4>
+                    <input class="input --lastname" type="text" required placeholder="Escribe aquí">
+                </div>
+            </form>
+            <form id="form__personaldata"  action=""></form>
+                <div  class="container__input">
+                    <h4>Cedula o pasaporte  <strong>*</strong></h4>
+                    <input class="input --cedula" type="text" required placeholder="Escribe aquí">
+                </div>
+            </form>
+            <form id="form__personaldata"  action=""></form>
+                <div  class="container__input">
+                    <h4>Numero de telefono  <strong>*</strong></h4>
+                    <input class="input --number" type="text" required placeholder="Escribe aquí">
+                </div>
+            </form>
+            <form id="form__personaldata"  action=""></form>
+                <div  class="container__input">
+                    <h4>Correo electronico  <strong>*</strong></h4>
+                    <input class="input --email" type="email" required placeholder="Escribe aquí">
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <div>
+            <div class="container_personaldata">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
+                </div>
+                <div>
+                    <h1 class="title --Fecha">Fecha</h1>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="calendar">
+                <header>
+                    <h3></h3>
+                    <nav>
+                        <button id="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                        <button id="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                    </nav>
+                </header>
+                <section>
+                    <ul class="days">
+                        <li>Dom</li>
+                        <li>Lun</li>
+                        <li>Mar</li>
+                        <li>Mie</li>
+                        <li>Jue</li>
+                        <li>Vie</li>
+                        <li>Sab</li>
+                    </ul>
+                    <ul class="dates"></ul>
+                </section>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="app2.js" defer></script>
+</body>
+</html>
