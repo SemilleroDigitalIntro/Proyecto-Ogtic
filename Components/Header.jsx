@@ -26,7 +26,6 @@ export default function Header() {
    if(ShowLogin == undefined){
     document.getElementById('Login').style.display = 'flex' ;
     ShowLogin = 1;
-    alert(ShowLogin)
    }else if(ShowLogin == 1){
     document.getElementById('Login').style.display = 'none';
     ShowLogin = 2;

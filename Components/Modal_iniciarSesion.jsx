@@ -11,6 +11,8 @@ export default function Modal_iniciarSesion() {
       document.getElementById('Login').style.display = 'none';
     }else if(ShowLogin == 2){
       document.getElementById('Login').style.display = 'none';
+    }else{
+      alert('tenemos un error con el login');
     };
 
   };
