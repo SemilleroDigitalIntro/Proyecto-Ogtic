@@ -42,7 +42,13 @@ export default function Servicios() {
         </div>
         
             <div className='Container__CardServices'> 
+            <div className='Container__BtnServices'>
+                <button><i class='bx bx-chevron-left' ></i></button>
+                <button><i class='bx bx-chevron-left bx-rotate-180' ></i></button>
+              </div>
+              <div className='Container__CardServices2'>
                 {Cardlist}
+            </div>
             </div>
    
         
