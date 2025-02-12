@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Components/Style/Servicios.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -74,47 +74,110 @@
                 <div>
                     <h1 class="title --Fecha">Fecha</h1>
                 </div>
+                <form action="">
+                    <label for="">
+                        <input type="text" class="date-input" placeholder="Selecciona una fecha" readonly />
+                    </label>
+                </form>
             </div>
 
 
 
 
+            <div class="datepicker-container">
+                
 
-            <div class="calendar">
+
                 <header>
-                    <h3></h3>
-                    <nav>
-                        <button id="prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                            </svg>
-                        </button>
-                        <button id="next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                            </svg>
-                        </button>
-                    </nav>
+                    <button class="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                        </svg>
+                    </button>
+
+                    <div>
+                        <select class="month-input">
+                            <option value="">Enero</option>
+                            <option value="">Febrero</option>
+                            <option value="">Marzo</option>
+                            <option value="">Abril</option>
+                            <option value="">Mayo</option>
+                            <option value="">Junio</option>
+                            <option value="">Julio</option>
+                            <option value="">Agosto</option>
+                            <option value="">Septiembre</option>
+                            <option value="">Octubre</option>
+                            <option value="">Noviembre</option>
+                            <option value="">Diciembre</option>
+                        </select>
+                        <input type="number" class="year-input" value="2025" />
+                    </div>
+
+                    <button class="next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                        </svg>
+                    </button>
                 </header>
-                <section>
-                    <ul class="days">
-                        <li>Dom</li>
-                        <li>Lun</li>
-                        <li>Mar</li>
-                        <li>Mie</li>
-                        <li>Jue</li>
-                        <li>Vie</li>
-                        <li>Sab</li>
-                    </ul>
-                    <ul class="dates"></ul>
-                </section>
+
+
+
+                <div class="datepicker">
+                    <div class="days">
+                        <span>Dom</span>
+                        <span>Lun</span>
+                        <span>Mar</span>
+                        <span>Mie</span>
+                        <span>Jue</span>
+                        <span>Vie</span>
+                        <span>Sab</span>
+                    </div>
+                    <div class="dates">
+                        <button disabled>1</button>
+                        <button disabled>2</button>
+                        <button disabled>3</button>
+                        <button disabled>4</button>
+                        <button disabled>5</button>
+                        <button>6</button>
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>10</button>
+                        <button class="today">11</button>
+                        <button>12</button>
+                        <button>13</button>
+                        <button>14</button>
+                        <button>15</button>
+                        <button>16</button>
+                        <button>17</button>
+                        <button>18</button>
+                        <button>19</button>
+                        <button>20</button>
+                        <button>21</button>
+                        <button>22</button>
+                        <button class="selected">23</button>
+                        <button>24</button>
+                        <button>25</button>
+                        <button>26</button>
+                        <button>27</button>
+                        <button>28</button>
+                        <button>29</button>
+                        <button>30</button>
+                        <button>31</button>
+                    </div>
+
+                    <div class="datepicker-footer">
+                        <button class="cancel">Cancelar</button>
+                        <button class="ok">Aceptar</button>
+                    </div>
+
+                </div>
             </div>
+            
         </div>
         
     </div>
 
 
-
-    <script src="app2.js" defer></script>
 </body>
 </html>
