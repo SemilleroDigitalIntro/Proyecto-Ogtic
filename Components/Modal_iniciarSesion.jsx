@@ -2,6 +2,7 @@ import React from 'react';
 import './Style/Modal_iniciarSesion.less';
 import { ShowLogin } from './Header';
 
+export let ShowLogin2;
 export default function Modal_iniciarSesion() {
 
 
@@ -9,8 +10,10 @@ export default function Modal_iniciarSesion() {
   const CloseLogin = () =>{
     if(ShowLogin == 1){
       document.getElementById('Login').style.display = 'none';
+      ShowLogin2 = true;
     }else if(ShowLogin == 2){
       document.getElementById('Login').style.display = 'none';
+      ShowLogin2 = true;
     }else{
       alert('tenemos un error con el login');
     };

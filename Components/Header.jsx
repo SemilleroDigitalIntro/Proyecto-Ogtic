@@ -1,10 +1,13 @@
 import React from 'react';
 import './Style/Header.less';
-
+import { ShowLogin2 } from './Modal_iniciarSesion';
+import { useState } from 'react';
 
 export let ShowLogin;
 export default function Header() {
 
+
+  const [openlogin,SetOpenlogin] = useState(true)
 
   const Servicios = () =>{
     scroll(0,600)
@@ -23,6 +26,8 @@ export default function Header() {
   };
   
   const Login = () =>{
+
+
    if(ShowLogin == undefined){
     document.getElementById('Login').style.display = 'flex' ;
     ShowLogin = 1;
