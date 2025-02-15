@@ -1,6 +1,6 @@
 import React from 'react';
 import './Style/Header.less';
-import { ShowLogin2 } from './Modal_iniciarSesion';
+import { ShowLogin2 } from '../Modal_iniciarSesion';
 import { useState } from 'react';
 
 export let ShowLogin;

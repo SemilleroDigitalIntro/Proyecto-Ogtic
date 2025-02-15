@@ -1,9 +1,22 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Structure from "./Structure";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Inicia_de_Sesion from "./Components/Inicia_de_Sesion";
+import Inicio from "./Components/Inicio";
+
+const Routes = createBrowserRouter([
+    {
+        path: '/',
+        element: <Inicia_de_Sesion/>
+    },
+    {
+        path: '/Inicio',
+        element: <Inicio/>
+    }
+]);
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <Structure/>
+        <RouterProvider router={Routes}/>
     </StrictMode>
 )

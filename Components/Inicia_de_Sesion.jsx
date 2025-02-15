@@ -1,32 +1,21 @@
 import React from 'react';
 import './Style/Modal_iniciarSesion.less';
-import { ShowLogin } from './Header';
+
 
 export let ShowLogin2;
-export default function Modal_iniciarSesion() {
+export default function Inicia_de_Sesion() {
 
 
 
-  const CloseLogin = () =>{
-    if(ShowLogin == 1){
-      document.getElementById('Login').style.display = 'none';
-      ShowLogin2 = true;
-    }else if(ShowLogin == 2){
-      document.getElementById('Login').style.display = 'none';
-      ShowLogin2 = true;
-    }else{
-      alert('tenemos un error con el login');
-    };
-
-  };
 
 
   return (
-    <dialog className='Login' id='Login' open>
+   <section className='Glogin'>
+     <section className='Login' id='Login'>
       <div className='Login__div1'>
-      <div className='Login__div1_dv1'>
-        <img src="nashla/LogoLogin.png" alt="Logo del login" />
-      </div>
+        <div className='Login__div1_dv1'>
+          <img src="nashla/LogoLogin.png" alt="Logo del login" />
+        </div>
         <form action="">
             <div className='Form__div1'>
               <label htmlFor="ID">ID: <span>*</span></label>
@@ -45,11 +34,10 @@ export default function Modal_iniciarSesion() {
       </div>
       
       <div className='Login__div2'>
-      <div className='Login_X'>
-        <button onClick={CloseLogin}><i class='bx bx-x'></i></button>
-      </div>
+      
         <img src="nashla/pexels-jopwell-2422290.jpg" alt="Grupo de personas" />
       </div>
-    </dialog>
+    </section>
+   </section>
   )
 }
