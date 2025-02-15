@@ -1,7 +1,12 @@
 const datepicker = document.querySelector('.datepicker');
 const cancelBtn = document.querySelector('.cancel');
+const dateInput = document.querySelector('.--date-input');
 const okBtn = document.querySelector('.ok');
 const dates = document.querySelector('.dates');
+const nextBtn = document.querySelector('.siguiente');
+const prevBtn = document.querySelector('.antes');
+const yearInput = document.querySelector('.year-input');
+const monthInput = document.querySelector('.month-input');
 
 
 let selectedDate = new Date();
@@ -10,8 +15,84 @@ let month = selectedDate.getMonth();
 
 
 
+
+    //manejo del boton del siguiente mes
+nextBtn.addEventListener("click", () => {
+    if (month === 11) year++;
+    month = (month + 1) % 12;
+    displayDates();
+});
+
+
+//manejo del boton del pasado mes
+prevBtn.addEventListener("click", () => {
+    if (month === 0) year--;
+    month = (month - 1 + 12) % 12;
+    displayDates();
+});
+
+
+//manejo del cambio de mes
+monthInput.addEventListener('change', () => {
+    month = monthInput.selectedIndex;
+    displayDates();
+});
+
+//manejo del cambio de año
+yearInput.addEventListener('change', () => {
+    year = yearInput.value;
+    displayDates();
+});
+
+
+//funcion de aplicar fecha
+okBtn.addEventListener('click', () => {
+    dateInput.value = selectedDate.toLocaleDateString();
+    ('en -  US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    })
+});
+
+
+
+
+
+const updateYearMonth = () => {
+    monthInput.selectedIndex = month;
+    yearInput.value = year;
+}
+
+
+//handle apply button click
+const handleDateClick = (e) => {
+    const button = e.target;
+
+
+
+    //remover la clase selected de otras fechas
+    const selected = dates.querySelector('.selected');
+    selected && selected.classList.remove('selected');
+
+
+
+    //agregar la clase selected a la fecha seleccionada
+    button.classList.add('selected');
+
+    //actualizar la fecha seleccionada
+    selectedDate = new Date(year, month, parseInt(button.textContent));
+};
+
+
+
 //renderizar fechas en el interfaz del calendario
 const displayDates = () => {
+    //actualizar year y mes 
+    updateYearMonth();
+
+
+
 
     dates.innerHTML = "";
 
@@ -30,8 +111,14 @@ const displayDates = () => {
     
     for(let i = 1; i <= lastOfMonth.getDate(); i++) {
 
-        
+        const isToday = 
+        selectedDate.getDate() === i &&
+        selectedDate.getFullYear() === year && 
+        selectedDate.getMonth() === month;
+
         const button = createButton(i, false, false);
+        button.addEventListener('click', handleDateClick);
+
         dates.appendChild(button);
     };
 

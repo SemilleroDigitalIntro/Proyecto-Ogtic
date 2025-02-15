@@ -213,10 +213,11 @@ body{
 .ok, .cancel{
     background-color: #01346B;
     color: #fff;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     width: 100px;
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -224,7 +225,7 @@ body{
     background-color: #004c99;
 }
 .cancel{
-    background-color: #d6d6d6;
+    background-color: #efefef;
     color: #000;
 }
 .cancel:hover{
