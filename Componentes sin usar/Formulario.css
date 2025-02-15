@@ -11,6 +11,10 @@ body{
     font-family: var(--letter_font);
 }
 
+strong{
+    color: red;
+}
+
 :root{
     --font_color:#01346B;
     --letter_font: "Inter", serif;
@@ -57,6 +61,13 @@ body{
     padding-left: 0;
     padding-bottom: 20px;
 }
+.titulos{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
 .--form{
     padding-right: 0;
     margin-bottom: 100px;
@@ -67,15 +78,13 @@ body{
 }
 
 
-.container_personaldata{
+.container_personaldata, .container_fecha{
     display: flex;
     justify-content: left;
     align-items:center;
     gap: 10px;
     width: 90%;
 }
-
-
 
 
 .container_form_personaldata{
@@ -94,9 +103,7 @@ body{
     border-style: solid;
     border-color: #d6d6d6;
 }
-.container__input strong{
-    color: red;
-}
+
 .container__input h4{
     font-weight: 400;
     font-size: 15px;
@@ -107,13 +114,78 @@ body{
 }
 
 
+/*-------------------------------------------*/
+
+
+.container__form__ubicacion{
+    margin-bottom: 300px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+    z-index: 3;
+    
+}
+.container__form__ubicacion h4{
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0;
+    margin: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px
+}
+
+.ubicacion__form{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.select__ubicacion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+#ubicaciones{
+    padding: 10px;
+    border-color: #d6d6d6;
+    border-radius: 5px;
+    border-width: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /*-------------------------------------------*/
+.container__datepicker{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-
-.--Fecha{
+.--fecha{
     font-size: 22px;
     padding: 0;
     margin-right: 10px;
@@ -230,4 +302,21 @@ body{
 }
 .cancel:hover{
     background-color: #e0e0e0;
+}
+
+
+
+/*------------------------------------------*/
+.--hora{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+    
+}
+
+.--date-input{
+    width: 150px;
+    padding: 10px;
 }
