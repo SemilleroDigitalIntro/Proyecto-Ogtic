@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Inicia_de_Sesion from "./Components/Inicia_de_Sesion";
 import Inicio from "./Components/Inicio";
+import Registro from "./Components/Registro";
 
 const Routes = createBrowserRouter([
     {
@@ -12,6 +13,10 @@ const Routes = createBrowserRouter([
     {
         path: '/Inicio',
         element: <Inicio/>
+    },
+    {
+        path: '/Registro',
+        element: <Registro/>
     }
 ]);
 
