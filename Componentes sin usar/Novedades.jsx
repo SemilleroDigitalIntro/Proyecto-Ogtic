@@ -1,5 +1,5 @@
 import React from 'react';
-import DataNovedades from './Data/DataNovedades';
+import DataNovedades from '../Data/DataNovedades';
 import './Style/Novedades.css';
 
 
