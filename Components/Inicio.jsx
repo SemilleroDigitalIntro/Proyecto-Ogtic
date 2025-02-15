@@ -2,12 +2,16 @@ import React from 'react';
 import './Style/Inicio.less';
 import EstandarN from './ComponentesParaN/EstandarN';
 import DataN from './Data/DataN';
+import SeleccionPuntoGOB from './ComponentesParaF/SeleccionPuntoGOB';
+import SeleccionInstitucion from './ComponentesParaF/SeleccionInstitucion';
+import SeleccionServicio from './ComponentesParaF/SeleccionServicio';
 
 export default function Inicio() {
     let CambiarVista;
     let SectionPerfil = document.getElementById('Main1');
     let SectionNotificacion = document.getElementById('Main2');
     let SectionAgendarCita = document.getElementById('Main3');
+
 
     const DataNlist = DataN.map( E =>{
         return(
@@ -98,6 +102,8 @@ export default function Inicio() {
     const Cerrarsesion = () => {
 
     };
+
+    
  
 
   return (
@@ -131,16 +137,16 @@ export default function Inicio() {
                 <div className='Main1__section_div2'>
                     <div className='Main1__section_div2_d1'>
                         <div>
-                            <label htmlFor="">Name</label>
-                            <input type="text" name="" id="" />
+                            <label className = 'exection' htmlFor="Name">Name</label>
+                            <input type="text" name="" id="Name" />
                         </div>
                         <div>
-                            <label htmlFor="">ID</label>
-                            <input type="text" name="" id="" />
+                            <label className = 'exection' htmlFor="ID">ID</label>
+                            <input type="text" name="" id="ID" />
                         </div>
                         <div>
-                            <label htmlFor="">Email</label>
-                            <input type="text" name="" id="" />
+                            <label  htmlFor="Email">Email</label>
+                            <input  type="text" name="" id="Email" />
                         </div>
                     </div>
                     <div className='Main1__section_div2_d2'>
@@ -206,7 +212,10 @@ export default function Inicio() {
                 </div>
             </header>
             <section className='Main3__section1'>
-            <div className='Main3__section_div2'>
+                <div className='Main3__section1_div2'>
+                    <div className='Main3__section1_Apartado1'>
+                        <h2><i class='bx bxs-user-circle' ></i>Datos Personales</h2>
+                    </div>
                     <div className='Main3__section_div2_d1'>
                         <div>
                             <label htmlFor="">Name</label>
@@ -229,6 +238,17 @@ export default function Inicio() {
                         </div>
 
                     </div>
+                </div>
+                <div className='Main3__section1_div3'>
+                    <div className='Main3__section1_Apartado2'>
+                        <h2><i class='bx bxs-map'></i>Ubicacion</h2>
+                    </div>
+                    <div className='Main3__section1_div3_d1'>
+                      <SeleccionPuntoGOB/>
+                      <SeleccionInstitucion/>
+                      <SeleccionServicio/>
+                    </div>
+
                 </div>
 
             </section>

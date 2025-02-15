@@ -48,10 +48,11 @@ yearInput.addEventListener('change', () => {
 //funcion de aplicar fecha
 okBtn.addEventListener('click', () => {
     dateInput.value = selectedDate.toLocaleDateString();
-    ('en -  US', {
+    ('es -  RD', {
         year: 'numeric',
+        day: '2-digit',
         month: '2-digit',
-        day: '2-digit'
+        
     })
 });
 
