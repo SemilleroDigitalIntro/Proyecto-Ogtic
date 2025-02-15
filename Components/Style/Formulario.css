@@ -159,6 +159,10 @@ body{
 .dates button:hover{
     background-color: #e0e0e0;
 }
+.dates button:disabled{
+    pointer-events: none;
+    user-select: none;
+}
 
 .dates button.today{
     background-color: #01346B;
@@ -189,8 +193,40 @@ body{
 .datepicker-container header input{
     max-width: 64px;
 }
-
+.datepicker-container header button{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 .datepicker-container header button:hover{
-    background-color: #01346B;
+    background-color: #e0e0e0;
 }
 
+.datepicker-footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.ok, .cancel{
+    background-color: #01346B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.ok:hover{
+    background-color: #004c99;
+}
+.cancel{
+    background-color: #d6d6d6;
+    color: #000;
+}
+.cancel:hover{
+    background-color: #e0e0e0;
+}
