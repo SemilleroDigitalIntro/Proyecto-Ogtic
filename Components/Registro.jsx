@@ -3,6 +3,7 @@ import './Style/Registro.less';
 
 export default function Registro() {
 
+    let ResetInput;
     const UnlockInput = () =>{
 
         let NumeroC_label = document.getElementById('NumeroC_label');
@@ -10,8 +11,19 @@ export default function Registro() {
         let Input = document.getElementById('Cedula');
         Input.style.marginBottom = '-60px';
         Formulario.style.gap = '50px';
-        NumeroC_label.style.fontSize = '16px'
+        NumeroC_label.style.fontSize = '16px';
+
         
+
+    };
+
+    const Reset = () =>{
+        let Gregistro = document.getElementById('Gregistro');
+        let Formulario = document.getElementById('Formulario');
+        let Input = document.getElementById('Cedula');
+        let NumeroC_label = document.getElementById('NumeroC_label');
+
+
 
     };
 
@@ -20,7 +32,7 @@ export default function Registro() {
 
 
   return (
-    <section className='Gregistro'>
+    <section className='Gregistro'id='Gregistro' onClick={Reset}>
         <div className='Gregistro_div1'>
             <div className='Gregistro_div1_d1'>
                 <img src="https://registro.cuentaunica.gob.do/_next/static/media/smallLogo.bf9e6436.svg" alt="" />
@@ -67,7 +79,7 @@ export default function Registro() {
 
                 <div className='Formulario_div2'>
                     <button type="submit">Confirmar<i class='bx bx-right-arrow-alt' ></i></button>
-                    <span>¿Ya tienes una cuenta? <a href="">Inicia sesión aquí.</a></span>
+                    <span>¿Ya tienes una cuenta? <a href="/">Inicia sesión aquí.</a></span>
                 </div>
             </form>
 
