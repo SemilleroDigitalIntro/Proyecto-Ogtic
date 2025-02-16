@@ -10,9 +10,15 @@ body{
     display: flex;
     font-family: var(--letter_font);
 }
-
 strong{
     color: red;
+}
+select{
+    padding: 10px;
+    border-color: #d6d6d6;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 250px;
 }
 
 :root{
@@ -20,7 +26,27 @@ strong{
     --letter_font: "Inter", serif;
 }
 
-/*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------PARTE INICIAL-------------------*/
 
 
 
@@ -51,7 +77,53 @@ strong{
 
 
 
-/*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------FORMULARIO DATOS PERSONALES------------------*/
 
 
 .title{
@@ -114,20 +186,53 @@ strong{
 }
 
 
-/*-------------------------------------------*/
 
 
-.container__form__ubicacion{
-    margin-bottom: 300px;
-    display: none;
-    justify-content: center;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------SELECT SECTION--------------------------*/
+
+
+.--ubicacion{
+    font-size: 22px;
+    padding: 0;
+}
+
+.ubicacion__form{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: left;
     align-items: center;
     width: 90%;
     flex-direction: column;
-    z-index: 3;
-    
 }
-.container__form__ubicacion h4{
+.ubicacion__form h4{
     font-weight: 400;
     font-size: 15px;
     padding: 0;
@@ -146,16 +251,18 @@ strong{
 .select__ubicacion{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.--DGM{
+    display: none;
+}
+.--PGR{
+    display: none;
 }
 
 
-#ubicaciones{
-    padding: 10px;
-    border-color: #d6d6d6;
-    border-radius: 5px;
-    border-width: 2px;
-}
 
 
 
@@ -177,14 +284,8 @@ strong{
 
 
 
-
-/*-------------------------------------------*/
-.container__datepicker{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
+/*--------------------DATE TIME PICKER----------------------*/
+/*-----Date*-----*/
 .--fecha{
     font-size: 22px;
     padding: 0;
@@ -303,10 +404,12 @@ strong{
 .cancel:hover{
     background-color: #e0e0e0;
 }
+.month-input{
+    width: 100px;
+}
 
 
-
-/*------------------------------------------*/
+/*-----time-----*/
 .--hora{
     display: flex;
     justify-content: center;
