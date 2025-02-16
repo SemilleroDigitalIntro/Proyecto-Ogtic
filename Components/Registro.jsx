@@ -14,6 +14,7 @@ export default function Registro() {
         Formulario.style.gap = '50px';
         NumeroC_label.style.fontSize = '16px';
 
+
         
 
     };
@@ -61,16 +62,18 @@ export default function Registro() {
             let H2Name = document.createElement('h2');
             let TextName = document.createTextNode(`¡Hola,${DataCedula[0].Nombre}!`);
             H2Name.style.fontWeight = '600';
+            H2Name.style.color = '#1B3F7E';
             H2Name.append(TextName);
             let Gregistro_div1_d3 = document.getElementById('Gregistro_div1_d3');
             Gregistro_div1_d3.insertBefore(H2Name,DecripcionValidacion);
             Gregistro_div1_d3.insertBefore(Img,H2Name);
 
             
+            
 
 
 
-            document.getElementById('Gregistro_div1').innerHTML +=`<div class='TerminosVerificacion'>
+            document.getElementById('Gregistro_div1').innerHTML +=`<div class='TerminosVerificacion' id = 'TerminosVerificacion'>
                 <div class='TV_div1'>
                     <i class='bx bx-camera' ></i>
                     <p>Utilizar un dispositivo que posea <span>cámara frontal</span> integrada.</p>
@@ -83,27 +86,60 @@ export default function Registro() {
                     <i class='bx bx-error-alt'></i>
                     <p>Esta verificación muestra <span>luces de colores.</span> Tenga cuidado si es fotosensible.</p>
                 </div>
-                <form action="" class='TV_formulario'>
-                    <div>
-                        <input type="checkbox" name="" id="" required/>
-                        <a href=${LinkTerminos}>Aceptar términos y políticas de privacidad</a>
-                    </div>
-                    <div>
-                        <button type="submit">Iniciar Proceso</button>
-                    </div>
-                </form>
                 <div class='TV_div4' id = 'TV_div4'>
                 </div>
             </div>`;
 
+            let formulario = document.createElement('form');
+            formulario.className = 'TV_formulario';
+            formulario.addEventListener('submit',(e)=>{
+                e.preventDefault();
+                LanzarCamara();
+            });
+
+            let div1 = document.createElement('div');
+            let div1_input = document.createElement('input');
+            div1_input.required = 'true';
+            div1_input.type = 'checkbox';
+            div1_input.name = '';
+            div1_input.id = '';
+
+            let div1_a = document.createElement('a');
+            let div1_aText = document.createTextNode('Aceptar términos y políticas de privacidad');
+            div1_a.href = `${LinkTerminos}`;
+            div1_a.append(div1_aText);
+            div1.append(div1_input);
+            div1.append(div1_a);
+
+            let div2 = document.createElement('div');
+            let div2_btn = document.createElement('button');
+            div2_btn.type = 'submit';
+            div2_btn.addEventListener('click',()=>{
+                
+            })
+            let div2_btnText = document.createTextNode('Iniciar Proceso');
+            div2_btn.append(div2_btnText);
+            div2.append(div2_btn);
+
+            formulario.append(div1);
+            formulario.append(div2);
+
+            
+
+
+
+            //funcion del boton para volver
             let TV_div4 = document.getElementById('TV_div4');
             let BtnVolver = document.createElement('button');
             BtnVolver.innerHTML = `<i class='bx bx-left-arrow-alt' ></i>Volver al paso anterior`;
             BtnVolver.addEventListener('click',()=>{
-                alert('funciona');
+                window.location.href = '/';
             });
 
             TV_div4.append(BtnVolver);
+
+            let TerminosVerificacion = document.getElementById('TerminosVerificacion');
+            TerminosVerificacion.insertBefore(formulario,TV_div4);
 
 
 
@@ -111,6 +147,69 @@ export default function Registro() {
         }else{
             alert('Error');
         };
+
+    };
+
+    const LanzarCamara = () => {
+        let Gregistro_div1 = document.getElementById('Gregistro_div1');
+        if(navigator.mediaDevices.getUserMedia){
+            navigator.mediaDevices.getUserMedia(
+                {video: 'true'}
+            ).then((Stream)=>{
+                let ContainerCamara = document.createElement('dialog');
+                ContainerCamara.className = 'ModalCamara';
+                ContainerCamara.open = 'true';
+                let Camara = document.createElement('video');
+                Camara.autoplay = 'true';
+                Camara.srcObject = Stream;
+
+                let ContainerBtns = document.createElement('div');
+
+
+
+                let btnNoTomarF = document.createElement('button');
+                btnNoTomarF.className = 'btnNoTomarF';
+                let btnNoTomarFtext = document.createTextNode('No escanear');
+                btnNoTomarF.append(btnNoTomarFtext);
+                btnNoTomarF.addEventListener('click',()=> {
+                    alert('funciona')
+                })
+
+
+
+                let btnTomarFoto = document.createElement('button');
+                let btnTomarFtext = document.createTextNode('Escanear Rostro');
+                btnTomarFoto.append(btnTomarFtext);
+
+                btnTomarFoto.addEventListener('click', ()=>{
+                    TomarFoto()
+                })
+
+                ContainerBtns.append(btnNoTomarF);
+                ContainerBtns.append(btnTomarFoto);
+                
+                
+
+                ContainerCamara.append(Camara);
+                ContainerCamara.append(ContainerBtns);
+                Gregistro_div1.append(ContainerCamara)
+
+
+
+            })
+            .catch(()=>{
+                let modalError = document.createElement('dialog');
+                modalError.className = 'ModalError';
+
+            })
+        }else{
+
+        };
+
+    };
+    
+    async function TomarFoto() {
+        
 
     };
 
