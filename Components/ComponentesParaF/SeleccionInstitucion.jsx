@@ -18,22 +18,34 @@ export default function SeleccionInstitucion() {
 
     const Institucion_DGP = () => {
       document.getElementById('Institucion__GOB').innerText = 'Dirección General de Pasaportes';
+      document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+      document.getElementById('Institucion__span').style.display = 'none' ;
+      SetdeployI(!DeployI);
       InstitucionSeleccionada = 1;
 
     };
 
     const Institucion_Intrant = () => {
       document.getElementById('Institucion__GOB').innerText = 'Intrant';
+      document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+      document.getElementById('Institucion__span').style.display = 'none' ;
+      SetdeployI(!DeployI);
       InstitucionSeleccionada = 2;
     };
 
     const Institucion_JCE = () => {
       document.getElementById('Institucion__GOB').innerText = 'Junta central electoral';
+      document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+      document.getElementById('Institucion__span').style.display = 'none' ;
+      SetdeployI(!DeployI);
       InstitucionSeleccionada = 3;
     };
 
     const Institucion_DGM = () => {
       document.getElementById('Institucion__GOB').innerText = 'Direccion General de Migracion';
+      document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+      document.getElementById('Institucion__span').style.display = 'none' ;
+      SetdeployI(!DeployI);
       InstitucionSeleccionada = 4;
     };
 
