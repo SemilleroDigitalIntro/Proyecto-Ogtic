@@ -10,13 +10,43 @@ body{
     display: flex;
     font-family: var(--letter_font);
 }
+strong{
+    color: red;
+}
+select{
+    padding: 10px;
+    border-color: #d6d6d6;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 250px;
+}
 
 :root{
     --font_color:#01346B;
     --letter_font: "Inter", serif;
 }
 
-/*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------PARTE INICIAL-------------------*/
 
 
 
@@ -47,7 +77,53 @@ body{
 
 
 
-/*-----------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------FORMULARIO DATOS PERSONALES------------------*/
 
 
 .title{
@@ -56,6 +132,13 @@ body{
     font-weight: 800;
     padding-left: 0;
     padding-bottom: 20px;
+}
+.titulos{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
 }
 .--form{
     padding-right: 0;
@@ -67,15 +150,13 @@ body{
 }
 
 
-.container_personaldata{
+.container_personaldata, .container_fecha{
     display: flex;
     justify-content: left;
     align-items:center;
     gap: 10px;
     width: 90%;
 }
-
-
 
 
 .container_form_personaldata{
@@ -94,9 +175,7 @@ body{
     border-style: solid;
     border-color: #d6d6d6;
 }
-.container__input strong{
-    color: red;
-}
+
 .container__input h4{
     font-weight: 400;
     font-size: 15px;
@@ -110,10 +189,104 @@ body{
 
 
 
-/*-------------------------------------------*/
 
 
-.--Fecha{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------SELECT SECTION--------------------------*/
+
+
+.--ubicacion{
+    font-size: 22px;
+    padding: 0;
+}
+
+.ubicacion__form{
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+}
+.ubicacion__form h4{
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0;
+    margin: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px
+}
+
+.ubicacion__form{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.select__ubicacion{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.--DGM{
+    display: none;
+}
+.--PGR{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------DATE TIME PICKER----------------------*/
+/*-----Date*-----*/
+.--fecha{
     font-size: 22px;
     padding: 0;
     margin-right: 10px;
@@ -230,4 +403,23 @@ body{
 }
 .cancel:hover{
     background-color: #e0e0e0;
+}
+.month-input{
+    width: 100px;
+}
+
+
+/*-----time-----*/
+.--hora{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+    
+}
+
+.--date-input{
+    width: 150px;
+    padding: 10px;
 }

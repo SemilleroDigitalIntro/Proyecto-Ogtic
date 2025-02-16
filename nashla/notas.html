@@ -17,7 +17,7 @@
 
 
 
-        <div class="container_personaldata">
+        <div class="titulos --personaldata">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"><path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
             </div>
@@ -53,7 +53,7 @@
                     <input class="input --number" type="text"  placeholder="Escribe aquí" required>
                 </div>
             </form>
-            <form id="form__personaldata"  action=""></form>
+            <form id="form__personaldata"  action="">
                 <div  class="container__input">
                     <h4>Correo electronico  <strong>*</strong></h4>
                     <input class="input --email" type="email"  placeholder="Escribe aquí" required>
@@ -64,92 +64,250 @@
 
 
 
-        <div>
-            <div class="container_personaldata">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
-                        <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
-                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
-                </div>
-                <div>
-                    <h1 class="title --Fecha">Fecha</h1>
-                </div>
-                <form action="">
-                    <label for="">
-                        <input type="text" class="input --date-input" placeholder="Fecha seleccionada" readonly />
-                    </label>
-                </form>
-            </div>
 
 
 
 
-            <div class="datepicker-container">
-                
 
 
-                <header>
-                    <button class="antes">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                        </svg>
-                    </button>
 
+
+
+
+
+            <div class="ubicacion__form">
+                <div class="titulos --ubicacion">
                     <div>
-                        <select class="month-input">
-                            <option value="">Enero</option>
-                            <option value="">Febrero</option>
-                            <option value="">Marzo</option>
-                            <option value="">Abril</option>
-                            <option value="">Mayo</option>
-                            <option value="">Junio</option>
-                            <option value="">Julio</option>
-                            <option value="">Agosto</option>
-                            <option value="">Septiembre</option>
-                            <option value="">Octubre</option>
-                            <option value="">Noviembre</option>
-                            <option value="">Diciembre</option>
-                        </select>
-                        <input type="number" class="year-input" value="2025" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg></div>
+                    <div>
+                        <h1 class="title --ubicacion">Ubicacion</h1>
                     </div>
-
-                    <button class="siguiente">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </button>
-                </header>
-
-
-
-                <div class="datepicker">
-                    <div class="days">
-                        <span>Dom</span>
-                        <span>Lun</span>
-                        <span>Mar</span>
-                        <span>Mie</span>
-                        <span>Jue</span>
-                        <span>Vie</span>
-                        <span>Sab</span>
-                    </div>
-
-
                     
-                    <div class="dates">
-                    </div>
+                </div>
+                <div class="select__ubicacion">
+                    <form action="" id="form__ubicacion">
+                        <div class="container__select">
+                            <h4>Punto GOB de referencia <strong>*</strong></h4>
+                            <select name="" id="ubicaciones" required>
+                                <option value="">Selecciona una opcion</option>
+                                <option value="">Punto GOB Megacentro</option>
+                                <option value="">Punto GOB Sambil</option>
+                                <option value="">Punto GOB Expreso (Parque del Este)</option>
+                                <option value="">Punto GOB Santo Domingo Oeste (Occidental Mall)</option>
+                                <option value="">Punto GOB Santo Domingo Norte (Colina Centro)</option>
+                                
+                            </select>
+                        </div>
+                    </form>
+                    <form action="" id="institucion">
+                        <div class="container__select">
+                            <h4>Institucion publica <strong>*</strong></h4>
+                            <select name="" id="ubicaciones" required>
+                                <option value="0">Selecciona una opcion</option>
+                                <option value="1">Direccion General de Pasaportes</option>
+                                <option value="2">Procuraduria General de la Republica</option>
+                                <option value="4">Direccion General de Migracion</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form action="" id="form__servicioDGP">
+                        <div class="container__select --DGP">
+                            <h4>Servicio <strong>*</strong></h4>
+                            <select name="" id="serviciosDGP" class="servicios --DGP" required>
+                                <option value="0">Selecciona una opcion</option>
+                                <option value="1">Solicitud de Pasaporte por primera vez (Adulto)</option>
+                                <option value="2">Renovación Pasaporte Adulto por Pérdida</option>
+                                <option value="3">Renovación Pasaporte Menor por Pérdida</option>
+                                <option value="4">Renovación Pasaporte adulto por deterioro</option>
+                                <option value="5">Renovación de Pasaporte para Adultos por Vencimiento</option>
+                                <option value="6">Renovación Pasaporte Menor por Vencimiento</option>
+                            </select>
+                        </div>
+                    </form>
 
-                    <div class="datepicker-footer">
-                        <button class="cancel">Cancelar</button>
-                        <button class="ok">Aceptar</button>
-                    </div>
 
+
+
+
+                    <form action="" id="form__servicioPGR">
+                        <div class="container__select --PGR">
+                            <h4>Servicio <strong>*</strong></h4>
+                            <select name="" id="serviciosPGR" class="servicios --PGR" required>
+                                <option value="0">Selecciona una opcion</option>
+                                <option value="1">Consultar Exequatur</option>
+                                <option value="2">Carta de buena conducta</option>
+                                <option value="3">Certificación Firma de Documentos Notariales y Oficiales</option>
+                            </select>
+                        </div>
+                    </form>
+
+
+
+
+
+                    <form action="" id="form__servicioDGM">
+                        <div class="container__select --DGM">
+                            <h4>Servicio <strong>*</strong></h4>
+                            <select name="" id="serviciosDGM" class="servicios --serviciosDGM" required>
+                                <option value="0">Selecciona una opcion</option>
+                                <option value="1">Permiso de Salida de Menores de Edad</option>
+                                <option value="2">Renovación de Residencia Permanente</option>
+                                <option value="3">Permisos para fines de Estudios</option>
+                                <option value="4">Permiso de Permanencia Corto Plazo</option>
+                                <option value="5">Residencia Definitiva (RD-1)</option>
+                                <option value="6">Residencia Permanente</option>
+                                <option value="7">Residencia Temporal (RT-4)</option>
+                                <option value="8">Residencia Permanente en Calidad de Inversionista</option>
+                                <option value="9">Residencia por inversión en calidad de Jubilado o Pensionado</option>
+                                <option value="10">Residencia por inversión en calidad de Rentista</option>
+                                <option value="11">Renovación de Residencia Temporal</option>
+                                <option value="12">Autogate</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
-            
-        </div>
-        
-    </div>
 
-<script type="module" src="../Components/Data/Form.js"></script>
+    
+
+
+        <section class="calendario">
+                <div class="container__datepicke">
+
+
+                    <div class="titulos --fecha">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
+                        </div>
+                        <div>
+                            <h1 class="title --fecha">Fecha</h1>
+                        </div>
+                        <form action="">
+                            <label for="">
+                                <input type="text" class="input --date-input" placeholder="Fecha seleccionada" readonly />
+                            </label>
+                        </form>
+                    </div>
+        
+        
+        
+        
+                    <div class="datepicker-container">
+                        
+        
+        
+                        <header>
+                            <button class="antes">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                                </svg>
+                            </button>
+        
+                            <div>
+                                <select class="month-input">
+                                    <option value="">Enero</option>
+                                    <option value="">Febrero</option>
+                                    <option value="">Marzo</option>
+                                    <option value="">Abril</option>
+                                    <option value="">Mayo</option>
+                                    <option value="">Junio</option>
+                                    <option value="">Julio</option>
+                                    <option value="">Agosto</option>
+                                    <option value="">Septiembre</option>
+                                    <option value="">Octubre</option>
+                                    <option value="">Noviembre</option>
+                                    <option value="">Diciembre</option>
+                                </select>
+                                <input type="number" class="year-input" value="2025" />
+                            </div>
+        
+                            <button class="siguiente">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                                </svg>
+                            </button>
+                        </header>
+        
+        
+        
+                        <div class="datepicker">
+                            <div class="days">
+                                <span>Dom</span>
+                                <span>Lun</span>
+                                <span>Mar</span>
+                                <span>Mie</span>
+                                <span>Jue</span>
+                                <span>Vie</span>
+                                <span>Sab</span>
+                            </div>
+        
+        
+                            
+                            <div class="dates">
+                            </div>
+        
+                            <div class="datepicker-footer">
+                                <button class="cancel">Cancelar</button>
+                                <button class="ok">Aceptar</button>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="hora">
+                    <div class="titulos --hora">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                                <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+                                <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="title --horatitle">Hora</h1>
+                        </div>
+                        <form action="">
+                            <label for="">
+                                <input type="text" class="input --date-input" placeholder="Fecha seleccionada" readonly />
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <script type="module" src="../Components/Data/Form.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!--------
+
+            <div class="hora">
+                <div class="titulos --hora">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16">
+                            <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+                            <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="title --horatitle">Hora</h1>
+                    </div>
+                    <form action="">
+                        <label for="">
+                            <input type="text" class="input --date-input" placeholder="Fecha seleccionada" readonly />
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
