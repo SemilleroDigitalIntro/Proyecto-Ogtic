@@ -2,7 +2,6 @@ import React from 'react';
 import './Style/Modal_iniciarSesion.less';
 
 
-export let ShowLogin2;
 export default function Inicia_de_Sesion() {
 
 
