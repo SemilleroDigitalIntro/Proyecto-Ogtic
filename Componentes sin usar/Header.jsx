@@ -26,24 +26,11 @@ export default function Header() {
   };
   
   const Login = () =>{
-
-
-   if(ShowLogin == undefined){
-    document.getElementById('Login').style.display = 'flex' ;
-    ShowLogin = 1;
-   }else if(ShowLogin == 1){
-    document.getElementById('Login').style.display = 'none';
-    ShowLogin = 2;
-   }else if(ShowLogin == 2){
-    document.getElementById('Login').style.display = 'flex';
-    ShowLogin = 1;
-   }else{
-    alert('existe un error')
-   };
+    window.location.href = '/';
   };
 
   const Registrar = () => {
-
+    window.location.href = '/Registro';
   };
 
   return (
