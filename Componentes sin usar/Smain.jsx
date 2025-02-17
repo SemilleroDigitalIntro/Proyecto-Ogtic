@@ -4,19 +4,12 @@ import './Style/Smain.less';
 export default function Smain() {
   return (
     <section className='Smain'>
-        <div className='Smain__background'>
-
+        <div className='Smain_div1'>
+          <h1>Portal Único de Servicios del Gobierno Dominicano</h1>
         </div>
-        <div className='Smain__Card'>
-            <div className='Sm__Card_content'>
-                <h1>Este sistema es para ti, porque el progreso comienza con el acceso a mejores servicios.</h1>
-            </div>
-            <div className='Sm__Card_BtnAgendar' >
-                <button className='BtnAgendar'>Agenda tu cita ahora</button>
-            </div>
-
+        <div className='Smain_div2'> 
+          <img src="https://www.gob.do/_next/static/media/monumentos-portal-gob.eb45ae78.svg" alt="Imagen Main" />
         </div>
-            <img src="https://pgr.gob.do/wp-content/uploads/2022/05/LA2A1422.jpg" alt="Imagen de un punto Gob" />
 
     </section>
   )

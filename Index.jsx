@@ -4,12 +4,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Inicia_de_Sesion from "./Components/Inicia_de_Sesion";
 import Inicio from "./Components/Inicio";
 import Registro from "./Components/Registro";
+import Structura from "./Componentes sin usar/Structura";
 
 const Routes = createBrowserRouter([
     {
         path: '/',
         element: <Inicia_de_Sesion/>
-    },
+    },  
     {
         path: '/Inicio',
         element: <Inicio/>
@@ -17,7 +18,12 @@ const Routes = createBrowserRouter([
     {
         path: '/Registro',
         element: <Registro/>
-    }
+    },
+    {
+        path: '/Home',
+        element: <Structura/>
+    },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
