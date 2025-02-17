@@ -5,7 +5,6 @@
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    border: 1px solid black;
     
     
 }
@@ -20,10 +19,14 @@
     
     h3{
         font-size: 30px;
+        color: #00244a;
     }
     a{
         text-decoration: none;
-        color: blue;
+        color: #01346B;
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
 }
@@ -41,18 +44,7 @@
    
     
 }
-.NvModal{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2cm;
-    width: 13.15cm;
-    padding: 20px;
-    background: #ffffffaf;
-    border: 1px solid gray;
-    border-radius: 10px;
-}
+
 .Novedades__Cards{
     width: 14.25cm;
     border: none ;
@@ -62,7 +54,25 @@
     justify-content: center;
     align-items: flex-end;
     border-radius: 20px;
-   
+    .NvModal{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.5cm;
+        width: 13.19cm;
+        padding: 20px;
+        background: white;
+        border: none;
+        border-radius: 10px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        h4{
+            font-size: 20px;
+            color: #01346B;
+        }
+    }
+    
 
     
 }

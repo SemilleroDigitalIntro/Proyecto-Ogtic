@@ -1,6 +1,6 @@
 import React from 'react';
 import DataCards from './Data/DataCards';
-import './Style/Servicios.css';
+import './Style/Servicios.less';
 
 export default function Servicios() {
     
@@ -29,9 +29,16 @@ export default function Servicios() {
         NameInstitucion = {C.NameInstitucion}
         Descripcion = {C.Descripcion}
         
-    />})
+    />});
+
+    const Scrollrigth = () => {
+
+    };
 
 
+    const Scrollleft = () => {
+
+    };
 
 
   return (
@@ -43,8 +50,8 @@ export default function Servicios() {
         
             <div className='Container__CardServices'> 
             <div className='Container__BtnServices'>
-                <button><i class='bx bx-chevron-left' ></i></button>
-                <button><i class='bx bx-chevron-left bx-rotate-180' ></i></button>
+                <button onClick={Scrollrigth}><i class='bx bx-chevron-left' ></i></button>
+                <button onClick={Scrollleft}><i class='bx bx-chevron-left bx-rotate-180' ></i></button>
               </div>
               <div className='Container__CardServices2'>
                 {Cardlist}

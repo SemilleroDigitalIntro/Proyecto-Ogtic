@@ -1,6 +1,6 @@
 import React from 'react';
 import './Style/Header.less';
-import { ShowLogin2 } from '../Modal_iniciarSesion';
+import { ShowLogin2 } from '../Components/Inicia_de_Sesion';
 import { useState } from 'react';
 
 export let ShowLogin;
@@ -42,10 +42,14 @@ export default function Header() {
    };
   };
 
+  const Registrar = () => {
+
+  };
+
   return (
     <section className='Sheader'>
         <div className='Sheader__logo'>
-          <img src="nashla/logoproyecto1.png" alt="logo Web" />
+          <img src="Components/Img/LogoOffSimbolo.png" alt="logo Web" />
         </div>
         <nav className='Sheader__Nav'>
           <a onClick={Home}>Home</a>
@@ -54,7 +58,10 @@ export default function Header() {
           <a onClick={Sobrenosotros}>Sobre nosotros</a>
           <a>Ubicaciones</a>
         </nav>
-        <button onClick={Login} className='BtnHeader'>Agenda tu cita</button>
+       <div className='BtnHeaders'>
+       <button className='Btn1' onClick={Login} >Iniciar Sesion</button>
+       <button className='Btn2' onClick={Registrar} ><i class='bx bx-user' ></i>Registrase</button>
+       </div>
     </section>
   )
 }

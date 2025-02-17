@@ -1,0 +1,82 @@
+.Sheader{
+    height: 2cm;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    box-shadow: 1px 1px 5px 5px #80808029;
+    background: #EFF7FF;
+    .Sheader__logo{
+        height: 1cm;
+        width: 4cm;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 50px;
+        }
+    }
+    .Sheader__Nav{
+        display: flex;
+        gap: 20px;
+        font-size: 18px;
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            color: blue;
+            transition: 300ms;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    .BtnHeaders{
+        display: flex;
+        gap: 10px;
+        .Btn1{
+        height: 1cm;
+        width: 5cm;
+        border: none;
+        background: none;
+        color: #1B3F7E;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 300ms;
+        &:hover{
+            opacity: 0.8;
+            border-bottom: 3px solid #1B3F7E;
+        }
+        }
+        .Btn2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 1cm;
+            width: 5cm;
+            border: 1px solid #1B3F7E;
+            background: #1B3F7E;
+            color: white;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 300ms;
+            i{
+                border: 2px solid white;
+                border-radius: 100%;
+            }
+            &:hover{
+                opacity: 0.8;
+            } 
+        }
+    }
+   
+}

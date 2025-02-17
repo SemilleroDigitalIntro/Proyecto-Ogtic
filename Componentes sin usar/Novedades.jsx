@@ -1,6 +1,6 @@
 import React from 'react';
-import DataNovedades from '../Data/DataNovedades';
-import './Style/Novedades.css';
+import DataNovedades from './Data/DataNovedades';
+import './Style/Novedades.less';
 
 
 export default function Novedades() {

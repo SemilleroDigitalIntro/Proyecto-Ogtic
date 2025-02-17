@@ -7,7 +7,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
-    border: 1px solid black;
+    background: #EFF7FF;
 }
 .Servicios__div1{
     width: 95%;
@@ -22,6 +22,9 @@
 .Servicios__div1 a{
     text-decoration: none;
     color: #01346B;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 .Container__CardServices{
     display: flex;
@@ -61,14 +64,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    border: 1px solid black;
+    border: none;
     color: #01346B;
     cursor: pointer;
+    box-shadow: 1px 1px 5px 5px #9596961a;
+    
 }
 .CardServiciosBackground{
     height: 101%;
     width: 0.5cm;
-    background: blue;
+    background: #01346B;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
@@ -77,9 +82,9 @@
     align-items: center;
     height: 5cm;
     width: 12cm;
-    border: 1px solid #8080805f;
     border-radius: 15px;
     box-shadow: 1px 1px 5px 5px #8988881d;
+    background: white;
 
 }
 .CardServices img{

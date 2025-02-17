@@ -62,12 +62,5 @@ const DataCards = [
         NameInstitucion: 'Lorem Title',
         Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
-    {
-        borderleftColor: '',
-        logoInstitucion: 'animal-9262352_1280.jpg',
-        AltImg: 'img',
-        NameInstitucion: 'Lorem Title',
-        Descripcion: 'Non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    }
 ]
 export default DataCards;

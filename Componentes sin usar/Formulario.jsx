@@ -1,5 +1,5 @@
 import React from 'react';
-import './Style/Formulario.css';
+import './Style/Formulario.less';
 
 
 export default function Form() {
