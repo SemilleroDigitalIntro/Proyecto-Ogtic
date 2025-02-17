@@ -160,10 +160,12 @@ export default function Registro() {
                 ContainerCamara.className = 'ModalCamara';
                 ContainerCamara.open = 'true';
                 let Camara = document.createElement('video');
+                Camara.id = 'Camara'
                 Camara.autoplay = 'true';
                 Camara.srcObject = Stream;
 
                 let ContainerBtns = document.createElement('div');
+                ContainerBtns.id = 'ContainerBtns';
 
 
 
@@ -172,7 +174,8 @@ export default function Registro() {
                 let btnNoTomarFtext = document.createTextNode('No escanear');
                 btnNoTomarF.append(btnNoTomarFtext);
                 btnNoTomarF.addEventListener('click',()=> {
-                    alert('funciona')
+                    Camara.srcObject.getTracks()[0].stop();
+                    ContainerCamara.remove();
                 })
 
 
@@ -209,6 +212,53 @@ export default function Registro() {
     };
     
     async function TomarFoto() {
+        const Camara = document.getElementById('Camara');
+        const ModalCamara = document.querySelector('.ModalCamara')
+        
+        setTimeout(()=>{
+            N = null;
+            let Loanding = document.getElementById('Loanding');
+            Loanding.innerHTML = `Verificacion Completada`;
+        },10000);
+
+        
+
+
+        const Canvas = document.createElement('canvas');
+        Canvas.className = 'PhotoEscanear';
+        const Context = Canvas.getContext('2d');
+        Context.drawImage(Camara,0,0,300,100);
+
+        ModalCamara.append(Canvas);
+
+        let ContainerBtns = document.getElementById('ContainerBtns');
+        ContainerBtns.innerHTML = `<h2 id='Loanding'>Escaneando Rostro<span id = 'puntos'></span></h2>`;
+
+        let puntos = document.getElementById('puntos');
+        puntos.style.transition = '300ms';
+
+
+
+        let Contador;
+        let N = setInterval(()=>{
+            if(Contador == undefined){
+                puntos.innerText = '.';
+                Contador = 1;
+            }else if(Contador == 1){
+                puntos.innerText = '..';
+                Contador = 2;
+            }else if(Contador == 2){
+                puntos.innerText = '...'
+                Contador = undefined;
+            }else{
+                alert('error');
+            };
+
+        },1000);
+
+        Camara.style.display = 'none';
+        Camara.srcObject.getTracks()[0].stop();
+
         
 
     };
