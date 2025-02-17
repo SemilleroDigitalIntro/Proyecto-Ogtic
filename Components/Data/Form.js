@@ -7,6 +7,7 @@ const nextBtn = document.querySelector('.siguiente');
 const prevBtn = document.querySelector('.antes');
 const yearInput = document.querySelector('.year-input');
 const monthInput = document.querySelector('.month-input');
+const horaBtn = document.getElementById('horasDispo');
 
 
 let selectedDate = new Date();
@@ -63,6 +64,14 @@ okBtn.addEventListener('click', () => {
 const updateYearMonth = () => {
     monthInput.selectedIndex = month;
     yearInput.value = year;
+}
+
+
+const handleHourClick = (e) => {
+    const button = e.target;
+    const selected = dates.querySelector('.selected');
+    selected && selected.classList.remove('selected');
+    button.classList.add('selected');
 }
 
 
