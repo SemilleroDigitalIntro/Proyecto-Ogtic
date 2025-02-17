@@ -1,6 +1,5 @@
 import React from 'react';
 import './Style/Header.less';
-import { ShowLogin2 } from '../Components/Inicia_de_Sesion';
 import { useState } from 'react';
 
 export let ShowLogin;
