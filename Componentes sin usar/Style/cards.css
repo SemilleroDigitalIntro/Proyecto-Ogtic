@@ -12,11 +12,16 @@ body{
     --icon_color:#0185e8;
     --letter_font: "Inter", serif;
 }
+hr{
+    border: 2px solid var(--icon_color);
+    border-radius: 50px;
+    width: 100%;
+}
 
 
 /*-----------------------CARDS------------------------*/
 .cards__ubi{
-    margin: 10px;
+    margin: 50px; /*Esto se puede editar, lo puse solo por comodidad a la hora de dar estilo*/
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -107,3 +112,19 @@ body{
 
 
 
+
+/*-------------------------INFO ADI-------------------------*/
+
+.info__adicional{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+    padding: 20px;
+    overflow: hidden;
+}
+.text__container{
+    color: #01346B;
+}
