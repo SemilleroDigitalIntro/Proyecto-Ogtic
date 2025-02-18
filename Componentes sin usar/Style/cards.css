@@ -7,13 +7,13 @@ body{
     padding: 0;
     font-family: var(--letter_font);
 }
-<<<<<<< HEAD
-=======
+
 :root{
     --font_color:#01346B;
     --icon_color:#0185e8;
     --letter_font: "Inter", serif;
 }
+
 hr{
     border: 2px solid var(--icon_color);
     border-radius: 50px;
@@ -113,7 +113,7 @@ hr{
 }
 
 
->>>>>>> e9593833668be49991a4cfc45a40b6e19fe3f609
+
 
 
 /*-------------------------INFO ADI-------------------------*/
@@ -121,7 +121,7 @@ hr{
 .info__adicional{
     display: flex;
     gap: 40px;
-    max-width: 650px;
+    max-width: 750px;
     min-width: 300px;
     height: auto;
     justify-content: center;
@@ -134,7 +134,6 @@ hr{
     color: var(--icon_color);
     display: flex;
     justify-content: center;
-    padding: 20px;
     gap: 30px;
 }
 
@@ -152,8 +151,25 @@ hr{
 
 .info__title{
     color: var(--font_color);
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 600;
-    padding: 20px;
     text-align: center;
+}
+.text__masinfo{
+    background-color: #F2F4F7;
+    padding: 10px;
+    max-width: 600px;
+    width: 600px;
+    border-radius: 10px;
+    color: var(--font_color);
+    text-align: center;
+}
+.text__masinfo p{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+}
+.text__masinfo a{
+    color: var(--font_color);
+    font-weight: 800;
 }
