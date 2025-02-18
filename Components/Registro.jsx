@@ -58,11 +58,13 @@ export default function Registro() {
 
             let Img = document.createElement('img');
             Img.src = 'https://registro.cuentaunica.gob.do/_next/static/media/verification.ef12b2b5.svg';
+            Img.id = 'ImgVerificacion';
 
             let H2Name = document.createElement('h2');
             let TextName = document.createTextNode(`¡Hola,${DataCedula[0].Nombre}!`);
             H2Name.style.fontWeight = '600';
             H2Name.style.color = '#1B3F7E';
+            H2Name.id = 'H2Name';
             H2Name.append(TextName);
             let Gregistro_div1_d3 = document.getElementById('Gregistro_div1_d3');
             Gregistro_div1_d3.insertBefore(H2Name,DecripcionValidacion);
@@ -224,7 +226,7 @@ export default function Registro() {
             let Loanding = document.getElementById('Loanding');
             Loanding.innerHTML = `Verificacion Completada`;
             FormularioRegistro();
-        },10000);
+        },2000);
 
         
         let ContainerBtns = document.getElementById('ContainerBtns');
@@ -235,8 +237,8 @@ export default function Registro() {
 
         const Canvas = document.createElement('canvas');
         Canvas.className = 'PhotoEscanear';
-        Canvas.height = '600';
-        Canvas.width = '800';
+        Canvas.height = '380';
+        Canvas.width = '600';
         const Context = Canvas.getContext('2d');
         Context.drawImage(Camara1,0,0,);
 
@@ -271,18 +273,99 @@ export default function Registro() {
     };
 
     const FormularioRegistro = () => {
+        let ContainerBtns =  document.getElementById('ContainerBtns');
+        ContainerBtns.style.flexDirection = 'column';
+        ContainerBtns.style.alignItems = 'center';
+        ContainerBtns.style.justifyContent = 'center';
+        ContainerBtns.style.gap = '10px';
+
         let ModalCamara = document.getElementById('ModalCamara');
         let btnContinuar = document.createElement('button');
+        btnContinuar.addEventListener('click',()=>{
+            RegistroUsuario()
+        })
         btnContinuar.className = 'btnContinuar';
+
         let btnContinuarText = document.createTextNode('Continuar');
         btnContinuar.append(btnContinuarText);
-        ModalCamara.append(btnContinuar);
+        ContainerBtns.append(btnContinuar);
 
 
 
 
 
     };
+    
+    const RegistroUsuario = () => {
+        ModalCamara.style.display = 'none';
+        let ImgVerificacion = document.getElementById('ImgVerificacion');
+        ImgVerificacion.remove();
+        let H2Name = document.getElementById('H2Name');
+        H2Name.remove();
+        let TerminosVerificacion = document.getElementById('TerminosVerificacion');
+        TerminosVerificacion.remove();
+        let DecripcionValidacion = document.getElementById('DecripcionValidacion');
+        DecripcionValidacion.innerText = 'Para finalizar tu registro, completa los siguientes campos:';
+
+
+        let Gregistro = document.getElementById('Gregistro_div1');
+        let GFormularioRegistro = document.createElement('div');
+        GFormularioRegistro.className = 'GFormularioRegistro';
+        GFormularioRegistro.id = 'GFormularioRegistro';
+
+        let FormularioRegistro = document.createElement('form');
+        FormularioRegistro.id = 'FormularioRegistro';
+        FormularioRegistro.className = ' FormularioRegistro';
+
+        let div1 = document.createElement('div');
+        div1.id = 'FormularioRegistro_div1';
+        let div1_label = document.createElement('label');
+        let div1_labelText = document.createTextNode('Correo Electrónico');
+        div1_label.append(div1_labelText);
+        let div1_input = document.createElement('input');
+        div1.append(div1_label);
+        div1.append(div1_input);
+
+        let div2 = document.createElement('div');
+        div2.id = 'FormularioRegistro_div2';
+        let div2_label = document.createElement('label');
+        let div2_labelText = document.createTextNode('Confirma tu Correo Electrónico');
+        div2_label.append(div2_labelText);
+        let div2_input = document.createElement('input');
+        div2.append(div2_label);
+        div2.append(div2_input);
+
+
+        let div3 = document.createElement('div');
+        div3.id = 'FormularioRegistro_div3';
+        let div3_label = document.createElement('label');
+        let div3_labelText = document.createTextNode('Contraseña');
+        div3_label.append(div3_labelText);
+        let div3_input = document.createElement('input');
+        div3_input.type = 'password';
+        div3.append(div3_label);
+        div3.append(div3_input);
+
+        let div4 = document.createElement('div');
+        div4.id = 'FormularioRegistro_div4';
+        let div4_label = document.createElement('label');
+        let div4_labelText = document.createTextNode('Confirma tu Contraseña');
+        div4_label.append(div4_labelText);
+        let div4_input = document.createElement('input');
+        div4_input.type = 'password';
+        div4.append(div4_label);
+        div4.append(div4_input);
+
+        FormularioRegistro.append(div1,div2,div3,div4);
+        GFormularioRegistro.append(FormularioRegistro);
+        Gregistro.append(GFormularioRegistro);
+
+        // FormularioRegistro.append(div2)
+        // FormularioRegistro.append(div3)
+        // FormularioRegistro.append(div4)
+
+
+    }
 
 
 

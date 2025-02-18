@@ -13,9 +13,8 @@ export default function Structura() {
     <section>
         <Header/>
         <Smain/>
-        <Servicios/>
-        <Novedades/>
         <Centros/>
+        <Novedades/>
         <Footer/>
     </section>
   )
