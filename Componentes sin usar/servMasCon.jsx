@@ -1,5 +1,5 @@
 import React from "react";
-import './Style/cards.css';
+import './Style/ServMas.less';
 import DataServMasCon from "./Data/DataServMasCon";
 
 
@@ -10,13 +10,6 @@ export default function ServMasCon(){
     const ServConsultados = (props) => {
         return(
             <div className="card__serviciosMasC">
-                <div className="serv__title">
-                    <h1>Servicios mas consultados</h1>
-                    <hr class="hr__serv"/>
-            </div>
-
-
-
                 <div className="card__serv">
                     <h3>{props.NameService}</h3>
                     <p>{props.DetailService}</p>
