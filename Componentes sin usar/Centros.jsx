@@ -66,12 +66,12 @@ export default function Centros() {
 
 
   return (
-    <section>
-        <div>
+    <section className='Centros'>
+        <div className='Centros__div1'>
             <h2>Centros de Atención Ciudadana Presencial</h2>
-            <a href="">Ver todos los Puntos GOB</a>
+            <a href="">Ver todos los Puntos GOB<i class='bx bx-right-arrow-alt'></i></a>
         </div>
-        <div>
+        <div className='Centros__div2'>
             {DataPuntosGoblist}
         </div>
     </section>
