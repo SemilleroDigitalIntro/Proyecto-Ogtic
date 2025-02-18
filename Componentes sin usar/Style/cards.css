@@ -20,7 +20,6 @@ hr{
     width: 100%;
 }
 
-
 /*-----------------------CARDS------------------------*/
 .cards__ubi{
     margin: 50px; /*Esto se puede editar, lo puse solo por comodidad a la hora de dar estilo*/
@@ -127,7 +126,7 @@ hr{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 50px;
+    margin: 200px; /*Esto se puede editar, lo hago por comodidad a la hora de dar estilo*/
     padding: 20px;
 }
 .text__container{
@@ -160,6 +159,7 @@ hr{
     padding: 10px;
     max-width: 600px;
     width: 600px;
+    min-width: 400px;
     border-radius: 10px;
     color: var(--font_color);
     text-align: center;
@@ -172,4 +172,54 @@ hr{
 .text__masinfo a{
     color: var(--font_color);
     font-weight: 800;
+}
+
+
+
+
+/*-------------------SERV MAS CONS---------------------*/
+.hr__serv{
+    border: 4px solid var(--icon_color) ;
+    border-radius: 0;
+    width: 200px;
+}
+
+.card__serviciosMasC{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 300px;
+    height: auto;
+    gap: 30px;
+    margin: auto;
+    margin-bottom: 300px;
+}
+
+.serv__title{
+    color: #01346B;
+}
+
+.card__serv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    padding: 25px;
+    width: 400px;
+}
+.card__serv h3{
+    color: #01346B;
+    padding: 5px;
+    padding-top:0 ;
+}
+.card__serv p{
+    font-size: 15px;
+    font-weight: 300;
+    padding: 5px 7px 30px 5px;
+}
+.card__serv a{
+    color: #0185e8;
+    padding: 5px;
+    font-size: 15px;
 }
