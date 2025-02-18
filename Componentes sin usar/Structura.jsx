@@ -6,6 +6,7 @@ import Servicios from './Servicios';
 import Novedades from './Novedades';
 import Footer from './Footer';
 import Centros from './Centros';
+import ServMasCon from './servMasCon';
 
 
 export default function Structura() {
@@ -16,6 +17,7 @@ export default function Structura() {
         <Centros/>
         <Novedades/>
         <Footer/>
+        <ServMasCon/>
     </section>
   )
 };

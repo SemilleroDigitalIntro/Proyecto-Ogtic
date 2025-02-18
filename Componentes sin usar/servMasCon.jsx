@@ -34,7 +34,6 @@ export default function ServMasCon(){
         <section className="ServiciosMasConsultados">
             <div className="ServiciosMasConsultados_title">
                 <h1>Servicios mas consultados</h1>
-                <hr class="hr__serv"/>
             </div>
             <div className="ServiciosMasConsultados_container">
                 {DataServMasConList}

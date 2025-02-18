@@ -1,12 +1,3 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    padding: 0;
-    font-family: var(--letter_font);
-}
 
 :root{
     --font_color:#01346B;
@@ -17,21 +8,14 @@ body{
 
 
 /*-------------------SERV MAS CONS---------------------*/
-.hr__serv{
-    border: 4px solid var(--icon_color) ;
-    border-radius: 0;
-    width: 200px;
-}
+
 
 .card__serviciosMasC{
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    min-width: 300px;
-    height: auto;
+    width: 300px;
+    height: 250px;
     gap: 30px;
-    margin: auto;
-    margin-bottom: 300px;
 }
 
 .serv__title{
@@ -46,6 +30,7 @@ body{
     border-radius: 3px;
     padding: 25px;
     width: 400px;
+    
 }
 .card__serv h3{
     color: #01346B;
@@ -66,5 +51,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 20px;
+    .ServiciosMasConsultados_container{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
