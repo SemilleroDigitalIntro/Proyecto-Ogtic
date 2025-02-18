@@ -118,13 +118,31 @@ hr{
 .info__adicional{
     display: flex;
     gap: 40px;
+    max-width: 650px;
+    min-width: 300px;
+    height: auto;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 50px;
     padding: 20px;
-    overflow: hidden;
 }
 .text__container{
-    color: #01346B;
+    color: var(--icon_color);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    text-align: center;
+}
+.text p{
+    color: var(--font_color);
+    font-weight: 600;
+    padding: 10px;
 }
