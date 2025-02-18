@@ -7,13 +7,13 @@ body{
     padding: 0;
     font-family: var(--letter_font);
 }
-<<<<<<< HEAD
-=======
+
 :root{
     --font_color:#01346B;
     --icon_color:#0185e8;
     --letter_font: "Inter", serif;
 }
+
 hr{
     border: 2px solid var(--icon_color);
     border-radius: 50px;
@@ -113,7 +113,7 @@ hr{
 }
 
 
->>>>>>> e9593833668be49991a4cfc45a40b6e19fe3f609
+
 
 
 /*-------------------------INFO ADI-------------------------*/
