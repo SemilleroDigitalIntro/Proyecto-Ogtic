@@ -5,6 +5,7 @@ import Smain from './Smain';
 import Servicios from './Servicios';
 import Novedades from './Novedades';
 import Footer from './Footer';
+import Centros from './Centros';
 
 
 export default function Structura() {
@@ -14,6 +15,7 @@ export default function Structura() {
         <Smain/>
         <Servicios/>
         <Novedades/>
+        <Centros/>
         <Footer/>
     </section>
   )

@@ -159,8 +159,11 @@ export default function Registro() {
                 let ContainerCamara = document.createElement('dialog');
                 ContainerCamara.className = 'ModalCamara';
                 ContainerCamara.open = 'true';
-                let Camara = document.createElement('video');
-                Camara.id = 'Camara'
+                var Camara = document.createElement('video');
+                Camara.id = 'Camara';
+                Camara.height = '720';
+                Camara.width = '1280';
+                
                 Camara.autoplay = 'true';
                 Camara.srcObject = Stream;
 
@@ -212,30 +215,34 @@ export default function Registro() {
     };
     
     async function TomarFoto() {
-        const Camara = document.getElementById('Camara');
+        const Camara1 = document.getElementById('Camara');
         const ModalCamara = document.querySelector('.ModalCamara')
+        ModalCamara.id = 'ModalCamara';
         
         setTimeout(()=>{
             N = null;
             let Loanding = document.getElementById('Loanding');
             Loanding.innerHTML = `Verificacion Completada`;
+            FormularioRegistro();
         },10000);
 
         
-
-
-        const Canvas = document.createElement('canvas');
-        Canvas.className = 'PhotoEscanear';
-        const Context = Canvas.getContext('2d');
-        Context.drawImage(Camara,0,0,300,100);
-
-        ModalCamara.append(Canvas);
-
         let ContainerBtns = document.getElementById('ContainerBtns');
         ContainerBtns.innerHTML = `<h2 id='Loanding'>Escaneando Rostro<span id = 'puntos'></span></h2>`;
 
         let puntos = document.getElementById('puntos');
         puntos.style.transition = '300ms';
+
+        const Canvas = document.createElement('canvas');
+        Canvas.className = 'PhotoEscanear';
+        Canvas.height = '600';
+        Canvas.width = '800';
+        const Context = Canvas.getContext('2d');
+        Context.drawImage(Camara1,0,0,);
+
+        ModalCamara.insertBefore(Canvas,ContainerBtns);
+
+        
 
 
 
@@ -260,6 +267,20 @@ export default function Registro() {
         Camara.srcObject.getTracks()[0].stop();
 
         
+
+    };
+
+    const FormularioRegistro = () => {
+        let ModalCamara = document.getElementById('ModalCamara');
+        let btnContinuar = document.createElement('button');
+        btnContinuar.className = 'btnContinuar';
+        let btnContinuarText = document.createTextNode('Continuar');
+        btnContinuar.append(btnContinuarText);
+        ModalCamara.append(btnContinuar);
+
+
+
+
 
     };
 
