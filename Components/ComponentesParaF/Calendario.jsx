@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Calendario() {
-    const datepicker = document.querySelector('.datepicker');
+const datepicker = document.querySelector('.datepicker');
 const cancelBtn = document.querySelector('.cancel');
 const dateInput = document.querySelector('.--date-input');
 const okBtn = document.querySelector('.ok');
@@ -10,7 +10,7 @@ const nextBtn = document.querySelector('.siguiente');
 const prevBtn = document.querySelector('.antes');
 const yearInput = document.querySelector('.year-input');
 const monthInput = document.querySelector('.month-input');
-const horaBtn = document.getElementById('horasDispo');
+
 
 
 let selectedDate = new Date();
@@ -21,19 +21,19 @@ let month = selectedDate.getMonth();
 
 
     //manejo del boton del siguiente mes
-nextBtn.addEventListener("click", () => {
+const NextBtn = () => {
     if (month === 11) year++;
     month = (month + 1) % 12;
     displayDates();
-});
+};
 
 
 //manejo del boton del pasado mes
-prevBtn.addEventListener("click", () => {
+const PrevBtn = () => {
     if (month === 0) year--;
     month = (month - 1 + 12) % 12;
     displayDates();
-});
+};
 
 
 //manejo del cambio de mes
@@ -190,7 +190,7 @@ displayDates();
         
         
                         <header>
-                            <button className="antes">
+                            <button onClick={PrevBtn} className="antes">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
                                 </svg>
@@ -214,7 +214,7 @@ displayDates();
                                 <input type="number" class="year-input" value="2025" />
                             </div>
         
-                            <button className="siguiente">
+                            <button onClick={NextBtn} className="siguiente">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                                 </svg>
