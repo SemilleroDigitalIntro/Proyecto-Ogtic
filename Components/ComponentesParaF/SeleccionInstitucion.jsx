@@ -39,7 +39,6 @@ export default function SeleccionInstitucion() {
             break;
           case 2:
 
-
             for(let I = 0 ; I < 18; I++){
               let Ints = document.createElement('span');
                 Ints.className = `${DataPuntoGobs[0].GobSambil[I].Instituciones}`;
@@ -72,7 +71,16 @@ export default function SeleccionInstitucion() {
           case 4:
             for(let I = 0 ; I < 16; I++){
 
-            }
+                let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
+            };
             break;
           case 5:
             for(let I = 0 ; I < 15; I++){
