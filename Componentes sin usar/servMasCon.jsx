@@ -13,7 +13,7 @@ export default function ServMasCon(){
                 <div className="card__serv">
                     <h3>{props.NameService}</h3>
                     <p>{props.DetailService}</p>
-                    <a href="">Mas detalles</a>
+                    <a href="">Más detalles</a>
                 </div>
         )
     };
