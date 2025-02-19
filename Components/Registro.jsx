@@ -227,7 +227,7 @@ export default function Registro() {
             let Loanding = document.getElementById('Loanding');
             Loanding.innerHTML = `Verificacion Completada`;
             FormularioRegistro();
-        },2000);
+        },10000);
 
         
         let ContainerBtns = document.getElementById('ContainerBtns');

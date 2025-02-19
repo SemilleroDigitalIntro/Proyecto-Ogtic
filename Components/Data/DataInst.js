@@ -1,52 +1,107 @@
-const GobOccidental = [{
-    Instituciones : 'MESCYT',
-},
-{
-    Instituciones : 'Superintendencia de Electricidad (SIE)'
-},
-{
-    Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
-},
-{
-    Instituciones : 'Superintendencia de Salud y Riesgos Laborales (SISALRIL)',
-},
-{
-    Instituciones : 'Tesorería de la Seguridad Social (TSS)',
-},
-{
-    Instituciones : 'Dirección General de Medicamentos, Alimentos y Productos Sanitarios',
-},
-{
-    Instituciones : 'Ministerio de Educación de la República Dominicana',
-},
-{
-    Instituciones : 'Instituto Nacional de Tránsito y Transporte Terrestre (INTRANT)',
-},
-{
-    Instituciones : 'Dirección General de Migración (DGM)'
-},
+const DataPuntoGobs = [{
+    GobOcidentalMall: [
+        {
+            Instituciones : 'MESCYT',
+        },
+        {
+            Instituciones : 'Superintendencia de Electricidad (SIE)'
+        },
+        {
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
+        },
+        {
+            Instituciones : 'Superintendencia de Salud y Riesgos Laborales (SISALRIL)',
+        },
+        {
+            Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+        },
+        {
+            Instituciones : 'Dirección General de Medicamentos, Alimentos y Productos Sanitarios',
+        },
+        {
+            Instituciones : 'Ministerio de Educación de la República Dominicana',
+        },
+        {
+            Instituciones : 'Instituto Nacional de Tránsito y Transporte Terrestre (INTRANT)',
+        },
+        {
+            Instituciones : 'Dirección General de Migración (DGM)'
+        },
+    ],
+    GobSambil: [
+        {
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+        },
+        {
+            Instituciones :'Policía Nacional (PN)',
+        },
+        {
+            Instituciones : 'Dirección General de Pasaportes (DGP)',
+        },
+        {
+            Instituciones : 'Dirección General de Migración (DGM)'
+        },
+        {
+            Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+        },
+    ],
+    GobExpreso : [
+        {
+        Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
+        },
+        {
+        Instituciones : 'Ayuntamiento Municipal de Santo Domingo Este',
+        },
+        {
+        Instituciones : 'Dirección General de Jubilaciones y Pensiones a Cargo del Estado',
+        },
+        {
+        Instituciones : 'Dirección General de Pasaportes (DGP)',
+        },
+        {
+        Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+        },
+        {
+        Instituciones : 'Procuraduría General de la República',
+        },
+        {
+        Instituciones : 'Supérate',
+        },
+    ],
+    GobMegacentro : [
+        {
+        Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
+        },
+        {
+        Instituciones : 'Instituto Nacional de Tránsito y Transporte Terrestre (INTRANT)',
+        },
+        {
+        Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+        },
+        {
+        Instituciones : 'Ayuntamiento Municipal de Santo Domingo Este',
+        },
+        {
+        Instituciones : 'Ministerio de Interior y Policía (MIP)',
+        },
+        {
+        Instituciones : 'Procuraduría General de la República',
+        },
+        {
+        Instituciones : 'Superintendencia de Salud y Riesgos Laborales (SISALRIL)',
+        },
+        {
+        Instituciones : 'Superintendencia de Electricidad (SIE)'
+        },
+        {
+        Instituciones : 'Supérate',
+        },
+]
+}
 ];
-const GobSambil = [
-{
-    Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
-},
-{
-    Instituciones :'Policía Nacional (PN)',
-},
-{
-    Instituciones : 'Dirección General de Pasaportes (DGP)',
-},
-{
-    Instituciones : 'Dirección General de Migración (DGM)'
-},
-{
-    Instituciones : 'Tesorería de la Seguridad Social (TSS)',
-},
 
-];
-const GobExpreso = [{
-    Instituciones : ''
-}];
+
+
 const GobMegacentro = [{
     Instituciones : ''
 }];
