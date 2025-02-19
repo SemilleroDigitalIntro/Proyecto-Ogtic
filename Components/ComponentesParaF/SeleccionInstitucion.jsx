@@ -1,11 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { PuntoGOBSelecionado } from './SeleccionPuntoGOB';
+import DataPuntoGobs from '../Data/DataInst';
 
 export let InstitucionSeleccionada;
 export default function SeleccionInstitucion() {
 
     const [DeployI, SetdeployI] = useState(true);
+  
 
     const DeployInstitucion = () => {
         SetdeployI(!DeployI);
@@ -16,13 +18,24 @@ export default function SeleccionInstitucion() {
         document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
 
         let Institucion__span = document.getElementById('Institucion__span');
-
+        Institucion__span.innerHTML = '';
+        let Institucion__GOB = document.getElementById('Institucion__GOB');
 
         switch (PuntoGOBSelecionado){
           case 1:
-            for(let I = 0 ; I < 14; I++){
 
-            }
+              for(let I = 0 ; I < 14; I++){
+                let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
+              };
+            
             break;
           case 2:
             for(let I = 0 ; I < 18; I++){
@@ -94,10 +107,7 @@ export default function SeleccionInstitucion() {
         <span>Institución pública</span>
         <button onClick={DeployInstitucion} className='Institucion__GOB'><span id='Institucion__GOB'>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
         <div className='Institucion__span' id='Institucion__span'>
-            <span className='exection' onClick={Institucion_DGP}>Dirección General de Pasaportes</span>
-            <span  onClick={Institucion_Intrant} >Intrant</span>
-            <span  onClick={Institucion_JCE}>Junta central electoral</span>
-            <span className='exection2' onClick={Institucion_DGM} >Direccion General de Migracion</span>
+            
         </div>
     </div>
   )
