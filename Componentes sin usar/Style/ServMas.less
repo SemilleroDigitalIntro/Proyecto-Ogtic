@@ -13,7 +13,7 @@
 .card__serviciosMasC{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     height: 250px;
     gap: 30px;
 }
@@ -28,13 +28,16 @@
     justify-content: center;
     border: 1px solid #d6d6d6;
     border-radius: 3px;
-    padding: 25px;
-    width: 300px;
-    height: 210px;
+    padding: 22px;
+    padding-top: 0;
+    padding-bottom: 35px;
+    width: calc(100% / 5);
+    height: 220px;
     
 }
 .card__serv h3{
     color: #01346B;
+    
 
 }
 .card__serv p{
@@ -45,6 +48,7 @@
 .card__serv a{
     color: #0185e8;
     font-size: 15px;
+    transform: translateY(10px);
 }
 .ServiciosMasConsultados{
     display: flex;
