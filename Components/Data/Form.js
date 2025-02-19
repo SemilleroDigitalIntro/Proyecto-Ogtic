@@ -33,10 +33,10 @@ prevBtn.addEventListener("click", () => {
 
 
 //manejo del cambio de mes
-monthInput.addEventListener('change', () => {
+const MonthInput = () => {
     month = monthInput.selectedIndex;
     displayDates();
-});
+};
 
 //manejo del cambio de año
 yearInput.addEventListener('change', () => {
