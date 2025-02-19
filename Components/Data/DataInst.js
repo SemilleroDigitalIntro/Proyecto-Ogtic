@@ -174,5 +174,6 @@ const DataPuntoGobs = [{
     ]
 }
 ];
+export default DataPuntoGobs;
 
 
