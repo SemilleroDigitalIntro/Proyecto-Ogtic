@@ -9,7 +9,9 @@ export default function Component_B() {
     const Categoria = () => {
         SetshowCategoria(!ShowCategoria);
         ShowCategoria ? document.getElementById('Buscador_categorias').style.display = 'flex' 
-        : document.getElementById('Buscador_categorias').style.display = 'none'
+        : document.getElementById('Buscador_categorias').style.display = 'none';
+
+        
     };
 
   return (
