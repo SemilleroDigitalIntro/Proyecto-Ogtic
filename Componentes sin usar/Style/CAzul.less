@@ -5,6 +5,7 @@
     --letter_font: "Inter", serif;
 }
 
+
 .container{
     z-index: 5;
     transform: translateX(150px);
@@ -16,4 +17,41 @@
     background-color: var(--back_color);
     width: 80%;
     height: 7cm;
+    border-radius: 10px;
+    color: #ffffff;
+
+    div{
+        width: calc(100% / 2);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        border: 2px #0185e8 solid;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    } h1,p{
+        width: 60%;
+        padding: 0;
+        margin: 0;
+
+    }
+    h1{
+        height: 40px;
+        font-weight: 300;
+        font-size: 20px;
+        border: 2px #0185e8 solid;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        padding-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+    }
 }
