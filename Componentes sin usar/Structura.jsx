@@ -7,6 +7,7 @@ import Novedades from './Novedades';
 import Footer from './Footer';
 import Centros from './Centros';
 import ServMasCon from './servMasCon';
+import InfoAdicional from './InfoAdicional';
 
 
 export default function Structura() {
@@ -14,10 +15,12 @@ export default function Structura() {
     <section>
         <Header/>
         <Smain/>
-        <Centros/>
-        <Novedades/>
-        <Footer/>
         <ServMasCon/>
+        <Centros/>
+        <InfoAdicional/>
+        <Footer/>
+        
+        
     </section>
   )
 };

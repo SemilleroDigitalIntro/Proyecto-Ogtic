@@ -13,6 +13,7 @@ export default function Registro() {
         Input.style.marginBottom = '-60px';
         Formulario.style.gap = '50px';
         NumeroC_label.style.fontSize = '16px';
+        NumeroC_label.style.padding = '0px';
 
 
         
@@ -307,6 +308,13 @@ export default function Registro() {
         let DecripcionValidacion = document.getElementById('DecripcionValidacion');
         DecripcionValidacion.innerText = 'Para finalizar tu registro, completa los siguientes campos:';
 
+        let VerificacionChild = document.getElementById('VerificacionChild');
+        VerificacionChild.innerHTML = `<i class='bx bx-check' ></i>`;
+        VerificacionChild.style.background = 'rgb(0, 56, 118)';
+
+        let Registro = document.getElementById('Registro');
+        Registro.style.background ='rgb(109, 176, 226)';
+
 
         let Gregistro = document.getElementById('Gregistro_div1');
         let GFormularioRegistro = document.createElement('div');
@@ -316,13 +324,34 @@ export default function Registro() {
         let FormularioRegistro = document.createElement('form');
         FormularioRegistro.id = 'FormularioRegistro';
         FormularioRegistro.className = ' FormularioRegistro';
+        FormularioRegistro.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            window.location.href = '/Inicio';
+        })
 
         let div1 = document.createElement('div');
         div1.id = 'FormularioRegistro_div1';
         let div1_label = document.createElement('label');
         let div1_labelText = document.createTextNode('Correo Electrónico');
         div1_label.append(div1_labelText);
+
+        div1_label.addEventListener('click',()=>{
+            div1_label.style.fontSize = '16px';
+            div1_label.style.marginBottom = '60px';
+            div1_label.style.background = 'white';
+            div1_label.style.marginLeft = '15px';
+            div1_label.style.padding = '0px';
+        })
+
         let div1_input = document.createElement('input');
+        div1_input.addEventListener('click',()=>{
+            div1_label.style.fontSize = '16px';
+            div1_label.style.marginBottom = '60px';
+            div1_label.style.background = 'white';
+            div1_label.style.marginLeft = '15px';
+            div1_label.style.padding = '0px';
+        });
+
         div1.append(div1_label);
         div1.append(div1_input);
 
@@ -331,7 +360,22 @@ export default function Registro() {
         let div2_label = document.createElement('label');
         let div2_labelText = document.createTextNode('Confirma tu Correo Electrónico');
         div2_label.append(div2_labelText);
+        div2_label.addEventListener('click',()=>{
+            div2_label.style.fontSize = '16px';
+            div2_label.style.marginBottom = '60px';
+            div2_label.style.background = 'white';
+            div2_label.style.marginLeft = '15px';
+            div2_label.style.padding = '0px';
+        })
+
         let div2_input = document.createElement('input');
+        div2_input.addEventListener('click',()=>{
+            div2_label.style.fontSize = '16px';
+            div2_label.style.marginBottom = '60px';
+            div2_label.style.background = 'white';
+            div2_label.style.marginLeft = '15px';
+            div2_label.style.padding = '0px';
+        });
         div2.append(div2_label);
         div2.append(div2_input);
 
@@ -341,7 +385,22 @@ export default function Registro() {
         let div3_label = document.createElement('label');
         let div3_labelText = document.createTextNode('Contraseña');
         div3_label.append(div3_labelText);
+        div3_label.addEventListener('click',()=>{
+            div3_label.style.fontSize = '16px';
+            div3_label.style.marginBottom = '60px';
+            div3_label.style.background = 'white';
+            div3_label.style.marginLeft = '15px';
+            div3_label.style.padding = '0px';
+        });
+
         let div3_input = document.createElement('input');
+        div3_input.addEventListener('click',()=>{
+            div3_label.style.fontSize = '16px';
+            div3_label.style.marginBottom = '60px';
+            div3_label.style.background = 'white';
+            div3_label.style.marginLeft = '15px';
+            div3_label.style.padding = '0px';
+        });
         div3_input.type = 'password';
         div3.append(div3_label);
         div3.append(div3_input);
@@ -351,12 +410,37 @@ export default function Registro() {
         let div4_label = document.createElement('label');
         let div4_labelText = document.createTextNode('Confirma tu Contraseña');
         div4_label.append(div4_labelText);
+        div4_label.addEventListener('click',()=>{
+            div4_label.style.fontSize = '16px';
+            div4_label.style.marginBottom = '60px';
+            div4_label.style.background = 'white';
+            div4_label.style.marginLeft = '15px';
+            div4_label.style.padding = '0px';
+        });
+
         let div4_input = document.createElement('input');
+        div4_input.addEventListener('click',()=>{
+            div4_label.style.fontSize = '16px';
+            div4_label.style.marginBottom = '60px';
+            div4_label.style.background = 'white';
+            div4_label.style.marginLeft = '15px';
+            div4_label.style.padding = '0px';
+        });
         div4_input.type = 'password';
         div4.append(div4_label);
         div4.append(div4_input);
 
-        FormularioRegistro.append(div1,div2,div3,div4);
+        let BtnCreacuenta = document.createElement('button');
+        BtnCreacuenta.className = 'BtnCreacuenta';
+        let BtnCreacuentaText = document.createTextNode = 'CREAR CUENTA UNICA';
+        BtnCreacuenta.append(BtnCreacuentaText);
+        BtnCreacuenta.innerHTML += `<i class='bx bx-check' ></i>`;
+
+        BtnCreacuenta.addEventListener('click',()=>{
+        });
+
+
+        FormularioRegistro.append(div1,div2,div3,div4,BtnCreacuenta);
         GFormularioRegistro.append(FormularioRegistro);
         Gregistro.append(GFormularioRegistro);
 
@@ -365,7 +449,7 @@ export default function Registro() {
         // FormularioRegistro.append(div4)
 
 
-    }
+    };
 
 
 
@@ -418,7 +502,7 @@ export default function Registro() {
 
             <form onSubmit={VerificandoCedula} action="" className='Formulario' id='Formulario'>
                 <div className='Formulario_div1'>
-                    <label htmlFor="" id='NumeroC_label'>Numero de cedula <span>*</span></label>
+                    <label onClick={UnlockInput} htmlFor="Cedula" id='NumeroC_label'>Numero de cedula <span>*</span></label>
                     <input onClick={UnlockInput} type="text" id='Cedula' required/>
                 </div>
 
