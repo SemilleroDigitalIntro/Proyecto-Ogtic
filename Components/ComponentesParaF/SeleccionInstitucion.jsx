@@ -39,7 +39,15 @@ export default function SeleccionInstitucion() {
             break;
           case 2:
             for(let I = 0 ; I < 18; I++){
-
+              let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobSambil[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSambil[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSambil[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
             }
             break;
           case 3:
