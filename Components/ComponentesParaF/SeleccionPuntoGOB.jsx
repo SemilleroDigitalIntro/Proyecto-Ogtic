@@ -69,7 +69,7 @@ export default function SeleccionPuntoGOB() {
         <div className='PuntoGOB__span' id='PuntoGOB__span'>
             <span className='exection' onClick={PGOB_megacentro}>Punto GOB Megacentro</span>
             <span onClick={PGOB_Sambil} >Punto GOB Sambil</span>
-            <span onClick={PGOB_Santo_Domingo_Oeste}>Punto GOB Occidental <Mall></Mall></span>
+            <span onClick={PGOB_Santo_Domingo_Oeste}>Punto GOB Occidental</span>
             <span onClick={PGOB_Santiago}>Punto GOB Santiago</span>
             <span onClick={PGOB_Santo_Doming_Norte}>Punto GOB Colina Centro</span>
             <span className='exection2' onClick={PGOB_San_Cristóbal}>Punto GOB San Cristobal</span>
