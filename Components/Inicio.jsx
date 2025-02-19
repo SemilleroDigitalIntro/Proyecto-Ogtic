@@ -346,10 +346,11 @@ export default function Inicio() {
                       <SeleccionPuntoGOB/>
                       <SeleccionInstitucion/>
                       <SeleccionServicio/>
-                      <div className='Horario'>
+                      
+                    </div>
+                    <div className='Horario'>
                         <Calendario/>
                       </div>
-                    </div>
 
                 </div>
 
