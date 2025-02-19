@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { PuntoGOBSelecionado } from './SeleccionPuntoGOB';
 
 export let InstitucionSeleccionada;
 export default function SeleccionInstitucion() {
@@ -13,6 +14,45 @@ export default function SeleccionInstitucion() {
 
         DeployI ? document.getElementById('Institucion__GOB_Arrow').style.rotate = '90deg' :
         document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+
+        let Institucion__span = document.getElementById('Institucion__span');
+
+
+        switch (PuntoGOBSelecionado){
+          case 1:
+            for(let I = 0 ; I < 14; I++){
+
+            }
+            break;
+          case 2:
+            for(let I = 0 ; I < 18; I++){
+
+            }
+            break;
+          case 3:
+            for(let I = 0 ; I < 10; I++){
+
+            }
+            break;
+          case 4:
+            for(let I = 0 ; I < 16; I++){
+
+            }
+            break;
+          case 5:
+            for(let I = 0 ; I < 15; I++){
+
+            }
+            break;
+          case 6:
+            for(let I = 0 ; I < 10; I++){
+
+            }
+            break;
+          default:
+            break;
+
+        }
 
     };
 
@@ -55,8 +95,8 @@ export default function SeleccionInstitucion() {
         <button onClick={DeployInstitucion} className='Institucion__GOB'><span id='Institucion__GOB'>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
         <div className='Institucion__span' id='Institucion__span'>
             <span className='exection' onClick={Institucion_DGP}>Dirección General de Pasaportes</span>
-            <span style={{display: 'none'}} onClick={Institucion_Intrant} >Intrant</span>
-            <span style={{display: 'none'}}  onClick={Institucion_JCE}>Junta central electoral</span>
+            <span  onClick={Institucion_Intrant} >Intrant</span>
+            <span  onClick={Institucion_JCE}>Junta central electoral</span>
             <span className='exection2' onClick={Institucion_DGM} >Direccion General de Migracion</span>
         </div>
     </div>
