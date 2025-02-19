@@ -5,6 +5,7 @@ import DataN from './Data/DataN';
 import SeleccionPuntoGOB from './ComponentesParaF/SeleccionPuntoGOB';
 import SeleccionInstitucion from './ComponentesParaF/SeleccionInstitucion';
 import SeleccionServicio from './ComponentesParaF/SeleccionServicio';
+import Calendario from './ComponentesParaF/Calendario';
 
 export default function Inicio() {
     let CambiarVista;
@@ -345,6 +346,9 @@ export default function Inicio() {
                       <SeleccionPuntoGOB/>
                       <SeleccionInstitucion/>
                       <SeleccionServicio/>
+                      <div className='Horario'>
+                        <Calendario/>
+                      </div>
                     </div>
 
                 </div>
