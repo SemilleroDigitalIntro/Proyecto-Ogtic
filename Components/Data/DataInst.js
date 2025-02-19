@@ -1,7 +1,7 @@
 const DataPuntoGobs = [{
     GobOcidentalMall: [
         {
-            Instituciones : 'MESCYT',
+            Instituciones : 'Ministerio de Educación Superior, Ciencia y Tecnología',
         },
         {
             Instituciones : 'Superintendencia de Electricidad (SIE)'
@@ -96,18 +96,38 @@ const DataPuntoGobs = [{
         {
         Instituciones : 'Supérate',
         },
-]
+    ],
+    GobSantiago : [
+        {
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
+        },
+        {
+            Instituciones : 'Superintendencia de Salud y Riesgos Laborales (SISALRIL)',
+        },
+        {
+            Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+        },
+        {
+            Instituciones : 'Supérate',
+        },
+        {
+            Instituciones : 'Instituto Nacional de Tránsito y Transporte Terrestre (INTRANT)',
+        },
+        {
+            Instituciones : 'Dirección General de Migración (DGM)'
+        },
+        {
+            Instituciones : 'Ministerio de Educación Superior, Ciencia y Tecnología',
+        },
+        {
+            Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
+        },
+    ],
 }
 ];
 
 
 
-const GobMegacentro = [{
-    Instituciones : ''
-}];
-const GobSantiago = [{
-    Instituciones : ''
-}];
 const GobSanCristobal = [{
     Instituciones : ''
 }];
