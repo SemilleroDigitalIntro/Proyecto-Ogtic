@@ -128,9 +128,6 @@ export default function Inicio() {
 
     };
 
-    const CitasAgendadas = () => {
-
-    };
 
     const Cerrarsesion = () => {
         document.getElementById('ModalCerrarSesion').style.display = 'flex';
@@ -207,9 +204,8 @@ export default function Inicio() {
             </div>
             <div className='Aside__div2'>
                 <span onClick={Perfil} onPointerOver={Over1} onPointerLeave={Leave1} id='EstiloP'><i class='bx bxs-user' ></i>Perfil</span>
-                <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Notificaciones</span>
+                <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Citas Agendadas</span>
                 <span onClick={AgendarCitas} onPointerOver={Over3} onPointerLeave={Leave3} id='EstiloAC'><i class='bx bxs-calendar-alt'></i>Agendar Citas</span>
-                <span onClick={CitasAgendadas} id='EstiloCA'><i class='bx bxs-calendar' ></i>Citas Agendadas</span>
                 <span onClick={Cerrarsesion} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
             </div>
 
@@ -297,7 +293,7 @@ export default function Inicio() {
         <main className='Main2' id='Main2' style={{display: 'none'}}>
             <header className='Main2__header'>
                 <div>
-                    <h1>Notificaciones</h1>
+                    <h1>Citas Agendadas</h1>
                 </div>
             </header>
             <section className='Container_notificaciones'>
