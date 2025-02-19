@@ -1,10 +1,15 @@
 import React from 'react';
-import './Style/Component_B.less'
+import './Style/Component_B.less';
+import { useState } from 'react';
 
 export default function Component_B() {
 
-    const Categoria = () => {
+    const [ShowCategoria, SetshowCategoria] = useState(true);
 
+    const Categoria = () => {
+        SetshowCategoria(!ShowCategoria);
+        ShowCategoria ? document.getElementById('Buscador_categorias').style.display = 'flex' 
+        : document.getElementById('Buscador_categorias').style.display = 'none'
     };
 
   return (
@@ -12,7 +17,7 @@ export default function Component_B() {
         <div className='InBuscador'>
         <div className='Buscador_div1'>
             <button onClick={Categoria}>Categoria<i class='bx bx-chevron-right'></i></button>
-            <div className='Buscador_categorias'>
+            <div className='Buscador_categorias' id='Buscador_categorias'>
                 
             </div>
         </div>
