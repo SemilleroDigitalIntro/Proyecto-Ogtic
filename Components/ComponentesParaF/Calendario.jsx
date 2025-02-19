@@ -37,16 +37,16 @@ const PrevBtn = () => {
 
 
 //manejo del cambio de mes
-monthInput.addEventListener('change', () => {
+const MonthInput = () => {
     month = monthInput.selectedIndex;
     displayDates();
-});
+};
 
 //manejo del cambio de año
-yearInput.addEventListener('change', () => {
+const YearInput = () => {
     year = yearInput.value;
     displayDates();
-});
+};
 
 
 //funcion de aplicar fecha
@@ -197,7 +197,7 @@ displayDates();
                             </button>
         
                             <div>
-                                <select className="month-input">
+                                <select onChange={MonthInput} className="month-input">
                                     <option value="">Enero</option>
                                     <option value="">Febrero</option>
                                     <option value="">Marzo</option>
@@ -211,7 +211,7 @@ displayDates();
                                     <option value="">Noviembre</option>
                                     <option value="">Diciembre</option>
                                 </select>
-                                <input type="number" class="year-input" value="2025" />
+                                <input type="number" onChange={YearInput} class="year-input" value="2025" />
                             </div>
         
                             <button onClick={NextBtn} className="siguiente">
