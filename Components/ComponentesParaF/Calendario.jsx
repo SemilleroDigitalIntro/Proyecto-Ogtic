@@ -50,7 +50,7 @@ yearInput.addEventListener('change', () => {
 
 
 //funcion de aplicar fecha
-okBtn.addEventListener('click', () => {
+const Ok = () => {
     dateInput.value = selectedDate.toLocaleDateString();
     ('es -  RD', {
         year: 'numeric',
@@ -58,7 +58,7 @@ okBtn.addEventListener('click', () => {
         month: '2-digit',
         
     })
-});
+};
 
 
 
@@ -241,7 +241,7 @@ displayDates();
         
                             <div className="datepicker-footer">
                                 <button className="cancel">Cancelar</button>
-                                <button className="ok">Aceptar</button>
+                                <button onAbort={Ok} className="ok">Aceptar</button>
                             </div>
         
                         </div>
