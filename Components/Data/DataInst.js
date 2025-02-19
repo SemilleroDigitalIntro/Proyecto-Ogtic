@@ -123,14 +123,31 @@ const DataPuntoGobs = [{
             Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
         },
     ],
+    GobSanCristobal : [
+        {
+            Instituciones : 'Instituto Nacional de Tránsito y Transporte Terrestre (INTRANT)',
+        },
+        {
+            Instituciones : 'Superintendencia de Electricidad (SIE)'
+        },
+        {
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
+        },
+        {
+            Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+        },
+        {
+            Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
+        },
+        {
+            Instituciones : 'Supérate',
+        },
+    ],
 }
 ];
 
 
 
-const GobSanCristobal = [{
-    Instituciones : ''
-}];
 const GobColinaCentro = [{
     Instituciones : ''
 }];
