@@ -26,9 +26,24 @@ const GobOccidental = [{
     Instituciones : 'Dirección General de Migración (DGM)'
 },
 ];
-const GobSambil = [{
-    Instituciones : ''
-}];
+const GobSambil = [
+{
+    Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+},
+{
+    Instituciones :'Policía Nacional (PN)',
+},
+{
+    Instituciones : 'Dirección General de Pasaportes (DGP)',
+},
+{
+    Instituciones : 'Dirección General de Migración (DGM)'
+},
+{
+    Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+},
+
+];
 const GobExpreso = [{
     Instituciones : ''
 }];
