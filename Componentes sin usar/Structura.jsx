@@ -19,8 +19,6 @@ export default function Structura() {
         <Centros/>
         <InfoAdicional/>
         <Footer/>
-        
-        
     </section>
   )
 };
