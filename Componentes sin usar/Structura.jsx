@@ -9,7 +9,9 @@ import Footer from './Footer';
 import Centros from './Centros';
 import ServMasCon from './servMasCon';
 import InfoAdicional from './InfoAdicional';
-import CuadroAzul from './CuadroAzul';
+
+
+import Component_B from './component_B';
 
 
 export default function Structura() {
@@ -17,7 +19,10 @@ export default function Structura() {
     <section>
         <Header/>
         <Smain/>
-        <CuadroAzul/>
+
+
+
+        <Component_B/>
         <ServMasCon/>
         <Centros/>
         <InfoAdicional/>
