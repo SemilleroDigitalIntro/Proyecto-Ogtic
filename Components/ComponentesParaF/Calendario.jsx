@@ -1,166 +1,166 @@
-import React from 'react'
+import React from 'react';
+import './Style/Calendario.less';
 
 export default function Calendario() {
-const datepicker = document.querySelector('.datepicker');
-const cancelBtn = document.querySelector('.cancel');
-const dateInput = document.querySelector('.--date-input');
-const okBtn = document.querySelector('.ok');
-const dates = document.querySelector('.dates');
-const nextBtn = document.querySelector('.siguiente');
-const prevBtn = document.querySelector('.antes');
-const yearInput = document.querySelector('.year-input');
-const monthInput = document.querySelector('.month-input');
+// const datepicker = document.querySelector('.datepicker');
+// const cancelBtn = document.querySelector('.cancel');
+// const dateInput = document.querySelector('.--date-input');
+
+// const dates = document.querySelector('.dates');
+
+// const yearInput = document.querySelector('.year-input');
+// const monthInput = document.querySelector('.month-input');
 
 
 
-let selectedDate = new Date();
-let year = selectedDate.getFullYear();
-let month = selectedDate.getMonth();
+// let selectedDate = new Date();
+// let year = selectedDate.getFullYear();
+// var month = selectedDate.getMonth();
 
 
 
 
-    //manejo del boton del siguiente mes
-const NextBtn = () => {
-    if (month === 11) year++;
-    month = (month + 1) % 12;
-    displayDates();
-};
+//     //manejo del boton del siguiente mes
+// const NextBtn = () => {
+//     if (month === 11) year++;
+//     month = (month + 1) % 12;
+//     displayDates();
+// };
 
 
-//manejo del boton del pasado mes
-const PrevBtn = () => {
-    if (month === 0) year--;
-    month = (month - 1 + 12) % 12;
-    displayDates();
-};
+// //manejo del boton del pasado mes
+// const PrevBtn = () => {
+//     if (month === 0) year--;
+//     month = (month - 1 + 12) % 12;
+//     displayDates();
+// };
 
 
-//manejo del cambio de mes
-const MonthInput = () => {
-    month = monthInput.selectedIndex;
-    displayDates();
-};
+// //manejo del cambio de mes
+// const MonthInput = () => {
+//     month = monthInput.selectedIndex;
+//     displayDates();
+// };
 
-//manejo del cambio de año
-const YearInput = () => {
-    year = yearInput.value;
-    displayDates();
-};
+// //manejo del cambio de año
+// const YearInput = () => {
+//     year = yearInput.value;
+//     displayDates();
+// };
 
 
-//funcion de aplicar fecha
-const Ok = () => {
-    dateInput.value = selectedDate.toLocaleDateString();
-    ('es -  RD', {
-        year: 'numeric',
-        day: '2-digit',
-        month: '2-digit',
+// //funcion de aplicar fecha
+// const Ok = () => {
+//     dateInput.value = selectedDate.toLocaleDateString();
+//     ('es -  RD', {
+//         year: 'numeric',
+//         day: '2-digit',
+//         month: '2-digit',
         
-    })
-};
+//     })
+// };
 
 
 
 
 
-const updateYearMonth = () => {
-    monthInput.selectedIndex = month;
-    yearInput.value = year;
-};
+// const updateYearMonth = () => {
+//     monthInput.selectedIndex = month;
+//     yearInput.value = year;
+// };
 
 
-const handleHourClick = (e) => {
-    const button = e.target;
-    const selected = dates.querySelector('.selected');
-    selected && selected.classList.remove('selected');
-    button.classList.add('selected');
-};
+// const handleHourClick = (e) => {
+//     const button = e.target;
+//     const selected = dates.querySelector('.selected');
+//     selected && selected.classList.remove('selected');
+//     button.classList.add('selected');
+// }
 
 
-//handle apply button click
-const handleDateClick = (e) => {
-    const button = e.target;
-
-
-
-    //remover la clase selected de otras fechas
-    const selected = dates.querySelector('.selected');
-    selected && selected.classList.remove('selected');
+// //handle apply button click
+// const handleDateClick = (e) => {
+//     const button = e.target;
 
 
 
-    //agregar la clase selected a la fecha seleccionada
-    button.classList.add('selected');
-
-    //actualizar la fecha seleccionada
-    selectedDate = new Date(year, month, parseInt(button.textContent));
-};
+//     //remover la clase selected de otras fechas
+//     const selected = dates.querySelector('.selected');
+//     selected && selected.classList.remove('selected');
 
 
 
-//renderizar fechas en el interfaz del calendario
-const displayDates = () => {
-    //actualizar year y mes 
-    updateYearMonth();
+//     //agregar la clase selected a la fecha seleccionada
+//     button.classList.add('selected');
+
+//     //actualizar la fecha seleccionada
+//     selectedDate = new Date(year, month, parseInt(button.textContent));
+// };
+
+
+
+// //renderizar fechas en el interfaz del calendario
+// const displayDates = () => {
+//     //actualizar year y mes 
+//     updateYearMonth();
 
 
 
 
-    dates.innerHTML = "";
+//     dates.innerHTML = "";
 
-    //mostrar la ultima semana del mes anterior ultimo dia del mes anterior
-    const lastOfPrevMonth = new Date(year, month, 0);
+//     //mostrar la ultima semana del mes anterior ultimo dia del mes anterior
+//     const lastOfPrevMonth = new Date(year, month, 0);
 
-    for(let i = 0; i <= lastOfPrevMonth.getDay(); i++) {
-        const text = lastOfPrevMonth.getDate() - lastOfPrevMonth.getDay() + i;
-        const button = createButton(text, true, false);
-        dates.appendChild(button);
-    }
+//     for(let i = 0; i <= lastOfPrevMonth.getDay(); i++) {
+//         const text = lastOfPrevMonth.getDate() - lastOfPrevMonth.getDay() + i;
+//         const button = createButton(text, true, false);
+//         dates.appendChild(button);
+//     }
 
-    //*mostrar el mes actual
+//     //*mostrar el mes actual
 
-    const lastOfMonth = new Date(year, month + 1, 0);
+//     const lastOfMonth = new Date(year, month + 1, 0);
     
-    for(let i = 1; i <= lastOfMonth.getDate(); i++) {
+//     for(let i = 1; i <= lastOfMonth.getDate(); i++) {
 
-        const isToday = 
-        selectedDate.getDate() === i &&
-        selectedDate.getFullYear() === year && 
-        selectedDate.getMonth() === month;
+//         const isToday = 
+//         selectedDate.getDate() === i &&
+//         selectedDate.getFullYear() === year && 
+//         selectedDate.getMonth() === month;
 
-        const button = createButton(i, false, false);
-        button.addEventListener('click', handleDateClick);
+//         const button = createButton(i, false, false);
+//         button.addEventListener('click', handleDateClick);
 
-        dates.appendChild(button);
-    };
-
-
-    //mostrar la primera semana del mes siguiente
-
-    const firstOfNextMonth = new Date(year, month + 1, 1);
-    for (let i = firstOfNextMonth.getDay(); i < 7; i++){
-        const text = firstOfNextMonth.getDate() -
-        firstOfNextMonth.getDay() + i;
+//         dates.appendChild(button);
+//     };
 
 
-        const button = createButton(text, true, false);
-        dates.appendChild(button);
-    }
+//     //mostrar la primera semana del mes siguiente
 
-}
-
-const createButton = (text, isDisabled = false, isToday) => {
-    const button = document.createElement('button');
-    button.textContent = text;
-    button.disabled = isDisabled;
-    button.classList.toggle('today', isToday);
-    return button;
+//     const firstOfNextMonth = new Date(year, month + 1, 1);
+//     for (let i = firstOfNextMonth.getDay(); i < 7; i++){
+//         const text = firstOfNextMonth.getDate() -
+//         firstOfNextMonth.getDay() + i;
 
 
-};
+//         const button = createButton(text, true, false);
+//         dates.appendChild(button);
+//     }
 
-displayDates();
+// }
+
+// const createButton = (text, isDisabled = false, isToday) => {
+//     const button = document.createElement('button');
+//     button.textContent = text;
+//     button.disabled = isDisabled;
+//     button.classList.toggle('today', isToday);
+//     return button;
+
+
+// };
+
+// displayDates();
 
   return (
     <div className="container__datepicker">
@@ -190,14 +190,16 @@ displayDates();
         
         
                         <header>
-                            <button onClick={PrevBtn} className="antes">
+                            <button  className="antes">
+                            {/* onClick={PrevBtn} */}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
                                 </svg>
                             </button>
         
                             <div>
-                                <select onChange={MonthInput} className="month-input">
+                                <select  className="month-input">
+                                {/* onChange={MonthInput} */}
                                     <option value="">Enero</option>
                                     <option value="">Febrero</option>
                                     <option value="">Marzo</option>
@@ -211,10 +213,12 @@ displayDates();
                                     <option value="">Noviembre</option>
                                     <option value="">Diciembre</option>
                                 </select>
-                                <input type="number" onChange={YearInput} class="year-input" value="2025" />
+                                <input type="number"  class="year-input" value="2025" />
+                                {/* onChange={YearInput} */}
                             </div>
         
-                            <button onClick={NextBtn} className="siguiente">
+                            <button  className="siguiente">
+                            {/* onClick={NextBtn} */}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                                 </svg>
@@ -241,7 +245,8 @@ displayDates();
         
                             <div className="datepicker-footer">
                                 <button className="cancel">Cancelar</button>
-                                <button onAbort={Ok} className="ok">Aceptar</button>
+                                <button className="ok">Aceptar</button>
+                                {/* onAbort={Ok}  */}
                             </div>
         
                         </div>
