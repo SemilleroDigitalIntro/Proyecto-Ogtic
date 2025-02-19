@@ -7,7 +7,6 @@ const nextBtn = document.querySelector('.siguiente');
 const prevBtn = document.querySelector('.antes');
 const yearInput = document.querySelector('.year-input');
 const monthInput = document.querySelector('.month-input');
-const horaBtn = document.getElementById('horasDispo');
 
 
 let selectedDate = new Date();
