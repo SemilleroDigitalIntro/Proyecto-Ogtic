@@ -39,7 +39,7 @@ export default function Header() {
         </div>
         <nav className='Sheader__Nav'>
           <a onClick={Home}>Home</a>
-          <a onClick={Servicios}>Servicios</a>
+          {/* <a onClick={Servicios}>Servicios</a> */}
           <a onClick={Novedades}>Novedades</a>
           <a onClick={Sobrenosotros}>Sobre nosotros</a>
           <a>Ubicaciones</a>

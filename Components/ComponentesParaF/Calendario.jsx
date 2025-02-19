@@ -67,7 +67,7 @@ const Ok = () => {
 const updateYearMonth = () => {
     monthInput.selectedIndex = month;
     yearInput.value = year;
-}
+};
 
 
 const handleHourClick = (e) => {
@@ -75,7 +75,7 @@ const handleHourClick = (e) => {
     const selected = dates.querySelector('.selected');
     selected && selected.classList.remove('selected');
     button.classList.add('selected');
-}
+};
 
 
 //handle apply button click

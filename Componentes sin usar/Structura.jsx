@@ -2,6 +2,7 @@ import React from 'react';
 import ContactoH from './ContactoH';
 import Header from './Header';
 import Smain from './Smain';
+import SobreNosotros from './SobreNosotros';
 import Servicios from './Servicios';
 import Novedades from './Novedades';
 import Footer from './Footer';
@@ -18,6 +19,7 @@ export default function Structura() {
         <ServMasCon/>
         <Centros/>
         <InfoAdicional/>
+        <SobreNosotros/>
         <Footer/>
     </section>
   )
