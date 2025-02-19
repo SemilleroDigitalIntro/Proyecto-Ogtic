@@ -143,11 +143,36 @@ const DataPuntoGobs = [{
             Instituciones : 'Supérate',
         },
     ],
+    GobColinaCentro : [
+        {
+            Instituciones : 'Administradora de Subsidios Sociales (ADESS)',
+        },
+        {
+            Instituciones : 'Dirección General de Migración (DGM)'
+        },
+        {
+            Instituciones : 'Supérate',
+        },
+        {
+            Instituciones : 'Tesorería de la Seguridad Social (TSS)',
+        },
+        {
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
+        },
+        {
+            Instituciones : 'Superintendencia de Salud y Riesgos Laborales (SISALRIL)',
+        },
+        {
+            Instituciones : 'Ministerio de Interior y Policía (MIP)',
+        },
+        {
+            Instituciones : 'Ministerio de Educación de la República Dominicana',
+        },
+        {
+            Instituciones : 'Superintendencia de Electricidad (SIE)'
+        },
+    ]
 }
 ];
 
 
-
-const GobColinaCentro = [{
-    Instituciones : ''
-}];
