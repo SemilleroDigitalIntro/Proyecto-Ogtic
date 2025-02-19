@@ -39,7 +39,7 @@ export default function SeleccionInstitucion() {
             break;
           case 2:
             for(let I = 0 ; I < 18; I++){
-
+              
             }
             break;
           case 3:
@@ -49,7 +49,15 @@ export default function SeleccionInstitucion() {
             break;
           case 4:
             for(let I = 0 ; I < 16; I++){
-
+              let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
             }
             break;
           case 5:
@@ -105,7 +113,7 @@ export default function SeleccionInstitucion() {
   return (
     <div className='Institucion'>
         <span>Institución pública</span>
-        <button onClick={DeployInstitucion} className='Institucion__GOB'><span id='Institucion__GOB'>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
+        <button onClick={DeployInstitucion} className='Institucion__GOB'><span id=''>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
         <div className='Institucion__span' id='Institucion__span'>
             
         </div>
