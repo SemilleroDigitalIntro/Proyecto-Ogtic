@@ -62,7 +62,7 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobExpreso[I].Instituciones}`;
                 })
-                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSambil[I].Instituciones}`);
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobExpreso[I].Instituciones}`);
                 
                 Ints.append(Intstext)
                 Institucion__span.append(Ints);
@@ -84,14 +84,42 @@ export default function SeleccionInstitucion() {
             break;
           case 5:
             for(let I = 0 ; I < 15; I++){
-
+              let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobSantiago[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSantiago[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSantiago[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
             }
             break;
           case 6:
             for(let I = 0 ; I < 10; I++){
-
+              let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobSanCristobal[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSanCristobal[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSanCristobal[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
             }
             break;
+          case 7:
+            let Ints = document.createElement('span');
+                Ints.className = `${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`;
+                Ints.addEventListener('click',()=>{
+                  Institucion__GOB.innerText = `${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`;
+                })
+                let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`);
+                
+                Ints.append(Intstext)
+                Institucion__span.append(Ints);
+            break;
+
           default:
             break;
 
