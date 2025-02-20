@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Style/Calendario.less';
+import {DatePicker} from '@mui/x-date-pickers/DatePicker'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import dayjs from 'dayjs';
+import { Button } from '@mui/material';
 
-export default function Calendario() {
+export default function Calendario(){
+    let date = Date()
+    const [value, setValue] = React.useState(dayjs)
+    return(
+        <div className='Calendario'> 
+            <h1 className="title --fecha">Fecha</h1>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker
+            value={value}
+            onChange={(newValue) => setValue(newValue)}
+            />
+            </LocalizationProvider>
+        </div>
+    )
+}
+
+// export default function Calendario() {
 // const datepicker = document.querySelector('.datepicker');
 // const cancelBtn = document.querySelector('.cancel');
 // const dateInput = document.querySelector('.--date-input');
@@ -162,95 +183,95 @@ export default function Calendario() {
 
 // displayDates();
 
-  return (
-    <div className="container__datepicker">
+//   return (
+//     <div className="container__datepicker">
 
 
-                    <div className="titulos --fecha">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
-                                <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
-                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
-                        </div>
-                        <div>
-                            <h1 className="title --fecha">Fecha</h1>
-                        </div>
-                        <form action="">
-                            <label for="">
-                                <input type="text" className="input --date-input" placeholder="Fecha seleccionada" readonly />
-                            </label>
-                        </form>
-                    </div>
+//                     <div className="titulos --fecha">
+//                         <div>
+//                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+//                                 <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+//                                 <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
+//                         </div>
+//                         <div>
+//                             <h1 className="title --fecha">Fecha</h1>
+//                         </div>
+//                         <form action="">
+//                             <label for="">
+//                                 <input type="text" className="input --date-input" placeholder="Fecha seleccionada" readonly />
+//                             </label>
+//                         </form>
+//                     </div>
         
         
         
         
-                    <div class="datepicker-container">
+//                     <div class="datepicker-container">
                         
         
         
-                        <header>
-                            <button  className="antes">
-                            {/* onClick={PrevBtn} */}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
-                                </svg>
-                            </button>
+//                         <header>
+//                             <button  className="antes">
+//                             {/* onClick={PrevBtn} */}
+//                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+//                                     <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+//                                 </svg>
+//                             </button>
         
-                            <div>
-                                <select  className="month-input">
-                                {/* onChange={MonthInput} */}
-                                    <option value="">Enero</option>
-                                    <option value="">Febrero</option>
-                                    <option value="">Marzo</option>
-                                    <option value="">Abril</option>
-                                    <option value="">Mayo</option>
-                                    <option value="">Junio</option>
-                                    <option value="">Julio</option>
-                                    <option value="">Agosto</option>
-                                    <option value="">Septiembre</option>
-                                    <option value="">Octubre</option>
-                                    <option value="">Noviembre</option>
-                                    <option value="">Diciembre</option>
-                                </select>
-                                <input type="number"  class="year-input" value="2025" />
-                                {/* onChange={YearInput} */}
-                            </div>
+//                             <div>
+//                                 <select  className="month-input">
+//                                 {/* onChange={MonthInput} */}
+//                                     <option value="">Enero</option>
+//                                     <option value="">Febrero</option>
+//                                     <option value="">Marzo</option>
+//                                     <option value="">Abril</option>
+//                                     <option value="">Mayo</option>
+//                                     <option value="">Junio</option>
+//                                     <option value="">Julio</option>
+//                                     <option value="">Agosto</option>
+//                                     <option value="">Septiembre</option>
+//                                     <option value="">Octubre</option>
+//                                     <option value="">Noviembre</option>
+//                                     <option value="">Diciembre</option>
+//                                 </select>
+//                                 <input type="number"  class="year-input" value="2025" />
+//                                 {/* onChange={YearInput} */}
+//                             </div>
         
-                            <button  className="siguiente">
-                            {/* onClick={NextBtn} */}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
-                                </svg>
-                            </button>
-                        </header>
+//                             <button  className="siguiente">
+//                             {/* onClick={NextBtn} */}
+//                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+//                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+//                                 </svg>
+//                             </button>
+//                         </header>
         
         
         
-                        <div className="datepicker">
-                            <div className="days">
-                                <span>Dom</span>
-                                <span>Lun</span>
-                                <span>Mar</span>
-                                <span>Mie</span>
-                                <span>Jue</span>
-                                <span>Vie</span>
-                                <span>Sab</span>
-                            </div>
+//                         <div className="datepicker">
+//                             <div className="days">
+//                                 <span>Dom</span>
+//                                 <span>Lun</span>
+//                                 <span>Mar</span>
+//                                 <span>Mie</span>
+//                                 <span>Jue</span>
+//                                 <span>Vie</span>
+//                                 <span>Sab</span>
+//                             </div>
         
         
                             
-                            <div className="dates">
-                            </div>
+//                             <div className="dates">
+//                             </div>
         
-                            <div className="datepicker-footer">
-                                <button className="cancel">Cancelar</button>
-                                <button className="ok">Aceptar</button>
-                                {/* onAbort={Ok}  */}
-                            </div>
+//                             <div className="datepicker-footer">
+//                                 <button className="cancel">Cancelar</button>
+//                                 <button className="ok">Aceptar</button>
+//                                 {/* onAbort={Ok}  */}
+//                             </div>
         
-                        </div>
-                    </div>
-                </div>
-  )
-};
+//                         </div>
+//                     </div>
+//                 </div>
+//   )
+// };
