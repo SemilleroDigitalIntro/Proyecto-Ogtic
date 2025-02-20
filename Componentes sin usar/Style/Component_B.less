@@ -1,11 +1,11 @@
 .Buscador{
-    width: 98%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #F4F7FF;
-    padding-bottom: 20px;
     .InBuscador{
+        transform: translateY(-80px);
         width: 46.5%;
         display: flex;
         justify-content: center;
@@ -25,26 +25,56 @@
             position: relative;
             button{
                 height: 1.5cm;
-                width: 4cm;
+                width: 4.25cm;
                 font-size: 18px;
                 font-weight: 600;
                 color: #01346B;
-                border-radius: 30px;
+                border-radius: 20px;
                 border: 1px solid #6DB0E2;
                 background: #EEF5FF;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 10px;
+                cursor: pointer;
                 i{
                     font-size: 20px;
                     font-weight: 600;
                 }
             }
             .Buscador_categorias{
+                z-index: 3;
                 position: absolute;
-
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 2cm;
+                width: 3.95cm;
+                background: #EEF5FF;
+                border: 1px solid #6DB0E2;
+                border-top: none;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                margin-top: 105px;
+                padding: 5px;
+                span{
+                    width: 100%;
+                    overflow: hidden;
+                    font-size: 13px;
+                    cursor: pointer;
+                    
+                    
+                    &:hover{
+                        background: #6DB0E2;
+                    }
+                }
+                .N3{
+                    border-bottom-right-radius: 6px;
+                    border-bottom-left-radius: 5px;
+                }
             }
+            
         }
         .Buscador_div2{
             input{

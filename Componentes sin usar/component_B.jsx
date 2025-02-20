@@ -1,15 +1,32 @@
 import React from 'react';
 import './Style/Component_B.less';
 import { useState } from 'react';
+import DataCategoria from './Data/DataCategoria';
 
 export default function Component_B() {
 
     const [ShowCategoria, SetshowCategoria] = useState(true);
 
     const Categoria = () => {
+        let Buscador_categorias = document.getElementById('Buscador_categorias');
         SetshowCategoria(!ShowCategoria);
         ShowCategoria ? document.getElementById('Buscador_categorias').style.display = 'flex' 
-        : document.getElementById('Buscador_categorias').style.display = 'none'
+        : document.getElementById('Buscador_categorias').style.display = 'none';
+        ShowCategoria ? document.getElementById('Buscador_categorias').innerHTML = '' :
+        document.getElementById('Buscador_categorias');
+        
+
+        for(var x =0; x<4; x++){
+            let opcion = document.createElement('span');
+            opcion.className = `N${x}`;
+            opcion.innerText = `${DataCategoria[x].Categoria}`;
+            Buscador_categorias.append(opcion);
+        };
+
+        
+
+
+        
     };
 
   return (
