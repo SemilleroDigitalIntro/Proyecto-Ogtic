@@ -3,9 +3,9 @@ import './Style/Formulario.less';
 
 
 export default function Form() {
-  return (
+    return (
     <section>
-         <div class="logo_form">
+        <div class="logo_form">
             <img src="nashla/logoproyecto1.png"/>
         </div> 
         <h1 class="title --form">Agenda tu cita</h1>
@@ -26,7 +26,7 @@ export default function Form() {
                 <div>
                     <div class="container__input">
                         <label>Nombre  <strong>*</strong></label>
-                        <input class="input --name" type="text"  placeholder="Escribe aquí" required/>
+                        <input name='nombreform' class="input --name" type="text"  placeholder="Escribe aquí" required/>
                     </div>
                     <div  class="container__input">
                         <label>Apellido  <strong>*</strong></label>
@@ -49,10 +49,10 @@ export default function Form() {
                         <input class="input --number" type="text"  placeholder="Escribe aquí" required/>
                     </div>
                 </div>
-
-               
             </form>
         </div>
+
+
         <div>
             <div class="container_personaldata">
                 <div>
@@ -64,10 +64,10 @@ export default function Form() {
                     <h1 class="title --Fecha">Fecha</h1>
                 </div>
             </div>
-     </div>
+        </div>
 
         
         
     </section>
-  );
+);
 };

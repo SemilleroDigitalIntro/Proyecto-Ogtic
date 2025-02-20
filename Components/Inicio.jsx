@@ -6,6 +6,7 @@ import SeleccionPuntoGOB from './ComponentesParaF/SeleccionPuntoGOB';
 import SeleccionInstitucion from './ComponentesParaF/SeleccionInstitucion';
 import SeleccionServicio from './ComponentesParaF/SeleccionServicio';
 import Calendario from './ComponentesParaF/Calendario';
+import Horario from './ComponentesParaF/horas';
 
 export default function Inicio() {
     let CambiarVista;
@@ -343,14 +344,14 @@ export default function Inicio() {
                         <h2><i class='bx bxs-map'></i>Ubicacion</h2>
                     </div>
                     <div className='Main3__section1_div3_d1'>
-                      <SeleccionPuntoGOB/>
-                      <SeleccionInstitucion/>
-                      <SeleccionServicio/>
-                      
+                        <SeleccionPuntoGOB/>
+                        <SeleccionInstitucion/>
+                        <SeleccionServicio/>
                     </div>
                     <div className='Horario'>
                         <Calendario/>
-                      </div>
+                        <Horario/>
+                    </div>
 
                 </div>
 
