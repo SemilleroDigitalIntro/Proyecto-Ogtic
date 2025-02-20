@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-
+import './Style/estilo.less'
 import { InstitucionSeleccionada } from './SeleccionInstitucion';
 
 export default function SeleccionServicio() {
