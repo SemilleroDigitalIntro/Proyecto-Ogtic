@@ -4,13 +4,19 @@ import {DatePicker} from '@mui/x-date-pickers/DatePicker'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import dayjs from 'dayjs';
+import { Button } from '@mui/material';
 
 export default function Calendario(){
+    let date = Date()
+    const [value, setValue] = React.useState(dayjs)
     return(
         <div className='Calendario'> 
             <h1 className="title --fecha">Fecha</h1>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker/>
+            <DatePicker
+            value={value}
+            onChange={(newValue) => setValue(newValue)}
+            />
             </LocalizationProvider>
         </div>
     )
