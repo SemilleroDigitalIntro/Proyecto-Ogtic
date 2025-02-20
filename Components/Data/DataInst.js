@@ -30,7 +30,7 @@ const DataPuntoGobs = [{
     ],
     GobSambil: [
         {
-            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+            Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
         },
         {
             Instituciones :'Policía Nacional (PN)',
@@ -59,7 +59,7 @@ const DataPuntoGobs = [{
         Instituciones : 'Dirección General de Pasaportes (DGP)',
         },
         {
-        Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA',
+        Instituciones : 'Dirección General de Información y Defensa de los Afiliados a la Seguridad Social (DIDA)',
         },
         {
         Instituciones : 'Procuraduría General de la República',
