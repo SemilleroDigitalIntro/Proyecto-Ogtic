@@ -350,7 +350,6 @@ export default function Inicio() {
                     </div>
                     <div className='Horario'>
                         <Calendario/>
-                        <App/>
                       </div>
 
                 </div>
