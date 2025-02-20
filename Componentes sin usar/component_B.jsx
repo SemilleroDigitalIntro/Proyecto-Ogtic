@@ -14,7 +14,9 @@ export default function Component_B() {
         : document.getElementById('Buscador_categorias').style.display = 'none';
         ShowCategoria ? document.getElementById('Buscador_categorias').innerHTML = '' :
         document.getElementById('Buscador_categorias');
-        
+
+        ShowCategoria ? document.getElementById('IconArrow').style.rotate = '90deg' : 
+        document.getElementById('IconArrow').style.rotate = '0deg';
 
         for(var x =0; x<4; x++){
             let opcion = document.createElement('span');
@@ -33,7 +35,7 @@ export default function Component_B() {
     <form className='Buscador'>
         <div className='InBuscador'>
         <div className='Buscador_div1'>
-            <button onClick={Categoria}>Categoria<i class='bx bx-chevron-right'></i></button>
+            <button onClick={Categoria}>Categoria<i id='IconArrow' class='bx bx-chevron-right'></i></button>
             <div className='Buscador_categorias' id='Buscador_categorias'>
                 
             </div>
