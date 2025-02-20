@@ -26,7 +26,7 @@ export default function Form() {
                 <div>
                     <div class="container__input">
                         <label>Nombre  <strong>*</strong></label>
-                        <input class="input --name" type="text"  placeholder="Escribe aquí" required/>
+                        <input name='nombreform' class="input --name" type="text"  placeholder="Escribe aquí" required/>
                     </div>
                     <div  class="container__input">
                         <label>Apellido  <strong>*</strong></label>
