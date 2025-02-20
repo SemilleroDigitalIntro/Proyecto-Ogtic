@@ -357,6 +357,8 @@
     height: 99.1vh;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
     .Main3__header{
         width: 100%;
         height: 1.5cm;
@@ -482,7 +484,7 @@
             display: flex;
             justify-content: left;
             align-items: center;
-            gap: 50px;
+            gap: 10px;
             width: 100%;
             .PuntoGOB{
                 display: flex;
@@ -510,14 +512,17 @@
                     display: none;
                     position: absolute;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: left;
+                    align-items: start;
                     border: 1px solid black;
                     border-radius: 10px;
+                    background: white;
                     margin-top: 72px;
                     width: 10cm;
-                    background: white;
+                    height: 6cm;
                     animation: Deploy1 500ms ;
+                    overflow-y: scroll;
+                    scrollbar-width: none;
                     z-index: 3;
                     span{
                         background: #80808008;
@@ -568,13 +573,17 @@
                     display: none;
                     position: absolute;
                     flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: left;
+                    align-items: start;
                     border: 1px solid black;
                     border-radius: 10px;
+                    background: white;
                     margin-top: 72px;
                     width: 10cm;
+                    height: 6cm;
                     animation: Deploy1 500ms ;
+                    overflow-y: scroll;
+                    scrollbar-width: none;
                     span{
                         background: #80808008;
                         width: 96.5%;
@@ -610,6 +619,7 @@
                     border: 1px solid #003876;
                     border-radius: 10px;
                     box-shadow: 1px 1px 5px 5px #ebeaea15;
+                    background: white;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
@@ -643,9 +653,9 @@
                         background: #80808008;
                         font-weight: 500;
                         width: 100%;
-                        padding: 5px;
                         cursor: pointer;
                         transition: 300ms;
+                        text-align: center;
                         &:hover{
                             background: #80808096;
                         }
