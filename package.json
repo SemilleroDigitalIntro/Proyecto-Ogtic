@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-email/components": "0.0.33",
     "@react-email/html": "0.0.11",
+    "axios": "^1.7.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.1.5",
