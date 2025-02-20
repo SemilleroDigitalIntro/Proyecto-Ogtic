@@ -5,6 +5,8 @@ import Inicia_de_Sesion from "./Components/Inicia_de_Sesion";
 import Inicio from "./Components/Inicio";
 import Registro from "./Components/Registro";
 import Structura from "./Componentes sin usar/Structura";
+import React from 'react';
+
 
 const Routes = createBrowserRouter([
     {
