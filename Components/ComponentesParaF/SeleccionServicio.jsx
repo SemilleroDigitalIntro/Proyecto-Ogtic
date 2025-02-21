@@ -528,7 +528,7 @@ export default function SeleccionServicio() {
         <span id='Servicio__GOB'>Seleciona una Servicio</span>
         <i id='Servicio__GOB_Arrow' class='bx bx-chevron-right' ></i>
     </button>
-    <div style={{zIndex:'4'}} className='Servicio__span' id='Servicio__span'>
+    <div style={{zIndex:'4', background: 'white'}} className='Servicio__span' id='Servicio__span'>
         
     </div>
 </div>
