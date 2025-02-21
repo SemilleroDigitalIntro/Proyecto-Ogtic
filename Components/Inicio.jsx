@@ -148,7 +148,7 @@ export default function Inicio() {
         if(Hoverperfil == undefined){
 
         }else if(Hoverperfil == true){
-            document.getElementById('EstiloP').style.background = 'gray';
+            document.getElementById('EstiloP').style.background = '#0b7cc8';
         };
 
     };
@@ -167,7 +167,7 @@ export default function Inicio() {
         if(HoverNotificaciones == undefined){
 
         }else if(HoverNotificaciones == true){
-            document.getElementById('EstiloN').style.background = 'gray';
+            document.getElementById('EstiloN').style.background = '#0b7cc8';
         };
 
     };
@@ -184,7 +184,7 @@ export default function Inicio() {
         if(HoverAgendarC == undefined){
 
         }else if(HoverAgendarC == true){
-            document.getElementById('EstiloAC').style.background = 'gray';
+            document.getElementById('EstiloAC').style.background = '#0b7cc8';
         };
     };
     const Leave3 = () => {
@@ -215,7 +215,7 @@ export default function Inicio() {
         {/* Perfil */}
         <dialog className='ModalCerrarSesion' id='ModalCerrarSesion' open>
             <div className='ModalCerrarSesion_div1'>
-                <h2>{`${ genero ? 'Segura que quieres cerrar sesion?' : 'Seguro que quieres cerrar sesion?'}`}</h2>
+                <h2>{`${ genero ? '¿Segura que quieres cerrar sesión?' : '¿Seguro que quieres cerrar sesión?'}`}</h2>
                 <div>
                     <button onClick={NocerrarSesion}>No</button>
                     <button onClick={CerrarsesionConfirmacion} id='Si'>Si</button>
@@ -237,7 +237,7 @@ export default function Inicio() {
                 <div className='Main1__section_div2'>
                     <div className='Main1__section_div2_d1'>
                         <div>
-                            <label className = 'exection' htmlFor="Name">Name</label>
+                            <label className = 'exection' htmlFor="Name">Nombre</label>
                             <input type="text" name="" id="Name" disabled/>
                         </div>
                         <div>
@@ -245,14 +245,14 @@ export default function Inicio() {
                             <input type="text" name="" id="ID" disabled/>
                         </div>
                         <div>
-                            <label  htmlFor="Email">Email</label>
+                            <label  htmlFor="Email">Email </label>
                             <input  type="text" name="" id="Email" />
                         </div>
                     </div>
                     <div className='Main1__section_div2_d2'>
                         
                         <div>
-                            <label htmlFor="">Phone Number</label>
+                            <label htmlFor="">Numero de teléfono </label>
                             <input type="text" name="" id="" />
                         </div>
 
@@ -265,20 +265,20 @@ export default function Inicio() {
                 </div>
                 <div className='Main1__section_div2_d3'>
                         <div className='Ms_div2_d3_d1'>
-                            <h3>Cambiar contrasena actual</h3>
+                            <h3>Cambiar contraseña actual</h3>
                         </div>
                         <div className='Ms_div2_d3_d2'>
                             <div>
-                                <label htmlFor="">Contrasena actual <span>*</span>
+                                <label htmlFor="">Contraseña actual <span>*</span>
                                 </label>
                                 <input type="text" name="" id="" />
                             </div>
                             <div>
-                                <label htmlFor="">Nueva contrasena <span>*</span></label>
+                                <label htmlFor="">Nueva contraseña <span>*</span></label>
                                 <input type="text" name="" id="" />
                             </div>
                             <div>
-                                <label htmlFor="">Confirmar nueva contrasena <span>*</span></label>
+                                <label htmlFor="">Confirmar nueva contraseña <span>*</span></label>
                                 <input type="text" name="" id="" />
                             </div>
 
@@ -318,7 +318,7 @@ export default function Inicio() {
                     </div>
                     <div className='Main3__section_div2_d1'>
                         <div>
-                            <label htmlFor="Name" id='NameL'>Name</label>
+                            <label htmlFor="Name" id='NameL'>Nombre </label>
                             <input type="text" name="" id="Name" disabled/>
                         </div>
                         <div>
@@ -333,7 +333,7 @@ export default function Inicio() {
                     <div className='Main3__section_div2_d2'>
                         
                         <div>
-                            <label htmlFor="Pnumber">Phone Number</label>
+                            <label htmlFor="Pnumber">Numero </label>
                             <input type="text" name="" id="Pnumber" />
                         </div>
 
@@ -341,7 +341,7 @@ export default function Inicio() {
                 </div>
                 <div className='Main3__section1_div3'>
                     <div className='Main3__section1_Apartado2'>
-                        <h2><i class='bx bxs-map'></i>Ubicacion</h2>
+                        <h2><i class='bx bxs-map'></i>Ubicacion </h2>
                     </div>
                     <div className='Main3__section1_div3_d1'>
                         <SeleccionPuntoGOB/>

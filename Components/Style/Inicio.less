@@ -6,7 +6,6 @@ select{
     width: 250px;
 }
 
-
 .Inicio{
     display: flex;
 }
@@ -44,12 +43,13 @@ select{
             padding: 10px;
             border-radius: 5px;
             cursor: pointer;
-            &:hover{
-                background: gray;
-            }
         }
+        
         #EstiloP{
             background: #003876;
+            &:hover{
+                background-color: #0b7cc8;
+            }
         }
         #CerrarSesion{
             &:hover{
@@ -68,31 +68,35 @@ select{
     display: none;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
     .ModalCerrarSesion_div1{
         background: white;
-        height: 6cm;
+        height: 5.5cm;
         width: 10cm;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid gray;
         border-radius: 20px;
         box-shadow: 1px 1px 5px 5px #8080802d;
         h2{
             text-align: center;
+            font-weight: 300;
+            width: 70%;
+            font-size: 22px;
+            margin-bottom: 30px;
         }
         div{
             width: 80%;
             display: flex;
             justify-content: space-around;
             button{
-                width: 2cm;
-                height: 0.9cm;
+                background-color: white;
+                width: 100px;
+                height: 40px;
                 border-radius: 10px;
-                border: 1px solid gray;
                 font-size: 18px;
-                box-shadow: 1px 1px 5px 5px #80808022;
+                border: 1px #d6d6d6 solid;
                 cursor: pointer;
                 &:hover{
                     opacity: 0.7;
@@ -100,7 +104,6 @@ select{
             }
             #Si{
                 background: red;
-                border: 1px solid #a40202;
                 color: white;
             }
 
@@ -156,14 +159,14 @@ select{
                     label{
                         font-size: 16px;
                         &::after{
-                            content: '*';
+                            content: ' *';
                             color: red;
                         }
                     }
                     .exection{
                         &::after{
-                            content: '*';
-                            color: #003876;
+                            content: ' *';
+                            color: #d6d6d6;
                         }
                     }
                     input{
@@ -172,8 +175,9 @@ select{
                         padding: 5px;
                         font-size: 20px;
                         border-radius: 10px;
-                        border: 1px solid #003876;
-                        outline-color: #003876;
+                        border: 1px solid #d6d6d6;
+                        outline-color: #d6d6d6;
+                        margin-top: 10px;
                         &:disabled{
                             opacity: 0.5;
                             filter: drop-shadow(50%);
@@ -199,9 +203,10 @@ select{
                         width: 7.8cm;
                         font-size: 20px;
                         border-radius: 10px;
-                        border: 1px solid #003876;
+                        border: 1px solid #d6d6d6;
                         outline-color: #003876;
                         padding: 5px;
+                        margin-top:10px ;
                     }
                 }
                 
@@ -218,6 +223,10 @@ select{
                     color: white;
                     box-shadow: 1px 1px 10px 5px #8080803e;
                     cursor: pointer;
+                    &:hover{
+                        background-color: #0b7cc8;
+                        transition: 0.3s
+                    }
                 }
             }
            
@@ -225,15 +234,16 @@ select{
     }
 };
 .Main1__section_div2_d3{
+    margin-top: 55px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    background: #dcdcdc3c;
+    background: #ffffff3c;
     .Ms_div2_d3_d1{
         h3{
             font-size: 22px;
-            margin: 0;
+            margin-bottom: 15px;
             color: #003876;
         }
     }
@@ -255,9 +265,11 @@ select{
                 height: 1cm;
                 width: 8cm;
                 font-size: 20px;
-                border: 1px solid #003876;
+                border: 1px solid #d6d6d6;
                 border-radius: 10px;
                 outline-color: #003876;
+                margin-bottom: 20px;
+                margin-top: 10px;
 
             }
         }
@@ -274,7 +286,12 @@ select{
             color: white;
             box-shadow: 1px 1px 10px 5px #8080803e;
             cursor: pointer;
+            &:hover{
+                background-color: #0b7cc8;
+                transition: 0.3s
+            }
         }
+        
     }
 };
 .Main2{
@@ -290,7 +307,7 @@ select{
         align-items: center;
         background: white;
         box-shadow: 1px 1px 5px 5px #80808008;
-        border-bottom: 1px solid #80808016;
+        border-bottom: 1px solid #d6d6d6;
         z-index: 3;
         div{
             margin-left: 20px;
@@ -332,7 +349,7 @@ select{
                         align-items: center;
                         
                         i{
-                            color: grey;
+                            color: #a0a0a0;
                             font-size: 18px;
                             transition: 300ms;
                             &:hover{
@@ -381,27 +398,31 @@ select{
         div{
             margin-left: 20px;
             h1{
-                color: #003876
+                font-size: 30px;
+                color: #003776
             }
         }
     }
     .Main3__section1_div2{
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         align-items: start;
         padding: 20px;
-        gap: 10px;
+        gap: 20px;
         .Main3__section1_Apartado1{
             display: flex;
             justify-content: center;
             align-items: center;
             height: 1cm;
             h2{
+                gap: 10px;
+                color: #0037769f;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 margin: 0;
-                font-size: 27px;
+                font-size: 24px;
             }
         }
         .Main3__section_div2_d1{
@@ -411,7 +432,7 @@ select{
                 display: flex;
                 flex-direction: column;
                 label{
-                    font-size: 18px;
+                    font-size: 16px;
                     &::after{
                         content: '*';
                         color: red;
@@ -426,9 +447,9 @@ select{
                 input{
                     height: 0.9cm;
                     width: 7.8cm;
-                    font-size: 20px;
+                    font-size: 16px;
                     border-radius: 10px;
-                    border: 1px solid #003876;
+                    border: 2px solid #d6d6d6;
                     outline-color: #003876;
                     padding: 5px;    
                     &:disabled{
@@ -445,7 +466,7 @@ select{
                 display: flex;
                 flex-direction: column;
                 label{
-                    font-size: 18px;
+                    font-size: 16px;
                     &::after{
                         content: '*';
                         color: red;
@@ -454,9 +475,9 @@ select{
                 input{
                     height: 0.9cm;
                     width: 7.8cm;
-                    font-size: 20px;
+                    font-size: 16px;
                     border-radius: 10px;
-                    border: 1px solid #003876;
+                    border: 2px solid #d6d6d6;
                     outline-color: #003876;
                     padding: 5px;
                     
@@ -470,7 +491,7 @@ select{
                 width: 4cm;
                 font-size: 17px;
                 font-weight: 600;
-                border: 1px solid black;
+                border: 1px solid #d6d6d6;
                 border-radius: 10px;
             }
         }
@@ -480,14 +501,17 @@ select{
         display: flex;
         flex-direction: column;
         align-items: start;
+        justify-content: center;
         padding: 20px;
         gap: 10px;
         .Main3__section1_Apartado2{
             h2{
+                font-size: 30px;
+                color: #0037769f;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                font-size: 27px;
+                font-size: 24px;
             }
         }
         .Main3__section1_div3_d1{
@@ -496,26 +520,32 @@ select{
             align-items: center;
             gap: 10px;
             width: 100%;
+            margin-bottom: 0;
             .PuntoGOB{
                 display: flex;
                 flex-direction: column;
                 position: relative;
                 align-items: start;
+                padding: 10px;
                 .PuntoGOB__GOB{
-                    height: 1.3cm;
-                    width: 10cm;
-                    font-size: 18px;
-                    border: 1px solid black;
-                    border-radius: 10px;
+                    background-color: white;
+                    height: 50px;
+                    width: 8cm;
+                    font-size: 14px;
+                    color: #545454;
+                    border: 2px solid #d6d6d6;
+                    border-radius: 6px;
                     display: flex;
+                    margin-top: 5px;
                     justify-content: space-around;
                     align-items: center;
                     font-weight: 500;
                     cursor: pointer;
                     i{
                         font-size: 30px;
-                        font-weight: 600;
+                        font-weight: 400;
                         transition: 300ms;
+                        color: #a0a0a0;
                     }
                 }
                 .PuntoGOB__span{
@@ -524,7 +554,7 @@ select{
                     flex-direction: column;
                     justify-content: left;
                     align-items: start;
-                    border: 1px solid black;
+                    border: 1px solid #d6d6d6;
                     border-radius: 10px;
                     background: white;
                     margin-top: 72px;
@@ -563,19 +593,23 @@ select{
                 position: relative;
                 align-items: start;
                 .Institucion__GOB{
-                    height: 1.3cm;
-                    width: 10cm;
-                    font-size: 18px;
-                    border: 1px solid black;
-                    border-radius: 10px;
+                    height: 50px;
+                    width: 8cm;
+                    font-size: 14px;
+                    margin-top: 10px;
+                    color: #545454;
+                    border: 2px solid #d6d6d6;
+                    border-radius: 6px;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
                     font-weight: 500;
                     cursor: pointer;
+                    background-color: white;
                     i{
                         font-size: 30px;
-                        font-weight: 600;
+                        color: #a0a0a0;
+                        font-weight: 400;
                         transition: 300ms;
                     }
                 }
@@ -623,22 +657,24 @@ select{
                 position: relative;
                 align-items: start;
                 .Servicio__GOB{
-                    height: 1.3cm;
-                    width: 10cm;
-                    font-size: 18px;
-                    border: 1px solid #003876;
-                    border-radius: 10px;
+                    height: 50px;
+                    width: 8cm;
+                    font-size: 14px;
+                    color: #545454;
+                    border: 2px solid #d6d6d6;
+                    border-radius: 6px;
                     box-shadow: 1px 1px 5px 5px #ebeaea15;
                     background: white;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
                     font-weight: 500;
+                    z-index: -1;
                     cursor: pointer;
                     i{
                         font-size: 30px;
-                        font-weight: 600;
-                        color: #001227;
+                        font-weight: 200;
+                        color: #a0a0a0;
                         transition: 300ms;
                     } 
                     #Servicio__GOB{
@@ -651,7 +687,7 @@ select{
                     flex-direction: column;
                     justify-content: left;
                     align-items: start;
-                    border: 1px solid black;
+                    border: 1px solid #d6d6d6;
                     border-radius: 10px;
                     margin-top: 72px;
                     width: 10cm;
@@ -692,7 +728,6 @@ select{
     align-items: center;
     width: 80%;
     margin: auto;
-    padding-top: 100px;
 }
 
 
