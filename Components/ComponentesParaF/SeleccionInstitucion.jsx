@@ -30,6 +30,7 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`);
                 

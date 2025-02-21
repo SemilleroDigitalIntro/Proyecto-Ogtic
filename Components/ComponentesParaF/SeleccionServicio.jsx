@@ -1,6 +1,4 @@
-import React from 'react';
 import { useState } from 'react';
-import './Style/estilo.less'
 import { InstitucionSeleccionada } from './SeleccionInstitucion';
 import { PuntoGOBSelecionado } from './SeleccionPuntoGOB';
 import DataServicios from '../Data/DataServicios';
@@ -16,8 +14,9 @@ export default function SeleccionServicio() {
 
         Servicio ? document.getElementById('Servicio__GOB_Arrow').style.rotate = '90deg' :
         document.getElementById('Servicio__GOB_Arrow').style.rotate = '0deg';
-
+        
         Continua();
+
 
     };
 
@@ -277,9 +276,8 @@ export default function SeleccionServicio() {
         //     Container.innerHTML = '';
 
         // }
-
-        if(PuntoGOBSelecionado === 1){
-            switch(InstitucionSeleccionada){//OccidentalMall
+        if(PuntoGOBSelecionado == 1){
+            switch(InstitucionSeleccionada){//OcidentalMall
                 case 0:
                     for(let x = 0; x<1;x++){
                         let servicio = document.createElement('span');
@@ -377,7 +375,7 @@ export default function SeleccionServicio() {
                     alert('tenemos un error')
                     break;
             }
-        }else if(PuntoGOBSelecionado === 2){//Sambil
+        }else if(PuntoGOBSelecionado == 2){//Sambil
             switch (InstitucionSeleccionada) {
                 case 0:
                     for(let x = 0; x < 6; x++){
@@ -433,7 +431,7 @@ export default function SeleccionServicio() {
                 default:
                     break;
             }
-        }else if(PuntoGOBSelecionado === 3){
+        }else if(PuntoGOBSelecionado == 3){
            switch(InstitucionSeleccionada){
             case 0:
                 for(let x = 0; x < 1; x++){
@@ -518,13 +516,19 @@ export default function SeleccionServicio() {
 
     };
 
-
+    const DeployInstitucion1 =  () =>{
+        alert('funciona')
+      };
+  
 
   return (
     <div className='Servicio'>
     <span>Servicio a solicitar</span>
-    <button onClick={DeployServicio} className='Servicio__GOB'><span id='Servicio__GOB'>Seleciona una Servicio</span><i id='Servicio__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
-    <div className='Servicio__span' id='Servicio__span'>
+    <button onClick={DeployServicio} className='Servicio__GOB'>
+        <span id='Servicio__GOB'>Seleciona una Servicio</span>
+        <i id='Servicio__GOB_Arrow' class='bx bx-chevron-right' ></i>
+    </button>
+    <div style={{zIndex:'4'}} className='Servicio__span' id='Servicio__span'>
         
     </div>
 </div>

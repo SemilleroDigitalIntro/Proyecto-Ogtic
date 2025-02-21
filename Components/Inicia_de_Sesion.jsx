@@ -3,25 +3,46 @@ import './Style/Modal_iniciarSesion.less';
 
 
 export default function Inicia_de_Sesion() {
-
+let boleanoV;
+let BoleanoD;
 
   const Sendform = async (event) => {
     event.preventDefault()
     const conexion = await fetch('http://localhost:4000/api/Users')
     const Data = await conexion.json();
 
-    for(x = 0; x < 2; x++){
-      validacion(`${x}`)
-    }
+    for(let x = 0; x < 2; x++){
+      validacion(`${Data.data[x].Cedula}`);
+    };
 
     
   };
 
   const validacion = (confirmacion) =>{
     if(document.getElementById('ID').value == confirmacion){
-      alert('la cedula es valida');
+      ValidacionPassword()
+
     }else{
       Sendform();
+      
+    }
+  }
+
+  const ValidacionPassword = async () => {
+    const conexion = await fetch('http://localhost:4000/api/Users')
+    const Data = await conexion.json();
+
+    for(let x = 0; x < 2; x++){
+      ValidacionP(`${Data.data[x].Password}`)
+    }
+
+  }
+
+  const ValidacionP = (confirmacion) => {
+    if(document.getElementById('Contraseña').value == confirmacion){
+      window.location.href ='/Inicio'
+    }else{
+      ValidacionPassword()
     }
   }
 
