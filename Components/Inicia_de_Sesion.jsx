@@ -40,7 +40,7 @@ let BoleanoD;
 
   const ValidacionP = (confirmacion) => {
     if(document.getElementById('Contraseña').value == confirmacion){
-      window.location.href ='/Inicio'
+      window.location.href ='/Inicio';
     }else{
       ValidacionPassword()
     }
@@ -66,7 +66,7 @@ let BoleanoD;
             <div className='Form__div3'>
               <a href="">¿Olvidó su contraseña?</a>
               <button type="submit">Iniciar sesion</button>
-              <span>¿No tienes una cuenta?<a href=""> Registrarse </a></span>
+              <span>¿No tienes una cuenta?<a href="/Registro"> Registrarse </a></span>
             </div>
         </form>
       </div>
