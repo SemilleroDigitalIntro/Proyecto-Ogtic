@@ -4,6 +4,8 @@ import DataCedula from './Data/DataCedula';
 
 export default function Registro() {
 
+    let SaveDataEmail;
+    let SaveDataPassword;
     let ResetInput;
     const UnlockInput = () =>{
 
@@ -324,11 +326,11 @@ export default function Registro() {
         let FormularioRegistro = document.createElement('form');
         FormularioRegistro.id = 'FormularioRegistro';
         FormularioRegistro.className = ' FormularioRegistro';
-        FormularioRegistro.addEventListener('submit',(e)=>{
-            e.preventDefault();
-            window.location.href = '/Inicio';
-        })
 
+
+        
+
+        let VL1;
         let div1 = document.createElement('div');
         div1.id = 'FormularioRegistro_div1';
         let div1_label = document.createElement('label');
@@ -350,7 +352,20 @@ export default function Registro() {
             div1_label.style.background = 'white';
             div1_label.style.marginLeft = '15px';
             div1_label.style.padding = '0px';
+
+        
         });
+        div1_input.addEventListener('change',()=>{
+            if(div1_input.value == div2_input.value){
+                SaveDataEmail = true;
+                warnnigEmail.style.display = 'none';
+                VL1 = false;
+            }else{
+                warnnigEmail.style.display = 'flex';
+                div2_label.style.marginBottom = '35px';
+                VL1 = true;
+            }
+        })
 
         div1.append(div1_label);
         div1.append(div1_input);
@@ -362,7 +377,7 @@ export default function Registro() {
         div2_label.append(div2_labelText);
         div2_label.addEventListener('click',()=>{
             div2_label.style.fontSize = '16px';
-            div2_label.style.marginBottom = '60px';
+            div2_label.style.marginBottom = '90px';
             div2_label.style.background = 'white';
             div2_label.style.marginLeft = '15px';
             div2_label.style.padding = '0px';
@@ -371,11 +386,24 @@ export default function Registro() {
         let div2_input = document.createElement('input');
         div2_input.addEventListener('click',()=>{
             div2_label.style.fontSize = '16px';
-            div2_label.style.marginBottom = '60px';
+            if(VL1 == true){
+                div2_label.style.marginBottom = '90px';
+            }else{
+                div2_label.style.marginBottom = '60px';
+            }
             div2_label.style.background = 'white';
             div2_label.style.marginLeft = '15px';
             div2_label.style.padding = '0px';
         });
+        div2_input.addEventListener('change',()=>{
+            if(div1_input.value == div2_input.value){
+                SaveDataEmail = true;
+                warnnigEmail.style.display = 'none';
+                div2_label.style.marginBottom = '60px';
+            }else{
+                warnnigEmail.style.display = 'flex';
+            }
+        })
         div2.append(div2_label);
         div2.append(div2_input);
 
@@ -401,6 +429,18 @@ export default function Registro() {
             div3_label.style.marginLeft = '15px';
             div3_label.style.padding = '0px';
         });
+        let VL;
+        div3_input.addEventListener('change',()=>{
+            if(div3_input.value == div4_input.value){
+                SaveDataPassword = true;
+                warnnigPassword.style.display = 'none';
+                VL = false;
+            }else{
+                warnnigPassword.style.display = 'flex';
+                div4_label.style.marginBottom = '26px';
+                VL = true;
+            }
+        })
         div3_input.type = 'password';
         div3.append(div3_label);
         div3.append(div3_input);
@@ -412,7 +452,7 @@ export default function Registro() {
         div4_label.append(div4_labelText);
         div4_label.addEventListener('click',()=>{
             div4_label.style.fontSize = '16px';
-            div4_label.style.marginBottom = '60px';
+            div4_label.style.marginBottom = '90px';
             div4_label.style.background = 'white';
             div4_label.style.marginLeft = '15px';
             div4_label.style.padding = '0px';
@@ -421,11 +461,24 @@ export default function Registro() {
         let div4_input = document.createElement('input');
         div4_input.addEventListener('click',()=>{
             div4_label.style.fontSize = '16px';
-            div4_label.style.marginBottom = '60px';
+            if(VL == true){
+                div4_label.style.marginBottom = '80px';
+            }else{
+                div4_label.style.marginBottom = '60px';
+            }
             div4_label.style.background = 'white';
             div4_label.style.marginLeft = '15px';
             div4_label.style.padding = '0px';
         });
+        div4_input.addEventListener('change',()=>{
+            if(div3_input.value == div4_input.value){
+                SaveDataPassword = true;
+                warnnigPassword.style.display = 'none';
+                div4_label.style.marginBottom = '60px';
+            }else{
+                warnnigPassword.style.display = 'flex';
+            }
+        })
         div4_input.type = 'password';
         div4.append(div4_label);
         div4.append(div4_input);
@@ -437,9 +490,56 @@ export default function Registro() {
         BtnCreacuenta.innerHTML += `<i class='bx bx-check' ></i>`;
 
         BtnCreacuenta.addEventListener('click',()=>{
+
         });
 
+        
+        
 
+
+
+        //funcion de envio de formulario.
+        FormularioRegistro.addEventListener('submit',(e)=>{
+            e.preventDefault();
+
+
+
+
+
+            // fetch('http://localhost:4000/api/Users',{
+            //     method: 'POST',
+            //     headers: {'content-Type':'application/json'},
+            //     body: JSON.stringify({NombreCompleto: , Gmail: div1_input.value})
+            //   }).then((respuesta)=> respuesta.json())
+            //   .then(data => {
+            //     console.log('Usuario agregado',data)
+            //   }).catch(
+            //     (err)=>{
+            //       console.log('tenemos un error', err)
+            //     }
+            // );
+        });
+
+     
+        let warnnigEmail = document.createElement('span');
+        warnnigEmail.style.color = 'red';
+        warnnigEmail.style.fontWeight = '600';
+        warnnigEmail.style.fontSize = '14px'
+        warnnigEmail.style.display = 'none';
+        let warnnigEmailText = document.createTextNode ='Las direcciones de correo ingresadas no coinciden.';
+        warnnigEmail.append(warnnigEmailText);
+        div2.append(warnnigEmail);
+
+
+        let warnnigPassword = document.createElement('span');
+        warnnigPassword.style.color = 'red';
+        warnnigPassword.style.fontWeight = '600';
+        warnnigPassword.style.fontSize = '14px';
+        warnnigPassword.style.display = 'none';
+        let warnnigPasswordText = document.createTextNode ='Las contraseña ingresadas no coinciden.';
+        warnnigPassword.append(warnnigPasswordText);
+        div4.append(warnnigPassword);
+    
         FormularioRegistro.append(div1,div2,div3,div4,BtnCreacuenta);
         GFormularioRegistro.append(FormularioRegistro);
         Gregistro.append(GFormularioRegistro);
