@@ -5,7 +5,25 @@ import './Style/Modal_iniciarSesion.less';
 export default function Inicia_de_Sesion() {
 
 
+  const Sendform = async (event) => {
+    event.preventDefault()
+    const conexion = await fetch('http://localhost:4000/api/Users')
+    const Data = await conexion.json();
 
+    for(x = 0; x < 2; x++){
+      validacion(`${x}`)
+    }
+
+    
+  };
+
+  const validacion = (confirmacion) =>{
+    if(document.getElementById('ID').value == confirmacion){
+      alert('la cedula es valida');
+    }else{
+      Sendform();
+    }
+  }
 
 
   return (
@@ -15,7 +33,7 @@ export default function Inicia_de_Sesion() {
         <div className='Login__div1_dv1'>
           <img src="nashla/LogoLogin.png" alt="Logo del login" />
         </div>
-        <form action="">
+        <form action="" onSubmit={Sendform}>
             <div className='Form__div1'>
               <label htmlFor="ID">ID: <span>*</span></label>
               <input type="text" name="" id="ID" />
