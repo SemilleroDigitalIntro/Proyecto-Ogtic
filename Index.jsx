@@ -6,7 +6,7 @@ import Inicio from "./Components/Inicio";
 import Registro from "./Components/Registro";
 import Structura from "./Componentes sin usar/Structura";
 import React from 'react';
-
+import Prueba from "./prueba";
 
 
 const Routes = createBrowserRouter([
@@ -26,6 +26,10 @@ const Routes = createBrowserRouter([
         path: '/Home',
         element: <Structura/>
     },
+    {
+        path: '/PEPE',
+        element: <Prueba/>
+    }
     
 
 ]);
