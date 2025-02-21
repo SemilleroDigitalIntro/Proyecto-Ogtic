@@ -318,7 +318,7 @@ export default function Inicio() {
                     </div>
                     <div className='Main3__section_div2_d1'>
                         <div>
-                            <label htmlFor="Name" id='NameL'>Name</label>
+                            <label htmlFor="Name" id='NameL'>Nombre </label>
                             <input type="text" name="" id="Name" disabled/>
                         </div>
                         <div>
@@ -333,7 +333,7 @@ export default function Inicio() {
                     <div className='Main3__section_div2_d2'>
                         
                         <div>
-                            <label htmlFor="Pnumber">Phone Number</label>
+                            <label htmlFor="Pnumber">Numero </label>
                             <input type="text" name="" id="Pnumber" />
                         </div>
 
@@ -341,7 +341,7 @@ export default function Inicio() {
                 </div>
                 <div className='Main3__section1_div3'>
                     <div className='Main3__section1_Apartado2'>
-                        <h2><i class='bx bxs-map'></i>Ubicacion</h2>
+                        <h2><i class='bx bxs-map'></i>Ubicacion </h2>
                     </div>
                     <div className='Main3__section1_div3_d1'>
                         <SeleccionPuntoGOB/>
