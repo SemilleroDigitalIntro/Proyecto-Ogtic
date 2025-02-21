@@ -13,7 +13,7 @@ export default function Prueba() {
       console.log(Data.data[0])
       console.log(Data.data[0].Nombre)
       const F = Data.data[0].Nombre;
-      Inprimir(Data)
+      Inprimir(F)
      
     }
     catch (err){
@@ -22,7 +22,7 @@ export default function Prueba() {
   }
   const Inprimir = (Datos) => {
     let lista = document.getElementById('lista');
-    lista.innerHTML += `${Datos.data[0].Nombre}`;
+    lista.append(Datos);
   };
 
   return (
