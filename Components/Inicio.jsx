@@ -34,7 +34,7 @@ export default function Inicio() {
         if(CambiarVista == undefined){
             Hoverperfil = undefined;
             HoverNotificaciones = true;
-            document.getElementById('EstiloP').style.background = '#003876';
+            document.getElementById('EstiloP').style.background = '#0b7cc8';
             document.getElementById('Main1').style.display = 'flex';
             CambiarVista = undefined;
 
@@ -43,7 +43,7 @@ export default function Inicio() {
             HoverNotificaciones = true;
             document.getElementById('Main2').style.display = 'none';
             document.getElementById('EstiloN').style.background = 'none';
-            document.getElementById('EstiloP').style.background = '#003876';
+            document.getElementById('EstiloP').style.background = '#0b7cc8';
             document.getElementById('Main1').style.display = 'flex';
             CambiarVista = undefined;
 
@@ -52,7 +52,7 @@ export default function Inicio() {
             HoverAgendarC = true;
             document.getElementById('EstiloAC').style.background = 'none';
             document.getElementById('Main3').style.display = 'none';
-            document.getElementById('EstiloP').style.background = '#003876';
+            document.getElementById('EstiloP').style.background = '#0b7cc8';
             document.getElementById('Main1').style.display = 'flex';
             CambiarVista = undefined;
 
@@ -69,14 +69,14 @@ export default function Inicio() {
             Hoverperfil = true;
             HoverNotificaciones = undefined;
             document.getElementById('EstiloP').style.background = 'none';
-            document.getElementById('EstiloN').style.background = '#003876';
+            document.getElementById('EstiloN').style.background = '#0b7cc8';
             document.getElementById('Main1').style.display = 'none';
             document.getElementById('Main2').style.display = 'flex';
             CambiarVista = 1;
 
         }else if(CambiarVista == 1){
             HoverNotificaciones = undefined;
-            document.getElementById('EstiloN').style.background = '#003876';
+            document.getElementById('EstiloN').style.background = '#0b7cc8';
             document.getElementById('Main2').style.display = 'flex';
             CambiarVista = 1;
 
@@ -84,7 +84,7 @@ export default function Inicio() {
             HoverNotificaciones = undefined;
             HoverAgendarC = true;
             document.getElementById('EstiloAC').style.background = 'none';
-            document.getElementById('EstiloN').style.background = '#003876';
+            document.getElementById('EstiloN').style.background = '#0b7cc8';
             document.getElementById('Main3').style.display = 'none';
             document.getElementById('Main2').style.display = 'flex';
             CambiarVista = 1;
@@ -102,7 +102,7 @@ export default function Inicio() {
             Hoverperfil = true;
             HoverAgendarC = undefined;
             document.getElementById('EstiloP').style.background = 'none';
-            document.getElementById('EstiloAC').style.background = '#003876';
+            document.getElementById('EstiloAC').style.background = '#0b7cc8';
             document.getElementById('Main1').style.display = 'none';
             document.getElementById('Main3').style.display = 'flex';
             CambiarVista = 2;
@@ -111,14 +111,14 @@ export default function Inicio() {
             HoverNotificaciones = true;
             HoverAgendarC = undefined;
             document.getElementById('EstiloN').style.background = 'none';
-            document.getElementById('EstiloAC').style.background = '#003876';
+            document.getElementById('EstiloAC').style.background = '#0b7cc8';
             document.getElementById('Main2').style.display = 'none';
             document.getElementById('Main3').style.display = 'flex';
             CambiarVista = 2;
 
         }else if(CambiarVista == 2){
             HoverAgendarC = undefined;
-            document.getElementById('EstiloAC').style.background = '#003876';
+            document.getElementById('EstiloAC').style.background = '#0b7cc8';
             document.getElementById('Main3').style.display = 'flex';
             CambiarVista = 2;
 
