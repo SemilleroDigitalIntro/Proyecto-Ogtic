@@ -11,7 +11,7 @@ let BoleanoD;
     const conexion = await fetch('http://localhost:4000/api/Users')
     const Data = await conexion.json();
 
-    for(let x = 0; x < 2; x++){
+    for(let x = 0; x < 5; x++){
       validacion(`${Data.data[x].Cedula}`);
     };
 

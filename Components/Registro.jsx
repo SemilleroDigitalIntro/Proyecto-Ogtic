@@ -22,27 +22,84 @@ export default function Registro() {
 
     };
 
-    const Reset = () =>{
-        let Gregistro = document.getElementById('Gregistro');
-        let Formulario = document.getElementById('Formulario');
-        let Input = document.getElementById('Cedula');
-        let NumeroC_label = document.getElementById('NumeroC_label');
+    // const Reset = () =>{
+    //     let Gregistro = document.getElementById('Gregistro');
+    //     let Formulario = document.getElementById('Formulario');
+    //     let Input = document.getElementById('Cedula');
+    //     let NumeroC_label = document.getElementById('NumeroC_label');
 
 
 
-    };
+    // };
 
     const ValidandoCedulaInDB = async (e) => {
         e.preventDefault();
+        let preconfirmacion;
         const connection = await fetch('http://localhost:4100/api/Cedulas');
         const  Data = await connection.json();
         for(var x = 0; x < 5; x++){
             if(Data.data[x].Cedula == document.getElementById('Cedula').value){
                 CheckCedulaInBD(Data.data[x].Cedula , Data.data[x].Nombre,Data.data[x].Apellido )
+                preconfirmacion = true;
             }else{
                 continue;
             }
+            
         };
+        if(preconfirmacion == undefined){
+            let dialog = document.createElement('dialog');
+            dialog.open = 'true';
+            dialog.style.height = '4cm';
+            dialog.style.width = '8cm';
+            dialog.style.border = '1px solid gray';
+            dialog.style.padding = '5px';
+            dialog.style.borderRadius = '20px';
+            dialog.style.display = 'flex';
+            dialog.style.flexDirection = 'column';
+            dialog.style.alignItems = 'center';
+            dialog.style.justifyContent = 'center';
+            dialog.style.boxShadow = '1px 1px 5px 5px rgba(128, 128, 128, 0.079)'
+
+
+            let dialogh1 = document.createElement('h1');
+            dialogh1.style.textAlign = 'center';
+            dialogh1.style.fontSize = '16px';
+            let dialogh1Text = document.createTextNode = 'La cédula ingresada no es válida. Por favor, verifique los datos e intente nuevamente.';
+            dialogh1.append(dialogh1Text);
+
+
+            let dialogBtn = document.createElement('button');
+            dialogBtn.style.background = 'red';
+            dialogBtn.style.color = 'white';
+            dialogBtn.style.fontWeight = '700';
+            dialogBtn.style.fontSize = '16px';
+            dialogBtn.style.cursor = 'pointer';
+            dialogBtn.addEventListener('pointerover',()=>{
+                dialogBtn.style.opacity = '0.7';
+            })
+            dialogBtn.addEventListener('pointerleave', ()=>{
+                dialogBtn.style.opacity = '1';
+            })
+            dialogBtn.style.borderRadius = '20px';
+            dialogBtn.style.border = 'none'
+            dialogBtn.style.height = '1cm';
+            dialogBtn.style.width = '2cm';
+
+            let dialogBtnText = document.createTextNode = 'Ok';
+            dialogBtn.append(dialogBtnText);
+            dialogBtn.addEventListener('click',()=>{
+                dialog.remove();
+            })
+
+            dialog.append(dialogh1,dialogBtn);
+
+            document.getElementById('Gregistro_div1').append(dialog);
+
+
+            Confirmacion = false;
+        }else{
+
+        }
 
     };
     let Confirmacion;
@@ -61,7 +118,54 @@ export default function Registro() {
         };
 
         if(Confirmacion == true){
-            alert('Usted Ya se registro')
+            let dialog = document.createElement('dialog');
+            dialog.open = 'true';
+            dialog.style.height = '4cm';
+            dialog.style.width = '8cm';
+            dialog.style.border = '1px solid gray';
+            dialog.style.padding = '5px';
+            dialog.style.borderRadius = '20px';
+            dialog.style.display = 'flex';
+            dialog.style.flexDirection = 'column';
+            dialog.style.alignItems = 'center';
+            dialog.style.boxShadow = '1px 1px 5px 5px rgba(128, 128, 128, 0.079)'
+
+
+            let dialogh1 = document.createElement('h1');
+            dialogh1.style.textAlign = 'center';
+            dialogh1.style.fontSize = '20px';
+            let dialogh1Text = document.createTextNode = 'Este usuario ya esta Registrado ⚠️';
+            dialogh1.append(dialogh1Text);
+
+
+            let dialogBtn = document.createElement('button');
+            dialogBtn.style.background = 'red';
+            dialogBtn.style.color = 'white';
+            dialogBtn.style.fontWeight = '700';
+            dialogBtn.style.fontSize = '16px';
+            dialogBtn.style.cursor = 'pointer';
+            dialogBtn.addEventListener('pointerover',()=>{
+                dialogBtn.style.opacity = '0.7';
+            })
+            dialogBtn.addEventListener('pointerleave', ()=>{
+                dialogBtn.style.opacity = '1';
+            })
+            dialogBtn.style.borderRadius = '20px';
+            dialogBtn.style.border = 'none'
+            dialogBtn.style.height = '1cm';
+            dialogBtn.style.width = '2cm';
+
+            let dialogBtnText = document.createTextNode = 'Ok';
+            dialogBtn.append(dialogBtnText);
+            dialogBtn.addEventListener('click',()=>{
+                dialog.remove();
+            })
+
+            dialog.append(dialogh1,dialogBtn);
+
+            document.getElementById('Gregistro_div1').append(dialog);
+
+
             Confirmacion = false;
         }else{
             VerificandoCedula(Cedula,Nombre,Apellido);
@@ -595,7 +699,7 @@ export default function Registro() {
 
 
   return (
-    <section className='Gregistro'id='Gregistro' onClick={Reset}>
+    <section className='Gregistro'id='Gregistro'>
         <div className='Gregistro_div1' id='Gregistro_div1'>
             <div className='Gregistro_div1_d1'>
                 <img src="https://registro.cuentaunica.gob.do/_next/static/media/smallLogo.bf9e6436.svg" alt="" />
