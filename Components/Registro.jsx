@@ -32,13 +32,26 @@ export default function Registro() {
 
     };
 
-    const VerificandoCedula = (e) => {
+    const ValidandoCedulaInDB = async (e) => {
         e.preventDefault();
+        const connection = await fetch('http://localhost:4000/api/Users');
+        const  Data = await connection.json();
+        for(var x = 0; x < 2; x++){
+            if(Data.data[x].Cedula == document.getElementById('Cedula').value){
+                VerificandoCedula(Data.data[x].Cedula,Data.data[x].NombreCompleto)
+            }else{
+                continue;
+            }
+        };
+
+    };
+
+    const VerificandoCedula = (Usuario,Nombre) => {
         let LinkTerminos;
         let formularioDNI = document.getElementById('Formulario');
         let Gregistro = document.getElementById('Gregistro');
 
-        if(DataCedula[0].Cedula == document.getElementById('Cedula').value){
+        if(Usuario == document.getElementById('Cedula').value){
 
             Gregistro.style.paddingTop = '150px';
             Gregistro.style.paddingBottom = '150px';
@@ -64,7 +77,7 @@ export default function Registro() {
             Img.id = 'ImgVerificacion';
 
             let H2Name = document.createElement('h2');
-            let TextName = document.createTextNode(`¡Hola,${DataCedula[0].Nombre}!`);
+            let TextName = document.createTextNode(`¡Hola,${Nombre}!`);
             H2Name.style.fontWeight = '600';
             H2Name.style.color = '#1B3F7E';
             H2Name.id = 'H2Name';
@@ -151,6 +164,8 @@ export default function Registro() {
 
         }else{
             alert('Error');
+
+
         };
 
     };
@@ -600,7 +615,7 @@ export default function Registro() {
                 <span id='DecripcionValidacion'>Este es el primer paso para poder verificar tu identidad y crear tu cuenta ciudadana.</span>
             </div>
 
-            <form onSubmit={VerificandoCedula} action="" className='Formulario' id='Formulario'>
+            <form onSubmit={ValidandoCedulaInDB} action="" className='Formulario' id='Formulario'>
                 <div className='Formulario_div1'>
                     <label onClick={UnlockInput} htmlFor="Cedula" id='NumeroC_label'>Numero de cedula <span>*</span></label>
                     <input onClick={UnlockInput} type="text" id='Cedula' required/>
