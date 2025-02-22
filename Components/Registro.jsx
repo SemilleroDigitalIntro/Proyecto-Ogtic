@@ -647,7 +647,6 @@ export default function Registro() {
             const Gmail = div1_input.value;
             const Passworb = div3_input.value;
             if(SaveDataEmail == true && SaveDataPassword == true){
-                alert(`${Nombre} ${Apellido} `)
                 fetch('http://localhost:4000/api/Users',{
                     method: 'POST',
                     headers: {'content-Type':'application/json'},
@@ -692,6 +691,34 @@ export default function Registro() {
         // FormularioRegistro.append(div4)
 
 
+    };
+
+    const AgregandoNuevoUsuario = async () => {
+        setTimeout((()=>{
+            N = null;
+            window.location.href = '/Inicio';
+        },5000));
+
+        let Puntos;
+        let FormularioRegistro = document.getElementById('FormularioRegistro');
+        FormularioRegistro.remove();
+
+        let CreandoUsuario = document.createElement('h2');
+        
+
+        const N = setInterval(()=>{
+            if(Puntos == undefined){
+                Puntos = '.';
+            }else if( Puntos =='.'){
+                Puntos = '..';
+            }else if(Puntos == '..'){
+                Puntos = '...';
+            }else if(Puntos = '...'){
+                Puntos = '.';
+            };
+        },1000);
+
+        CreandoUsuario.textContent = `Creando cuenta${Puntos}`;
     };
 
 

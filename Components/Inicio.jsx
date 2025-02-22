@@ -7,6 +7,7 @@ import SeleccionInstitucion from './ComponentesParaF/SeleccionInstitucion';
 import SeleccionServicio from './ComponentesParaF/SeleccionServicio';
 import Calendario from './ComponentesParaF/Calendario';
 import Horario from './ComponentesParaF/horas';
+// import { application, json } from 'express';
 
 export default function Inicio() {
     let CambiarVista;
@@ -29,6 +30,85 @@ export default function Inicio() {
             <EstandarN Institucion = {E.Institucion} Asunto = {E.Asunto} parte_contenidoN = {E.parte_contenidoN}/>
         )
     });
+    
+
+    // const ValidacionInicioSesion = async () => {
+    //     fetch('http://localhost:4000/api/Users',{
+    //         method: 'PUT',
+    //         headers: {'content-Type' : 'application/json'},
+    //         body: JSON.stringify({})
+    //     })
+        
+    // };
+    let Noexiste;
+    const ValidacionInicioSesion = async () =>{
+        const connection = await fetch('http://localhost:4000/api/Users');
+        const Data = await connection.json();
+        let Inicio = document.querySelector('.Inicio');
+        let root = document.getElementById('root');
+        for(let x=0;x < 4; x++){
+            if(Data.data[x].InicioSesion == 1){
+                InicioSesion(Data.data[x].NombreCompleto , Data.data[x].Cedula, Data.data[x].Gmail)
+                Noexiste = true;
+            }else{
+                continue;
+            }
+        }
+        if(Noexiste == undefined){
+            Inicio.remove();
+
+            let dialog = document.createElement('dialog');
+            dialog.open = 'true';
+            dialog.style.height = '100vh';
+            dialog.style.border = 'none';
+            let dialogh1 = document.createElement('h1');
+            dialogh1.style.color = '#003876';
+            let dialogText = document.createTextNode = 'No se ha registrado un inicio de sesion valido, por favor regresar al login para iniciar sesion⚠️.';
+
+            let dialogBtn = document.createElement('button');
+            dialogBtn.style.height = '1cm';
+            dialogBtn.style.width = '3cm';
+            dialogBtn.style.border = '1px solid gray';
+            dialogBtn.style.borderRadius = '10px';
+            dialogBtn.style.fontSize = '16px';
+            dialogBtn.style.fontWeight = '600';
+            dialogBtn.style.background = '#003876';
+            dialogBtn.style.color = 'white';
+            dialogBtn.style.cursor = 'pointer';
+
+            dialogBtn.addEventListener('pointerover',()=>{
+                dialogBtn.style.opacity = '0.7'
+            });
+            dialogBtn.addEventListener('pointerleave', ()=>{
+                dialogBtn.style.opacity = '1';
+            });
+            dialogBtn.addEventListener('click',()=>{
+                window.location.href = '/';
+            });
+
+            let dialogBtnText = document.createTextNode = 'Ir a login';
+            dialogBtn.append(dialogBtnText);
+            dialogh1.append(dialogText);
+            dialog.append(dialogh1,dialogBtn);
+            root.append(dialog);
+
+        }else{
+
+        }
+    };
+    ValidacionInicioSesion();
+
+    const InicioSesion = (NombreCompleto,Cedula,CorreoElectronico)=> {
+
+        let Name = document.getElementById('Name');
+        Name.value = NombreCompleto;
+
+        let ID = document.getElementById('ID');
+        ID.value = Cedula;
+
+        let Email = document.getElementById('Email');
+        Email.value = CorreoElectronico;
+    };
 
     const Perfil = () => {
         if(CambiarVista == undefined){
@@ -131,12 +211,39 @@ export default function Inicio() {
     };
 
 
-    const Cerrarsesion = () => {
+    const CerrarsesionModal = () => {
         document.getElementById('ModalCerrarSesion').style.display = 'flex';
     };
 
-    const CerrarsesionConfirmacion = () => {
-        window.location.href = '/';
+    const CerrarsesionConfirmacion = async () => {
+        const connection = await fetch('http://localhost:4000/api/Users');
+        const Data = await connection.json();
+
+        for(let x = 0; x < 5; x++){
+            if(Data.data[x].InicioSesion == 1){
+                Cerrarsesion(Data.data[x].ID,Data.data[x].InicioSesion)
+            }else{
+                continue;
+            }
+        }
+
+        
+    };
+
+    const Cerrarsesion = (ID,BINARIO_INICIO_SESION) =>{
+        fetch('http://localhost:4000/api/Users/:ID',{
+            method: 'PUT',
+            headers: {'content-Type':'application/json'},
+            body: JSON.stringify({InicioSesion: 2, ID: ID })
+          }).then((respuesta)=> respuesta.json())
+          .then(data => {
+            console.log('Usuario agregado',data)
+            window.location.href = '/';
+          }).catch(
+            (err)=>{
+              console.log('tenemos un error', err)
+            }
+        );
     };
 
     const NocerrarSesion = () => {
@@ -208,7 +315,7 @@ export default function Inicio() {
                 <span onClick={Perfil} onPointerOver={Over1} onPointerLeave={Leave1} id='EstiloP'><i class='bx bxs-user' ></i>Perfil</span>
                 <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Citas Agendadas</span>
                 <span onClick={AgendarCitas} onPointerOver={Over3} onPointerLeave={Leave3} id='EstiloAC'><i class='bx bxs-calendar-alt'></i>Agendar Citas</span>
-                <span onClick={Cerrarsesion} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
+                <span onClick={CerrarsesionModal} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
             </div>
 
         </aside>
