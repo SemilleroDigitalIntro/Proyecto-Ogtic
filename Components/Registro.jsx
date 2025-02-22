@@ -34,24 +34,47 @@ export default function Registro() {
 
     const ValidandoCedulaInDB = async (e) => {
         e.preventDefault();
-        const connection = await fetch('http://localhost:4000/api/Users');
+        const connection = await fetch('http://localhost:4100/api/Cedulas');
         const  Data = await connection.json();
-        for(var x = 0; x < 2; x++){
+        for(var x = 0; x < 5; x++){
             if(Data.data[x].Cedula == document.getElementById('Cedula').value){
-                VerificandoCedula(Data.data[x].Cedula,Data.data[x].NombreCompleto)
+                CheckCedulaInBD(Data.data[x].Cedula , Data.data[x].Nombre,Data.data[x].Apellido )
             }else{
                 continue;
             }
         };
 
     };
+    let Confirmacion;
+    const CheckCedulaInBD = async (Cedula,Nombre,Apellido) => {
+        
+        const connection = await fetch('http://localhost:4000/api/Users');
+        const  Data = await connection.json();
+        for(let x = 0; x < 3; x++){
+            if(Data.data[x].Cedula == Cedula){
+                
+                Confirmacion = true;
+            }else{
+                continue;
+            }
+            
+        };
 
-    const VerificandoCedula = (Usuario,Nombre) => {
+        if(Confirmacion == true){
+            alert('Usted Ya se registro')
+            Confirmacion = false;
+        }else{
+            VerificandoCedula(Cedula,Nombre,Apellido);
+        };
+        
+    };
+
+    const VerificandoCedula = (Cedula,Nombre,Apellido) => {
         let LinkTerminos;
         let formularioDNI = document.getElementById('Formulario');
         let Gregistro = document.getElementById('Gregistro');
 
-        if(Usuario == document.getElementById('Cedula').value){
+        if(Cedula == document.getElementById('Cedula').value){
 
             Gregistro.style.paddingTop = '150px';
             Gregistro.style.paddingBottom = '150px';
@@ -112,7 +135,7 @@ export default function Registro() {
             formulario.className = 'TV_formulario';
             formulario.addEventListener('submit',(e)=>{
                 e.preventDefault();
-                LanzarCamara();
+                LanzarCamara(Cedula,Nombre,Apellido);
             });
 
             let div1 = document.createElement('div');
@@ -170,7 +193,7 @@ export default function Registro() {
 
     };
 
-    const LanzarCamara = () => {
+    const LanzarCamara = (Cedula,Nombre,Apellido) => {
         let Gregistro_div1 = document.getElementById('Gregistro_div1');
         if(navigator.mediaDevices.getUserMedia){
             navigator.mediaDevices.getUserMedia(
@@ -208,7 +231,7 @@ export default function Registro() {
                 btnTomarFoto.append(btnTomarFtext);
 
                 btnTomarFoto.addEventListener('click', ()=>{
-                    TomarFoto()
+                    TomarFoto(Cedula,Nombre,Apellido)
                 })
 
                 ContainerBtns.append(btnNoTomarF);
@@ -234,7 +257,7 @@ export default function Registro() {
 
     };
     
-    async function TomarFoto() {
+    async function TomarFoto(Cedula,Nombre,Apellido) {
         const Camara1 = document.getElementById('Camara');
         const ModalCamara = document.querySelector('.ModalCamara')
         ModalCamara.id = 'ModalCamara';
@@ -243,7 +266,7 @@ export default function Registro() {
             N = null;
             let Loanding = document.getElementById('Loanding');
             Loanding.innerHTML = `Verificacion Completada`;
-            FormularioRegistro();
+            FormularioRegistro(Cedula,Nombre,Apellido);
         },10000);
 
         
@@ -290,7 +313,7 @@ export default function Registro() {
 
     };
 
-    const FormularioRegistro = () => {
+    const FormularioRegistro = (Cedula,Nombre,Apellido) => {
         let ContainerBtns =  document.getElementById('ContainerBtns');
         ContainerBtns.style.flexDirection = 'column';
         ContainerBtns.style.alignItems = 'center';
@@ -300,7 +323,7 @@ export default function Registro() {
         let ModalCamara = document.getElementById('ModalCamara');
         let btnContinuar = document.createElement('button');
         btnContinuar.addEventListener('click',()=>{
-            RegistroUsuario()
+            RegistroUsuario(Cedula,Nombre,Apellido)
         })
         btnContinuar.className = 'btnContinuar';
 
@@ -314,7 +337,8 @@ export default function Registro() {
 
     };
     
-    const RegistroUsuario = () => {
+    const RegistroUsuario = (Cedula,Nombre,Apellido) => {
+        alert(Cedula,Nombre,Apellido)
         ModalCamara.style.display = 'none';
         let ImgVerificacion = document.getElementById('ImgVerificacion');
         ImgVerificacion.remove();
@@ -516,23 +540,23 @@ export default function Registro() {
         //funcion de envio de formulario.
         FormularioRegistro.addEventListener('submit',(e)=>{
             e.preventDefault();
-
-
-
-
-
-            // fetch('http://localhost:4000/api/Users',{
-            //     method: 'POST',
-            //     headers: {'content-Type':'application/json'},
-            //     body: JSON.stringify({NombreCompleto: , Gmail: div1_input.value})
-            //   }).then((respuesta)=> respuesta.json())
-            //   .then(data => {
-            //     console.log('Usuario agregado',data)
-            //   }).catch(
-            //     (err)=>{
-            //       console.log('tenemos un error', err)
-            //     }
-            // );
+            const Gmail = div1_input.value;
+            const Passworb = div3_input.value;
+            if(SaveDataEmail == true && SaveDataPassword == true){
+                alert(`${Nombre} ${Apellido} `)
+                fetch('http://localhost:4000/api/Users',{
+                    method: 'POST',
+                    headers: {'content-Type':'application/json'},
+                    body: JSON.stringify({NombreCompleto: Nombre+' '+Apellido , Gmail: Gmail , Password: Passworb,Cedula: Cedula })
+                  }).then((respuesta)=> respuesta.json())
+                  .then(data => {
+                    console.log('Usuario agregado',data)
+                  }).catch(
+                    (err)=>{
+                      console.log('tenemos un error', err)
+                    }
+                );
+            }
         });
 
      
