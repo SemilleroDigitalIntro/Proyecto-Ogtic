@@ -29,9 +29,8 @@ const Routes = createBrowserRouter([
     {
         path: '/PEPE',
         element: <Prueba/>
-    }
+    },
     
-
 ]);
 
 createRoot(document.getElementById('root')).render(

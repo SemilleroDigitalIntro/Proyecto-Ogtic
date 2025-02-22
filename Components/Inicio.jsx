@@ -9,6 +9,7 @@ import Calendario from './ComponentesParaF/Calendario';
 import Horario from './ComponentesParaF/horas';
 // import { application, json } from 'express';
 
+
 export default function Inicio() {
     let CambiarVista;
     let genero = false;
