@@ -1,3 +1,5 @@
+import { Dialog } from "@mui/material";
+
 const DataServicios = [
     //OcidentalMall
     {
@@ -190,7 +192,7 @@ const DataServicios = [
             ServiciosINTRANT:'Duplicado de Licencia de conducir por deterioro.'
             },
             {
-                ServiciosINTRANT: 'Renovación licencia de conducir categoría 02'
+            ServiciosINTRANT: 'Renovación licencia de conducir categoría 02'
             },
         ],
         MIP: [
@@ -239,6 +241,86 @@ const DataServicios = [
         ],
     },
 
-    
+    //Santiago
+    {
+        TSS: [
+            {
+                ServiciosTSS: 'Información de reclamaciones relacionadas con normalización de RNC, nóminas de trabajadores y períodos omisos.'
+            },
+        ],
+        SIE:[
+            {
+                ServiciosSIE: 'Reclamaciones en Tarifas BTS1 y BTS2'
+            },
+        ],
+        SISALRIL :[
+            {
+                ServiciosSISALRIL: 'Atención a Peticiones, Quejas, Reclamos y Sugerencias'
+            },
+            {
+                ServiciosSISALRIL: 'Investigación de Traspasos por Alto Costo y/o Cirugía Pendiente'
+            },
+            {
+                ServiciosSISALRIL: 'Respuesta a las Solicitudes y Casos (Revisión de cuenta clínica)'
+            },
+            {
+                ServiciosSISALRIL: 'Investigación de Afiliación y/o Traspaso irregular'
+            },
+        ],
+        ADESS : [
+            {
+                ServiciosADESS: 'Solicitud Reemplazo de Tarjeta'
+            },
+            {
+                ServiciosADESS: 'Reclamo por Aplicacion de nomina'
+            }
+        ],
+        SUPERATE: [
+            {
+                ServiciosSUPERATE: 'Solicitud de cambio de direccion'
+            },
+        ],
+        MESCYT: [
+            {
+                ServiciosM: 'Legalización de Documentos Académicos Emitidos por las IES Nacionales Activas'
+            }
+        ],
+        INTRANT: [
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por pérdida.'
+            },
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por deterioro.'
+            },
+            {
+            ServiciosINTRANT: 'Renovación licencia de conducir categoría 02'
+            },
+        ],
+        DIDA:[
+            {
+                ServiciosDIDA:'Solicitud de Número de Seguridad Social (NSS)'
+            },
+            {
+                ServiciosDIDA:'Corrección de datos personales en la base de datos del Sistema Dominicano de Seguridad Social (SDSS)'
+            },
+            {
+                ServiciosDIDA:'Solicitud de constancia de afiliación en el Seguro Familiar de Salud y de afiliación en el Seguro de Pensiones.'
+            },
+            {
+                ServiciosDIDA:'Atención de reclamaciones en el SDSS'
+            },
+            {
+                ServiciosDIDA:'Consultas y entrega de respuestas sobre el SDSS'
+            },
+        ],
+        DGM: [
+            {
+                ServiciosDGM: 'Autogate'
+            },
+        ],
+    },
+
+    //
+
 ];
 export default DataServicios;
