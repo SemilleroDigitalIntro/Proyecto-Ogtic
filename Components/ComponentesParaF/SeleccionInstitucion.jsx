@@ -7,15 +7,16 @@ export let InstitucionSeleccionada;
 export default function SeleccionInstitucion() {
 
     const [DeployI, SetdeployI] = useState(true);
-  
+
+    let manageDeploI;
 
     const DeployInstitucion = () => {
         SetdeployI(!DeployI);
-        DeployI ? document.getElementById('Institucion__span').style.display = 'flex' : 
-        document.getElementById('Institucion__span').style.display = 'none' ;
 
-        DeployI ? document.getElementById('Institucion__GOB_Arrow').style.rotate = '90deg' :
-        document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+          DeployI ? document.getElementById('Institucion__span').style.display = 'flex' : 
+          document.getElementById('Institucion__span').style.display = 'none' ;
+          DeployI ? document.getElementById('Institucion__GOB_Arrow').style.rotate = '90deg' :
+          document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
 
         let Institucion__span = document.getElementById('Institucion__span');
         Institucion__span.innerHTML = '';
@@ -30,7 +31,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`;
                   InstitucionSeleccionada = I;
-
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobOcidentalMall[I].Instituciones}`);
                 
@@ -47,6 +50,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSambil[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSambil[I].Instituciones}`);
                 
@@ -64,6 +70,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobExpreso[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
 
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobExpreso[I].Instituciones}`);
@@ -80,6 +89,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobMegacentro[I].Instituciones}`);
                 
@@ -94,6 +106,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSantiago[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSantiago[I].Instituciones}`);
                 
@@ -108,6 +123,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobSanCristobal[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobSanCristobal[I].Instituciones}`);
                 
@@ -121,6 +139,9 @@ export default function SeleccionInstitucion() {
                 Ints.addEventListener('click',()=>{
                   Institucion__GOB.innerText = `${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`;
                   InstitucionSeleccionada = I;
+                  SetdeployI(!DeployI)
+                  document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
+                  document.getElementById('Institucion__span').style.display = 'none';
                 })
                 let Intstext = document.createTextNode(`${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`);
                 
@@ -134,39 +155,6 @@ export default function SeleccionInstitucion() {
         }
 
     };
-
-    // const Institucion_DGP = () => {
-    //   document.getElementById('Institucion__GOB').innerText = 'Dirección General de Pasaportes';
-    //   document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
-    //   document.getElementById('Institucion__span').style.display = 'none' ;
-    //   SetdeployI(!DeployI);
-    //   InstitucionSeleccionada = 1;
-
-    // };
-
-    // const Institucion_Intrant = () => {
-    //   document.getElementById('Institucion__GOB').innerText = 'Intrant';
-    //   document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
-    //   document.getElementById('Institucion__span').style.display = 'none' ;
-    //   SetdeployI(!DeployI);
-    //   InstitucionSeleccionada = 2;
-    // };
-
-    // const Institucion_JCE = () => {
-    //   document.getElementById('Institucion__GOB').innerText = 'Junta central electoral';
-    //   document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
-    //   document.getElementById('Institucion__span').style.display = 'none' ;
-    //   SetdeployI(!DeployI);
-    //   InstitucionSeleccionada = 3;
-    // };
-
-    // const Institucion_DGM = () => {
-    //   document.getElementById('Institucion__GOB').innerText = 'Direccion General de Migracion';
-    //   document.getElementById('Institucion__GOB_Arrow').style.rotate = '0deg';
-    //   document.getElementById('Institucion__span').style.display = 'none' ;
-    //   SetdeployI(!DeployI);
-    //   InstitucionSeleccionada = 4;
-    // };
 
   return (
     <div className='Institucion'>
