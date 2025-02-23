@@ -148,5 +148,97 @@ const DataServicios = [
             }
         ]
     },
+
+
+     //Megacentro
+    {
+        ADESS: [
+            {
+            ServiciosADESS: 'Solicitud Reemplazo de Tarjeta'
+            },
+            {
+            ServiciosADESS: 'Consulta para Ciudadanos',
+            }
+        ],
+        ASDE: [
+            {
+                ServiciosASDE: 'Registro civil.'
+            }
+        ],
+        DIDA: [
+            {
+                ServiciosDIDA:'Consultas y entrega de respuestas sobre el SDSS'
+            },
+            {
+                ServiciosDIDA:'Solicitud de corrección de datos personales en la base de datos del Sistema Dominicano de Seguridad Social (SDSS)'
+            },
+            {
+                ServiciosDIDA:'Solicitud de Número de Seguridad Social (NSS)'
+            },
+            {
+                ServiciosDIDA: 'Solicitud de Constancia de Afiliación en el Seguro Familiar de Salud y Afiliación en el Seguro de Pensiones'
+            },
+            {
+                ServiciosDIDA: 'Atención de Reclamaciones'
+            }
+        ],
+        INTRANT: [
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por pérdida.'
+            },
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por deterioro.'
+            },
+            {
+                ServiciosINTRANT: 'Renovación licencia de conducir categoría 02'
+            },
+        ],
+        MIP: [
+            {
+            ServiciosMIP: 'Licenciamiento por Tenencia y Porte de Armas de Fuego para Persona Fisica'
+            },
+            {
+            ServiciosPGR: 'Certificacion de Firma de Documentos Notariales y Oficiales'
+            },
+        ],
+        SIE: [
+            {
+                ServiciosSIE: 'Reclamaciones en Tarifas BTS1 y BTS2'
+            },
+        ],
+        SISALRIL :[
+            {
+                ServiciosSISALRIL: 'Atención a Peticiones, Quejas, Reclamos y Sugerencias'
+            },
+            {
+                ServiciosSISALRIL: 'Investigación de Traspasos por Alto Costo y/o Cirugía Pendiente'
+            },
+            {
+                ServiciosSISALRIL: 'Respuesta a las Solicitudes y Casos (Revisión de cuenta clínica)'
+            },
+            {
+                ServiciosSISALRIL: 'Respuesta a la solicitud de negación de cobertura '
+            },
+            {
+                ServiciosSISALRIL: 'Investigación de Afiliación y/o Traspaso irregular'
+            }
+        ],
+        SUPERATE: [
+            {
+                ServiciosSUPERATE: 'Solicitud de cambio de direccion'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Exclusion de Miembro'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de cambio de jefe de hogar por discapacidad'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Actualizacion de datos'
+            }
+        ],
+    },
+
+    
 ];
 export default DataServicios;
