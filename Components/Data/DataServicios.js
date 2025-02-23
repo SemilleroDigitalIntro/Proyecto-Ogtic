@@ -395,6 +395,87 @@ const DataServicios = [
         ],
     },
     
-    //
+    //San Cristobal 
+    {
+        INTRANT: [
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por pérdida.'
+            },
+            {
+            ServiciosINTRANT:'Duplicado de Licencia de conducir por deterioro.'
+            },
+            {
+            ServiciosINTRANT: 'Renovación licencia de conducir categoría 02'
+            },
+        ],
+        SIE:[
+            {
+                ServiciosSIE: 'Reclamaciones en Tarifas BTS1 y BTS2'
+            },
+        ],
+        TSS: [
+            {
+                ServiciosTSS: 'Información de reclamaciones relacionadas con normalización de RNC, nóminas de trabajadores y períodos omisos.'
+            },
+            {
+                ServiciosTSS: 'Acuerdo de pago TSS'
+            }
+        ],
+        DIDA: [
+            {
+                ServiciosDIDA:'Solicitud de Historial de Aportes SDSS'
+            },
+            {
+                ServiciosDIDA:'Solicitud de corrección de datos personales en la base de datos del Sistema Dominicano de Seguridad Social (SDSS)'
+            },
+            {
+                ServiciosDIDA:'Solicitud de Número de Seguridad Social (NSS)'
+            },
+            {
+                ServiciosDIDA: 'Solicitud de Constancia de Afiliación en el Seguro Familiar de Salud y Afiliación en el Seguro de Pensiones'
+            },
+            {
+                ServiciosDIDA: 'Atención de Reclamaciones'
+            },
+        ],
+        SUPERATE: [
+            {
+                ServiciosSUPERATE: 'Solicitud de cambio de direccion'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Exclusion de Miembro'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Cambio de jefe de hogar por discapacidad'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Cambio de Jefe por fallecimiento'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Cambio jefe de Hogar por Ausencia Definitiva o Abandono'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Inclusion de Miembros'
+            },
+            {
+                ServiciosSUPERATE: 'Solicitud de Actualizacion de datos'
+            },
+        ],
+        ADESS : [
+            {
+                ServiciosADESS: 'Solicitud Reemplazo de Tarjeta'
+            },
+            {
+                ServiciosADESS: 'Reclamo por Aplicacion de nomina'
+            },
+            {
+                ServiciosADESS: 'Reclamo por Balance o Fondo no disponible'
+            },
+            {
+                ServiciosADESS: 'Reclamo por Consumo no Autorizado'
+            },
+        ],
+
+    }
 ];
 export default DataServicios;
