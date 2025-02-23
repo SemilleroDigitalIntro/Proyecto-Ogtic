@@ -517,7 +517,6 @@ select{
         }
         .Main3__section1_div3_d1{
             display: flex;
-            justify-content: left;
             align-items: center;
             gap: 10px;
             width: 100%;
@@ -527,8 +526,8 @@ select{
                 flex-direction: column;
                 position: relative;
                 align-items: start;
-                padding: 10px;
-                .PuntoGOB__GOB{
+
+                .PuntoGOB__GOB_btn{
                     background-color: white;
                     height: 50px;
                     width: 8cm;
@@ -537,7 +536,6 @@ select{
                     border: 2px solid #d6d6d6;
                     border-radius: 6px;
                     display: flex;
-                    margin-top: 5px;
                     justify-content: space-around;
                     align-items: center;
                     font-weight: 500;
@@ -559,7 +557,7 @@ select{
                     border-radius: 10px;
                     background: white;
                     margin-top: 72px;
-                    width: 10cm;
+                    width: 8cm;
                     height: 6cm;
                     animation: Deploy1 500ms ;
                     overflow-y: scroll;
@@ -593,11 +591,10 @@ select{
                 flex-direction: column;
                 position: relative;
                 align-items: start;
-                .Institucion__GOB{
+                .Institucion__GOB_btn{
                     height: 50px;
                     width: 8cm;
                     font-size: 14px;
-                    margin-top: 10px;
                     color: #545454;
                     border: 2px solid #d6d6d6;
                     border-radius: 6px;
@@ -620,15 +617,16 @@ select{
                     flex-direction: column;
                     justify-content: left;
                     align-items: start;
-                    border: 1px solid black;
+                    border: 1px solid #d6d6d6;
                     border-radius: 10px;
                     background: white;
                     margin-top: 72px;
-                    width: 10cm;
+                    width: 8cm;
                     height: 6cm;
                     animation: Deploy1 500ms ;
                     overflow-y: scroll;
                     scrollbar-width: none;
+                    z-index: 3;
                     span{
                         background: #80808008;
                         width: 96.5%;
@@ -657,20 +655,18 @@ select{
                 flex-direction: column;
                 position: relative;
                 align-items: start;
-                .Servicio__GOB{
+                .Servicio__GOB_btn{
+                    background-color: white;
                     height: 50px;
                     width: 8cm;
                     font-size: 14px;
                     color: #545454;
                     border: 2px solid #d6d6d6;
                     border-radius: 6px;
-                    box-shadow: 1px 1px 5px 5px #ebeaea15;
-                    background: white;
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
                     font-weight: 500;
-                    z-index: 1;
                     cursor: pointer;
                     i{
                         font-size: 30px;
@@ -678,9 +674,7 @@ select{
                         color: #a0a0a0;
                         transition: 300ms;
                     } 
-                    #Servicio__GOB{
-                        color: black;
-                    }
+                    
                 }
                 .Servicio__span{
                     display: none;
@@ -690,12 +684,14 @@ select{
                     align-items: start;
                     border: 1px solid #d6d6d6;
                     border-radius: 10px;
+                    background: white;
                     margin-top: 72px;
-                    width: 10cm;
+                    width: 8cm;
                     height: 6cm;
                     animation: Deploy1 500ms ;
                     overflow-y: scroll;
                     scrollbar-width: none;
+                    z-index: 3;
                     span{
                         background: #80808008;
                         font-weight: 500;
@@ -732,17 +728,7 @@ select{
     display: flex;
     width: 100%;
 }
-.Horario{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    h1{
-        color: #0037768d;
-        font-size: 24px;
-    }
-}
+
 .confirm{
     height: 1.2cm;
     width: 10cm;

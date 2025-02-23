@@ -524,7 +524,7 @@ export default function SeleccionServicio() {
   return (
     <div className='Servicio'>
     <span>Servicio a solicitar</span>
-    <button onClick={DeployServicio} className='Servicio__GOB'>
+    <button onClick={DeployServicio} className='Servicio__GOB_btn'>
         <span id='Servicio__GOB'>Seleciona una Servicio</span>
         <i id='Servicio__GOB_Arrow' class='bx bx-chevron-right' ></i>
     </button>

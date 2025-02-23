@@ -457,13 +457,14 @@ export default function Inicio() {
                         <SeleccionInstitucion/>
                         <SeleccionServicio/>
                     </div>
-                    <div className='Horario'>
+                    
+                </div>
+                <div className='Horario'>
                         <Calendario/>
                         <Horario/>
-                    </div>
-                    <div className='container_btn_confirm'>
+                </div>
+                <div className='container_btn_confirm'>
                         <button className='confirm'>Agendar cita</button>
-                    </div>
                 </div>
 
             </section>

@@ -171,7 +171,7 @@ export default function SeleccionInstitucion() {
   return (
     <div className='Institucion'>
         <span>Institución pública</span>
-        <button onClick={DeployInstitucion} className='Institucion__GOB'><span id='Institucion__GOB'>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
+        <button onClick={DeployInstitucion} className='Institucion__GOB_btn'><span id='Institucion__GOB'>Seleciona una Institucion</span><i id='Institucion__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
         <div className='Institucion__span' id='Institucion__span'>
             
         </div>

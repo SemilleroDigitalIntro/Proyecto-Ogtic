@@ -76,7 +76,7 @@ export default function SeleccionPuntoGOB() {
   return (
     <div className='PuntoGOB'>
         <span>Punto GOB de preferencia</span>
-        <button onClick={DeployPuntosGOB} className='PuntoGOB__GOB'><span id='PuntoGOB__GOB'>Seleciona un punto GOB</span><i id='PuntoGOB__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
+        <button onClick={DeployPuntosGOB} className='PuntoGOB__GOB_btn'><span id='PuntoGOB__GOB'>Seleciona un punto GOB</span><i id='PuntoGOB__GOB_Arrow' class='bx bx-chevron-right' ></i></button>
         <div className='PuntoGOB__span' id='PuntoGOB__span'>
             <span className='exection' onClick={PGOB_Santo_Domingo_Oeste}>Punto GOB Occidental</span>
             <span onClick={PGOB_Sambil} >Punto GOB Sambil</span>

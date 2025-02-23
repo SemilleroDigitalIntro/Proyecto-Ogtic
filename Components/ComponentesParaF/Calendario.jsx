@@ -11,7 +11,7 @@ export default function Calendario(){
     const [value, setValue] = React.useState(dayjs)
     return(
         <div className='Calendario'> 
-            <h1 className="title --fecha">Fecha</h1>
+            <h1 className="title --fecha"><i class='bx bxs-calendar'></i>Fecha</h1>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
             value={value}
