@@ -37,7 +37,8 @@ export default function Registro() {
         let preconfirmacion;
         const connection = await fetch('http://localhost:4100/api/Cedulas');
         const  Data = await connection.json();
-        for(var x = 0; x < 5; x++){
+        const largoArray = Data.data.length;
+        for(var x = 0; x < largoArray; x++){
             if(Data.data[x].Cedula == document.getElementById('Cedula').value){
                 CheckCedulaInBD(Data.data[x].Cedula , Data.data[x].Nombre,Data.data[x].Apellido )
                 preconfirmacion = true;
@@ -97,8 +98,6 @@ export default function Registro() {
 
 
             Confirmacion = false;
-        }else{
-
         }
 
     };
@@ -107,7 +106,8 @@ export default function Registro() {
         
         const connection = await fetch('http://localhost:4000/api/Users');
         const  Data = await connection.json();
-        for(let x = 0; x < 3; x++){
+        const largoArray = Data.data.length;
+        for(let x = 0; x < largoArray; x++){
             if(Data.data[x].Cedula == Cedula){
                 
                 Confirmacion = true;
@@ -166,7 +166,7 @@ export default function Registro() {
             document.getElementById('Gregistro_div1').append(dialog);
 
 
-            Confirmacion = false;
+            Confirmacion = undefined;
         }else{
             VerificandoCedula(Cedula,Nombre,Apellido);
         };
@@ -174,128 +174,136 @@ export default function Registro() {
     };
 
     const VerificandoCedula = (Cedula,Nombre,Apellido) => {
+        // let LinkTerminos;
+        // let formularioDNI = document.getElementById('Formulario');
+        // let Gregistro = document.getElementById('Gregistro');
+        
+        if(Cedula == document.getElementById('Cedula').value){
+        //    alert('valor ingresado '+ document.getElementById('Cedula').value + ' y el valor del DB ' + Cedula )
+         funcionCedula(Cedula, Nombre, Apellido)
+
+        }else{
+            alert('error')
+        }
+
+    };
+
+    const funcionCedula = (Cedula,Nombre,Apellido) => {
         let LinkTerminos;
         let formularioDNI = document.getElementById('Formulario');
         let Gregistro = document.getElementById('Gregistro');
 
-        if(Cedula == document.getElementById('Cedula').value){
+        Gregistro.style.paddingTop = '150px';
+        Gregistro.style.paddingBottom = '150px';
 
-            Gregistro.style.paddingTop = '150px';
-            Gregistro.style.paddingBottom = '150px';
+        let Identificación = document.getElementById('Identificación');
+        Identificación.innerHTML = `<i class='bx bx-check'></i>`;
+        Identificación.style.background = '#003876';
 
-            let Identificación = document.getElementById('Identificación');
-            Identificación.innerHTML = `<i class='bx bx-check'></i>`;
-            Identificación.style.background = '#003876';
-
-            let Verificacionclass = document.getElementById('Verificacion');
-            Verificacionclass.style.opacity = '1';
-            let VerificacionChild = document.getElementById('VerificacionChild');
-            VerificacionChild.style.background = '#6DB0E2';
+        let Verificacionclass = document.getElementById('Verificacion');
+        Verificacionclass.style.opacity = '1';
+        let VerificacionChild = document.getElementById('VerificacionChild');
+        VerificacionChild.style.background = '#6DB0E2';
 
 
-            formularioDNI.style.display = 'none';
-            let DecripcionValidacion = document.getElementById('DecripcionValidacion');
-            let NuevoText = document.createTextNode('A continuación validaremos tu identidad mediante una verificación facial y prueba de vida. Asegúrate de cumplir con las siguientes condiciones:');
-            DecripcionValidacion.innerHTML = ``;
-            DecripcionValidacion.append(NuevoText)
+        formularioDNI.style.display = 'none';
+        let DecripcionValidacion = document.getElementById('DecripcionValidacion');
+        // let NuevoText = document.createTextNode('');
+        // DecripcionValidacion.innerHTML = ``;
+        DecripcionValidacion.innerText = 'A continuación validaremos tu identidad mediante una verificación facial y prueba de vida. Asegúrate de cumplir con las siguientes condiciones:'
 
-            let Img = document.createElement('img');
-            Img.src = 'https://registro.cuentaunica.gob.do/_next/static/media/verification.ef12b2b5.svg';
-            Img.id = 'ImgVerificacion';
+        let Img = document.createElement('img');
+        Img.src = 'https://registro.cuentaunica.gob.do/_next/static/media/verification.ef12b2b5.svg';
+        Img.id = 'ImgVerificacion';
 
-            let H2Name = document.createElement('h2');
-            let TextName = document.createTextNode(`¡Hola,${Nombre}!`);
-            H2Name.style.fontWeight = '600';
-            H2Name.style.color = '#1B3F7E';
-            H2Name.id = 'H2Name';
-            H2Name.append(TextName);
-            let Gregistro_div1_d3 = document.getElementById('Gregistro_div1_d3');
-            Gregistro_div1_d3.insertBefore(H2Name,DecripcionValidacion);
-            Gregistro_div1_d3.insertBefore(Img,H2Name);
+        let H2Name = document.createElement('h2');
+        // let TextName = document.createTextNode();
+        H2Name.style.fontWeight = '600';
+        H2Name.style.color = '#1B3F7E';
+        H2Name.id = 'H2Name';
+        H2Name.innerText = `¡Hola,${Nombre}!`;
+        let Gregistro_div1_d3 = document.getElementById('Gregistro_div1_d3');
+        Gregistro_div1_d3.insertBefore(H2Name,DecripcionValidacion);
+        Gregistro_div1_d3.insertBefore(Img,H2Name);
 
+        
+        
+
+
+
+        document.getElementById('Gregistro_div1').innerHTML +=`<div class='TerminosVerificacion' id = 'TerminosVerificacion'>
+            <div class='TV_div1'>
+                <i class='bx bx-camera' ></i>
+                <p>Utilizar un dispositivo que posea <span>cámara frontal</span> integrada.</p>
+            </div>
+            <div class='TV_div2'>
+                <i class='bx bx-face'></i>
+                <p>Permitir que tomemos capturas de tu <span>rostro</span>.</p>
+            </div>
+            <div class='TV_div3'>
+                <i class='bx bx-error-alt'></i>
+                <p>Esta verificación muestra <span>luces de colores.</span> Tenga cuidado si es fotosensible.</p>
+            </div>
+            <div class='TV_div4' id = 'TV_div4'>
+            </div>
+        </div>`;
+
+        let formulario = document.createElement('form');
+        formulario.className = 'TV_formulario';
+        formulario.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            LanzarCamara(Cedula,Nombre,Apellido);
+        });
+
+        let div1 = document.createElement('div');
+        let div1_input = document.createElement('input');
+        div1_input.required = 'true';
+        div1_input.type = 'checkbox';
+        div1_input.name = '';
+        div1_input.id = '';
+
+        let div1_a = document.createElement('a');
+        // let div1_aText = document.createTextNode('');
+        div1_a.href = `${LinkTerminos}`;
+        div1_a.innerText = 'Aceptar términos y políticas de privacidad';
+        div1.append(div1_input);
+        div1.append(div1_a);
+
+        let div2 = document.createElement('div');
+        let div2_btn = document.createElement('button');
+        div2_btn.type = 'submit';
+        div2_btn.addEventListener('click',()=>{
             
-            
+        })
+        // let div2_btnText = document.createTextNode('Iniciar Proceso');
+        div2_btn.innerText = 'Iniciar Proceso';
+        div2.append(div2_btn);
+
+        formulario.append(div1);
+        formulario.append(div2);
+
+        
 
 
 
-            document.getElementById('Gregistro_div1').innerHTML +=`<div class='TerminosVerificacion' id = 'TerminosVerificacion'>
-                <div class='TV_div1'>
-                    <i class='bx bx-camera' ></i>
-                    <p>Utilizar un dispositivo que posea <span>cámara frontal</span> integrada.</p>
-                </div>
-                <div class='TV_div2'>
-                    <i class='bx bx-face'></i>
-                    <p>Permitir que tomemos capturas de tu <span>rostro</span>.</p>
-                </div>
-                <div class='TV_div3'>
-                    <i class='bx bx-error-alt'></i>
-                    <p>Esta verificación muestra <span>luces de colores.</span> Tenga cuidado si es fotosensible.</p>
-                </div>
-                <div class='TV_div4' id = 'TV_div4'>
-                </div>
-            </div>`;
+        //funcion del boton para volver
+        let TV_div4 = document.getElementById('TV_div4');
+        let BtnVolver = document.createElement('button');
+        BtnVolver.innerHTML = `<i class='bx bx-left-arrow-alt' ></i>Volver al paso anterior`;
+        BtnVolver.addEventListener('click',()=>{
+            window.location.href = '/login';
+        });
 
-            let formulario = document.createElement('form');
-            formulario.className = 'TV_formulario';
-            formulario.addEventListener('submit',(e)=>{
-                e.preventDefault();
-                LanzarCamara(Cedula,Nombre,Apellido);
-            });
+        TV_div4.append(BtnVolver);
 
-            let div1 = document.createElement('div');
-            let div1_input = document.createElement('input');
-            div1_input.required = 'true';
-            div1_input.type = 'checkbox';
-            div1_input.name = '';
-            div1_input.id = '';
-
-            let div1_a = document.createElement('a');
-            let div1_aText = document.createTextNode('Aceptar términos y políticas de privacidad');
-            div1_a.href = `${LinkTerminos}`;
-            div1_a.append(div1_aText);
-            div1.append(div1_input);
-            div1.append(div1_a);
-
-            let div2 = document.createElement('div');
-            let div2_btn = document.createElement('button');
-            div2_btn.type = 'submit';
-            div2_btn.addEventListener('click',()=>{
-                
-            })
-            let div2_btnText = document.createTextNode('Iniciar Proceso');
-            div2_btn.append(div2_btnText);
-            div2.append(div2_btn);
-
-            formulario.append(div1);
-            formulario.append(div2);
-
-            
-
-
-
-            //funcion del boton para volver
-            let TV_div4 = document.getElementById('TV_div4');
-            let BtnVolver = document.createElement('button');
-            BtnVolver.innerHTML = `<i class='bx bx-left-arrow-alt' ></i>Volver al paso anterior`;
-            BtnVolver.addEventListener('click',()=>{
-                window.location.href = '/';
-            });
-
-            TV_div4.append(BtnVolver);
-
-            let TerminosVerificacion = document.getElementById('TerminosVerificacion');
-            TerminosVerificacion.insertBefore(formulario,TV_div4);
+        let TerminosVerificacion = document.getElementById('TerminosVerificacion');
+        TerminosVerificacion.insertBefore(formulario,TV_div4);
 
 
 
 
-        }else{
-            alert('Error');
-
-
-        };
-
-    };
+   
+    }
 
     const LanzarCamara = (Cedula,Nombre,Apellido) => {
         let Gregistro_div1 = document.getElementById('Gregistro_div1');
@@ -321,8 +329,8 @@ export default function Registro() {
 
                 let btnNoTomarF = document.createElement('button');
                 btnNoTomarF.className = 'btnNoTomarF';
-                let btnNoTomarFtext = document.createTextNode('No escanear');
-                btnNoTomarF.append(btnNoTomarFtext);
+                // let btnNoTomarFtext = document.createTextNode('No escanear');
+                btnNoTomarF.innerText = 'No escanear';
                 btnNoTomarF.addEventListener('click',()=> {
                     Camara.srcObject.getTracks()[0].stop();
                     ContainerCamara.remove();
@@ -331,8 +339,8 @@ export default function Registro() {
 
 
                 let btnTomarFoto = document.createElement('button');
-                let btnTomarFtext = document.createTextNode('Escanear Rostro');
-                btnTomarFoto.append(btnTomarFtext);
+                // let btnTomarFtext = document.createTextNode('Escanear Rostro');
+                btnTomarFoto.innerText = 'Escanear Rostro';
 
                 btnTomarFoto.addEventListener('click', ()=>{
                     TomarFoto(Cedula,Nombre,Apellido)
@@ -431,8 +439,8 @@ export default function Registro() {
         })
         btnContinuar.className = 'btnContinuar';
 
-        let btnContinuarText = document.createTextNode('Continuar');
-        btnContinuar.append(btnContinuarText);
+        // let btnContinuarText = document.createTextNode('Continuar');
+        btnContinuar.innerText = 'Continuar';
         ContainerBtns.append(btnContinuar);
 
 
@@ -477,8 +485,8 @@ export default function Registro() {
         let div1 = document.createElement('div');
         div1.id = 'FormularioRegistro_div1';
         let div1_label = document.createElement('label');
-        let div1_labelText = document.createTextNode('Correo Electrónico');
-        div1_label.append(div1_labelText);
+        // let div1_labelText = document.createTextNode('Correo Electrónico');
+        div1_label.innerText = 'Correo Electrónico';
 
         div1_label.addEventListener('click',()=>{
             div1_label.style.fontSize = '16px';
@@ -516,8 +524,8 @@ export default function Registro() {
         let div2 = document.createElement('div');
         div2.id = 'FormularioRegistro_div2';
         let div2_label = document.createElement('label');
-        let div2_labelText = document.createTextNode('Confirma tu Correo Electrónico');
-        div2_label.append(div2_labelText);
+        // let div2_labelText = document.createTextNode('Confirma tu Correo Electrónico');
+        div2_label.innerText = 'Confirma tu Correo Electrónico';
         div2_label.addEventListener('click',()=>{
             div2_label.style.fontSize = '16px';
             div2_label.style.marginBottom = '90px';
@@ -554,8 +562,8 @@ export default function Registro() {
         let div3 = document.createElement('div');
         div3.id = 'FormularioRegistro_div3';
         let div3_label = document.createElement('label');
-        let div3_labelText = document.createTextNode('Contraseña');
-        div3_label.append(div3_labelText);
+        // let div3_labelText = document.createTextNode('Contraseña');
+        div3_label.innerText = 'Contraseña';
         div3_label.addEventListener('click',()=>{
             div3_label.style.fontSize = '16px';
             div3_label.style.marginBottom = '60px';
@@ -654,6 +662,7 @@ export default function Registro() {
                   }).then((respuesta)=> respuesta.json())
                   .then(data => {
                     console.log('Usuario agregado',data)
+                    AgregandoNuevoUsuario();
                   }).catch(
                     (err)=>{
                       console.log('tenemos un error', err)
@@ -668,8 +677,8 @@ export default function Registro() {
         warnnigEmail.style.fontWeight = '600';
         warnnigEmail.style.fontSize = '14px'
         warnnigEmail.style.display = 'none';
-        let warnnigEmailText = document.createTextNode ='Las direcciones de correo ingresadas no coinciden.';
-        warnnigEmail.append(warnnigEmailText);
+        // let warnnigEmailText = document.createTextNode ='Las direcciones de correo ingresadas no coinciden.';
+        warnnigEmail.innerText ='Las direcciones de correo ingresadas no coinciden.';
         div2.append(warnnigEmail);
 
 
@@ -678,8 +687,8 @@ export default function Registro() {
         warnnigPassword.style.fontWeight = '600';
         warnnigPassword.style.fontSize = '14px';
         warnnigPassword.style.display = 'none';
-        let warnnigPasswordText = document.createTextNode ='Las contraseña ingresadas no coinciden.';
-        warnnigPassword.append(warnnigPasswordText);
+        // let warnnigPasswordText = document.createTextNode ='Las contraseña ingresadas no coinciden.';
+        warnnigPassword.innerText = 'Las contraseña ingresadas no coinciden.';
         div4.append(warnnigPassword);
     
         FormularioRegistro.append(div1,div2,div3,div4,BtnCreacuenta);
@@ -693,32 +702,86 @@ export default function Registro() {
 
     };
 
-    const AgregandoNuevoUsuario = async () => {
-        setTimeout((()=>{
-            N = null;
-            window.location.href = '/Inicio';
-        },5000));
+    const AgregandoNuevoUsuario = () => {
+        document.getElementById('FormularioRegistro').style.display = 'none';
+        document.getElementById('DecripcionValidacion').style.display = 'none';
+       let N;
+       let GFormularioRegistro = document.getElementById('GFormularioRegistro');
+       GFormularioRegistro.innerHTML +=`<div id = 'Cuentacreada'>
+        <h1 id='CreandoBCarga'>Creando su cuenta ciudadana<span id='BarraCarga'></span></h1>
+        </div>`;
 
-        let Puntos;
-        let FormularioRegistro = document.getElementById('FormularioRegistro');
-        FormularioRegistro.remove();
 
-        let CreandoUsuario = document.createElement('h2');
-        
+    //    let h1 = document.createElement('h1');
+    //    h1.innerText = 'Tu cuenta ha sido creada correctamente';
 
-        const N = setInterval(()=>{
-            if(Puntos == undefined){
-                Puntos = '.';
-            }else if( Puntos =='.'){
-                Puntos = '..';
-            }else if(Puntos == '..'){
-                Puntos = '...';
-            }else if(Puntos = '...'){
-                Puntos = '.';
-            };
-        },1000);
+    
 
-        CreandoUsuario.textContent = `Creando cuenta${Puntos}`;
+
+       let CreandoBCarga = document.getElementById('CreandoBCarga');
+       CreandoBCarga.style.color = '#01346B';
+
+       let BarraCarga = document.getElementById('BarraCarga');
+       let Cuentacreada = document.getElementById('Cuentacreada');
+       Cuentacreada.style.display = 'flex';
+       Cuentacreada.style.justifyContent = 'center';
+       Cuentacreada.style.alignItems = 'center';
+       Cuentacreada.style.width = '100%';
+       Cuentacreada.style.flexDirection = 'column';
+
+       
+        setInterval(()=>{
+        if(N == undefined){
+            BarraCarga.innerText = '.';
+            N =1;
+        }else if(N == 1){
+            BarraCarga.innerText = '..';
+            N =2;
+        }else if(N == 2){
+            BarraCarga.innerText = '...';
+            N =undefined
+        }
+       },1000)
+
+       setTimeout(()=>{
+        document.getElementById('Gregistro_div1_d3').remove();
+        document.getElementById('LastResgitro').style.opacity = '1';
+
+        let Registro = document.getElementById('Registro');
+        Registro.innerHTML = `<i class='bx bx-check'></i>`;
+        Registro.style.background = 'rgb(0, 56, 118)';
+        CreandoBCarga.innerText = 'Su cuenta ha sido creada exitosamente.';
+
+
+        let btn = document.createElement('button');
+        btn.innerText = 'Volver al Login';
+        btn.style.height =  '1cm';
+        btn.style.width = '6cm';
+        btn.style.borderRadius = '20px';
+        btn.style.border = 'none';
+        btn.style.boxShadow = '1px 1px 5px 5px #ebeaea15';
+        btn.style.background = '#003876';
+        btn.style.color = 'white';
+        btn.style.fontSize = '16px';
+        btn.style.fontWeight = '600';
+        btn.style.cursor = 'pointer';
+
+        btn.addEventListener('pointerover',()=>{
+            btn.style.opacity = '0.7';
+        });
+        btn.addEventListener('pointerleave',()=>{
+            btn.style.opacity = '1';
+        });
+        btn.addEventListener('click',()=>{
+            window.location.href = '/login';
+        });
+
+        Cuentacreada.append(btn);
+
+
+       },5000)
+       
+
     };
 
 
@@ -755,7 +818,7 @@ export default function Registro() {
 
                <span className='Arrows'></span>
 
-               <div className='Confirmaciones Registro'>
+               <div className='Confirmaciones Registro' id='LastResgitro'>
                 <span id='Registro'>3</span>
                     <div>
                         <h3>Registro</h3>
@@ -778,7 +841,7 @@ export default function Registro() {
 
                 <div className='Formulario_div2'>
                     <button type="submit">Confirmar<i class='bx bx-right-arrow-alt' ></i></button>
-                    <span>¿Ya tienes una cuenta? <a href="/">Inicia sesión aquí.</a></span>
+                    <span>¿Ya tienes una cuenta? <a href="/login">Inicia sesión aquí.</a></span>
                 </div>
             </form>
             

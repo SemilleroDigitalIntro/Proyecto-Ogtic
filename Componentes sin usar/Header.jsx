@@ -25,7 +25,7 @@ export default function Header() {
   };
   
   const Login = () =>{
-    window.location.href = '/';
+    window.location.href = '/login';
   };
 
   const Registrar = () => {

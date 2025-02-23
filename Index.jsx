@@ -12,7 +12,7 @@ import Prueba from "./prueba";
 const Routes = createBrowserRouter([
     {
         path: '/',
-        element: <Inicia_de_Sesion/>
+        element: <Structura/>
     },  
     {
         path: '/Inicio',
@@ -23,8 +23,8 @@ const Routes = createBrowserRouter([
         element: <Registro/>
     },
     {
-        path: '/Home',
-        element: <Structura/>
+        path: '/login',
+        element: <Inicia_de_Sesion/>
     },
     {
         path: '/PEPE',

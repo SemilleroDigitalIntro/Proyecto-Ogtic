@@ -47,7 +47,8 @@ export default function Inicio() {
         const Data = await connection.json();
         let Inicio = document.querySelector('.Inicio');
         let root = document.getElementById('root');
-        for(let x=0;x < 4; x++){
+        const largoArray = Data.data.length;
+        for(let x=0;x < largoArray; x++){
             if(Data.data[x].InicioSesion == 1){
                 InicioSesion(Data.data[x].NombreCompleto , Data.data[x].Cedula, Data.data[x].Gmail)
                 Noexiste = true;
@@ -84,7 +85,7 @@ export default function Inicio() {
                 dialogBtn.style.opacity = '1';
             });
             dialogBtn.addEventListener('click',()=>{
-                window.location.href = '/';
+                window.location.href = '/login';
             });
 
             let dialogBtnText = document.createTextNode = 'Ir a login';
@@ -219,8 +220,8 @@ export default function Inicio() {
     const CerrarsesionConfirmacion = async () => {
         const connection = await fetch('http://localhost:4000/api/Users');
         const Data = await connection.json();
-
-        for(let x = 0; x < 5; x++){
+        const largoArray = Data.data.length;
+        for(let x = 0; x < largoArray; x++){
             if(Data.data[x].InicioSesion == 1){
                 Cerrarsesion(Data.data[x].ID,Data.data[x].InicioSesion)
             }else{
@@ -239,7 +240,7 @@ export default function Inicio() {
           }).then((respuesta)=> respuesta.json())
           .then(data => {
             console.log('Usuario agregado',data)
-            window.location.href = '/';
+            window.location.href = '/login';
           }).catch(
             (err)=>{
               console.log('tenemos un error', err)

@@ -11,7 +11,8 @@ export default function Inicia_de_Sesion() {
     const Data = await connection.json();
     let ErrorInicioSesion;
     let Glogin = document.querySelector('.Glogin');
-    for(let x = 0; x < 4; x++ ){
+    const largoArray = Data.data.length;
+    for(let x = 0; x < largoArray; x++ ){
       if(Data.data[x].InicioSesion == 1){
         ErrorInicioSesion = true;
       }else{
@@ -76,8 +77,8 @@ export default function Inicia_de_Sesion() {
     event.preventDefault()
     const conexion = await fetch('http://localhost:4000/api/Users')
     const Data = await conexion.json();
-
-    for(let x = 0; x < 4; x++){
+    const largoArray = Data.data.length;
+    for(let x = 0; x < largoArray; x++){
       validacion(Data.data[x].Cedula,Data.data[x].ID);
     };
 
@@ -97,8 +98,8 @@ export default function Inicia_de_Sesion() {
   const ValidacionPassword = async (confirmacion,ID) => {
     const conexion = await fetch('http://localhost:4000/api/Users')
     const Data = await conexion.json();
-
-    for(let x = 0; x < 4; x++){
+    const largoArray = Data.data.length;
+    for(let x = 0; x < largoArray; x++){
       ValidacionP(Data.data[x].Password,ID)
     }
 
