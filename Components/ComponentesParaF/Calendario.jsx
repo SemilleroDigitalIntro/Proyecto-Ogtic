@@ -1,18 +1,25 @@
 import React, {useEffect} from 'react';
 import './Style/Calendario.less';
 
-
+export let DiaSeleccionado;
 export default function Calendario(){
+
+
+    const ChangeHour = () => {
+        DiaSeleccionado = document.getElementById('DatePicker').value
+    };
+
+
     return(
         <div className='Calendario'> 
             <h1 className="title --fecha"><i class='bx bxs-calendar'></i>Fecha</h1>
-            <input type="date" className='DatePicker' />
+            <input onChange={ChangeHour} type="date" className='DatePicker' id='DatePicker' />
         </div>
     )
     
 }
 
-// export default function Calendario() {
+
 // const datepicker = document.querySelector('.datepicker');
 // const cancelBtn = document.querySelector('.cancel');
 // const dateInput = document.querySelector('.--date-input');
