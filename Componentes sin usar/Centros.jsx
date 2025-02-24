@@ -1,6 +1,7 @@
 import React from 'react'
 import './Style/Centros.less';
 import DataPuntosGob from './Data/DataPuntosGob';
+import {InicioConfirmado} from './Header.jsx';
 
 export default function Centros() {
 
@@ -8,6 +9,14 @@ export default function Centros() {
 
 
     const PuntosGobs = (props) => {
+        const Verservicios = () => {
+            if(InicioConfirmado == true){
+                window.location.href = '/Inicio';
+            }else{
+                window.location.href = '/login';
+            }
+        };
+
         return(
             <div className="cards__ubi">
                 <div className="card__img">
@@ -41,7 +50,7 @@ export default function Centros() {
                 </div>
 
                 <div className="btn__ver">
-                    <button>Ver servicios y tramites <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></svg>
+                    <button onClick={Verservicios}>Ver servicios y tramites <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/></svg>
                     </button>
                 </div>
         </div>
