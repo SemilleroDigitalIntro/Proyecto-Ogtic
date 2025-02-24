@@ -3,6 +3,7 @@ import './Style/Calendario.less';
 
 
 export let HoraSeleccionada;
+export let HoraseleccionadaData;
 export default function Horario(){
 
         
@@ -145,6 +146,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '8:00 AM - 9:00 AM';
     };
     const horasDispos2 = () => {
         HoraSeleccionada = 2;
@@ -158,6 +160,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '9:00 AM - 10:00 AM';
     };
     const horasDispos3 = () => {
         HoraSeleccionada = 3;
@@ -171,6 +174,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        HoraseleccionadaData = '10:00 AM - 11:00 AM';
     };
     const horasDispos4 = () => {
         HoraSeleccionada = 4;
@@ -184,6 +188,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '11:00 AM - 12:00 PM';
     };
     const horasDispos5 = () => {
         HoraSeleccionada = 5;
@@ -196,7 +201,8 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '12:00 PM - 1:00 PM'; 
     };
     const horasDispos6 = () => {
         HoraSeleccionada = 6;
@@ -210,6 +216,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        HoraseleccionadaData = '1:00 PM - 2:00 PM';
     };
     const horasDispos7 = () => {
         HoraSeleccionada = 7;
@@ -222,7 +229,8 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '2:00 PM - 3:00 PM'; 
     };
     const horasDispos8 = () => {
         HoraSeleccionada = 8;
@@ -236,6 +244,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '3:00 PM - 4:00 PM';
     };
     const horasDispos9 = () => {
         HoraSeleccionada = 9;
@@ -248,7 +257,8 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '4:00 PM - 5:00 PM'; 
     };
     const horasDispos10 = () => {
         HoraSeleccionada = 10;
@@ -262,6 +272,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
+        HoraseleccionadaData = '5:00 PM - 6:00 PM';
     };
     const horasDispos11 = () => {
         HoraSeleccionada = 11;
@@ -275,6 +286,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '6:00 PM - 7:00 PM';
     };
     const horasDispos12 = () => {
         HoraSeleccionada = 12;
@@ -288,6 +300,7 @@ export default function Horario(){
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
+        HoraseleccionadaData = '7:00 PM - 7:45 PM';
     };
 
 
