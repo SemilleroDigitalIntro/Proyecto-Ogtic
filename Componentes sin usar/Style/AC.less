@@ -1,0 +1,73 @@
+:root{
+    --font_color:#01346B;
+    --icon_color:#0185e8;
+    --letter_font: "Inter", serif;
+}
+
+.containerAC {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    height: 660px;
+    background-size: cover;
+    border-radius: 0px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #01346baa; // Fondo verde semitransparente
+        mix-blend-mode: multiply; // Modo de mezcla
+        z-index: 1;
+    }
+}
+
+
+.textoAC{
+    position: absolute;
+    z-index: 5;
+    font-size: 35px;
+    color: white;
+    position: absolute;
+    width: 50%;
+    z-index: 10; // Aumenta el z-index para que esté por encima del overlay
+    color: white;
+    top: 45%; // Centra verticalmente (ajusta según necesites)
+    left: 72%; // Centra horizontalmente (ajusta según necesites)
+    transform: translate(-50%, -50%); 
+    text-align: center; // 
+}
+.Simple{
+    color: #44b4ff
+}
+.rapido{
+    color: #44b4ff
+}
+.sinfilas{
+    color: #44b4ff
+}
+
+.agendar{
+    margin-top: 40px;
+    padding: 20px;
+    width: 350px;
+    background-color: #03045e;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    &:hover{
+        background-color: #07098f;
+    }
+}
