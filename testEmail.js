@@ -4,7 +4,7 @@ const toUserGmail = 'nashlamissel27@gmail.com'
 const passAppGmail = 'nqti giec bswu hxlu';
 
 export default function SendEmail(){
-
+    
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth:{

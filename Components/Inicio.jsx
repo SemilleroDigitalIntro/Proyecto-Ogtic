@@ -23,6 +23,9 @@ export default function Inicio() {
     let HoverCitasA;
     let HoverNotificaciones;
 
+    let InstitucionG;
+    let servicioG;
+
 
 
     let SectionPerfil = document.getElementById('Main1');
@@ -105,7 +108,7 @@ export default function Inicio() {
     };
     ValidacionInicioSesion();
 
-    const InicioSesion = (NombreCompleto,Cedula,CorreoElectronico)=> {
+    const InicioSesion =  (NombreCompleto,Cedula,CorreoElectronico)=> {
 
         let Name = document.getElementById('Name');
         Name.value = NombreCompleto;
@@ -122,6 +125,8 @@ export default function Inicio() {
         IDF.value = Cedula;
         let EmailF = document.getElementById('EmailF');
         EmailF.value = CorreoElectronico;
+
+       
 
         ValidacionCitas(NombreCompleto,Cedula,CorreoElectronico)
         
@@ -406,8 +411,10 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].MESCYT[0].ServiciosM;
+                                InstitucionG = Institucion;
+                                servicioG = servicio;
                                 SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
-                                alert(Cedula+ ' ' + Institucion2 + ' '+ servicio + ' ' + HoraseleccionadaData +' '+ DiaSeleccionado);
+                                alert(Cedula+ ' ' + Institucion + ' '+ servicio + ' ' + HoraseleccionadaData +' '+ DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1234,12 +1241,23 @@ export default function Inicio() {
           }).then((respuesta)=> respuesta.json())
           .then(data => {
             console.log('Servicio Agregado',data)
+            EnviarCorreo(Cedula,Institucion,servicio,Hora,FechaCita)
           }).catch(
             (err)=>{
               console.log('tenemos un error', err)
             }
         );
+        
     };
+    const EnviarCorreo = (Cedula,Institucion,servicio,Hora,FechaCita) => {
+    //    document.getElementById('InformacionCita').innerText = 
+        console.log(document.getElementById('InformacionCita').value)
+    };
+
+    
+
+ 
+
     
  
 
@@ -1394,12 +1412,21 @@ export default function Inicio() {
                         <Calendario/>
                         <Horario/>
                 </div>
-                <div className='container_btn_confirm'>
-                        <button onClick={AgendarCita} className='confirm'>Agendar cita</button>
-                </div>
-
+                <form className='container_btn_confirm' action="https://formsubmit.co/Urpiriojunior2@gmail.com" method="POST" onSubmit={()=>{document.getElementById('InformacionCita').innerText = `Día: ${DiaSeleccionado}
+Hora: ${HoraseleccionadaData}
+Institución: ${InstitucionG}
+Servicio: ${servicioG}
+Costo: No disponible`}} >
+                    <button onClick={AgendarCita} className='confirm'>Agendar cita</button>
+                    {/* <input  type="text" name='InformacionCita' id='' /> */}
+                    <textarea style={{display: 'none'}} name="InformacionCita" id="InformacionCita">{InstitucionG}</textarea>
+                    <input type="hidden" name="_captcha" value="false"></input>
+                     <input type="hidden" name="_next" value="http://localhost:5173/Inicio"></input>
+                </form>
+                
             </section>
         </main>
+       
     </section>
   );
 };
