@@ -139,10 +139,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
     const horasDispos2 = () => {
         HoraSeleccionada = 2;
@@ -150,10 +152,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
     const horasDispos3 = () => {
         HoraSeleccionada = 3;
@@ -161,10 +165,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos4 = () => {
         HoraSeleccionada = 4;
@@ -172,10 +178,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
     const horasDispos5 = () => {
         HoraSeleccionada = 5;
@@ -183,10 +191,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos6 = () => {
         HoraSeleccionada = 6;
@@ -194,10 +204,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos7 = () => {
         HoraSeleccionada = 7;
@@ -205,10 +217,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos8 = () => {
         HoraSeleccionada = 8;
@@ -216,10 +230,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
     const horasDispos9 = () => {
         HoraSeleccionada = 9;
@@ -227,10 +243,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos10 = () => {
         HoraSeleccionada = 10;
@@ -238,10 +256,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white'; 
     };
     const horasDispos11 = () => {
         HoraSeleccionada = 11;
@@ -249,10 +269,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
     const horasDispos12 = () => {
         HoraSeleccionada = 12;
@@ -260,10 +282,12 @@ export default function Horario(){
             document.getElementById(`horasDispos${x}`).style.background = 'none';
             document.getElementById(`horasDispos${x}`).style.fontSize = '14px';
         document.getElementById(`horasDispos${x}`).style.fontWeight = '400'; 
+        document.getElementById(`horasDispos${x}`).style.color ='black';
         }
-        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#eaf4f4';
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.background = '#01346B';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontSize = '16px';
         document.getElementById(`horasDispos${HoraSeleccionada}`).style.fontWeight = '600'; 
+        document.getElementById(`horasDispos${HoraSeleccionada}`).style.color = 'white';
     };
 
 
