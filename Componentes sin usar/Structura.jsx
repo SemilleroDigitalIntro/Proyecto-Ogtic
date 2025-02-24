@@ -19,6 +19,7 @@ import Component_B from './component_B';
 export default function Structura() {
   return (
     <section>
+      <ContactoH/>
         <Header/>
         <Smain/>
         <Component_B/>
