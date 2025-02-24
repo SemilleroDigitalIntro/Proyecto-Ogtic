@@ -10,6 +10,7 @@ import Centros from './Centros';
 import ServMasCon from './servMasCon';
 import InfoAdicional from './InfoAdicional';
 import CuadroAzul from './CuadroAzul';
+import AgendaYa from './ACsection';
 
 
 import Component_B from './component_B';
@@ -23,9 +24,11 @@ export default function Structura() {
         <Component_B/>
         <CuadroAzul/>
         <ServMasCon/>
+        <AgendaYa/>
         <Centros/>
         <InfoAdicional/>
         <Footer/>
+        
     </section>
   )
 };
