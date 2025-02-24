@@ -1,7 +1,15 @@
 import React from "react";
-import '../Componentes sin usar/Style/AC.less'
+import '../Componentes sin usar/Style/AC.less';
+import {InicioConfirmado} from './Header.jsx';
 
 export default function AgendaYa(){
+    const Agendar = () => {
+        if(InicioConfirmado== true){
+            window.location.href = '/Inicio';
+        }else{
+            window.location.href = '/login';
+        }
+    };
     return(
         <div>
             <div className="containerAC">
@@ -13,7 +21,7 @@ export default function AgendaYa(){
                         <span className="rapido"> rápido </span>  
                         y <span className="sinfilas"> sin filas</span></h1>
                             <div>
-                            <button className="agendar">Agenda tu cita ahora</button>
+                            <button onClick={Agendar} className="agendar">Agenda tu cita ahora</button>
                             </div>
                     </div>
                     
