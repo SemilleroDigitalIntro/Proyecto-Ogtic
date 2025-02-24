@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <section className='Sheader'>
         <div className='Sheader__logo'>
-          <img src="Components/Img/LogoOffSimbolo.png" alt="logo Web" />
+          <img src="Components/Img/LogoOffSimbolo1.png" alt="logo Web" />
         </div>
         <nav className='Sheader__Nav'>
           <a onClick={Home}>Home</a>
