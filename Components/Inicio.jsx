@@ -9,6 +9,8 @@ import Horario from './ComponentesParaF/horas';
 import { PuntoGOBSelecionado } from './ComponentesParaF/SeleccionPuntoGOB';
 import { InstitucionSeleccionada } from './ComponentesParaF/SeleccionInstitucion';
 import { ServicioSeleccionado } from './ComponentesParaF/SeleccionServicio';
+import { HoraseleccionadaData } from './ComponentesParaF/horas';
+import { DiaSeleccionado } from './ComponentesParaF/Calendario';
 import DataPuntoGobs from './Data/DataInst';
 import DataServicios from './Data/DataServicios';
 
@@ -142,7 +144,7 @@ export default function Inicio() {
 
         
     };
-    const GeneralHistoriaCitas = (ArrayDatos,Institucion,DescripcionCita, ) => {
+    const GeneralHistoriaCitas = (Institucion,DescripcionCita) => {
     
    
             let Container_notificaciones = document.getElementById('Container_notificaciones');
@@ -157,7 +159,7 @@ export default function Inicio() {
 
             let Asunto_Notificacion =  document.createElement('span');
             Asunto_Notificacion.id = 'Asunto_Notificacion';
-            Asunto_Notificacion.innerText = 'Asunto ';
+            Asunto_Notificacion.innerText = 'Cita';
 
             let spangray = document.createElement('span');
             spangray.innerText = '-';
@@ -404,8 +406,8 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].MESCYT[0].ServiciosM;
-                                SubirCita(Cedula,Institucion,servicio);
-                                alert(Cedula+ ' ' + Institucion + ' '+ servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
+                                alert(Cedula+ ' ' + Institucion2 + ' '+ servicio + ' ' + HoraseleccionadaData +' '+ DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -418,8 +420,8 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].SIE[0].ServiciosSIE;
-                                SubirCita(Cedula,Institucion1,servicio)
-                                alert(Cedula+ ' ' + Institucion1 + ' '+ servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado)
+                                // alert(Cedula+ ' ' + Institucion1 + ' '+ servicio);
                                 break;
                             default:
                                 break;
@@ -430,8 +432,8 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio)
-                                alert(Cedula+ ' ' + Institucion2 + ' '+ servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado)
+                                
                                 break;
                             default:
                                 break;
@@ -442,24 +444,24 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].SISALRIL[0].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion3,servicio)
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[0].SISALRIL[1].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion3,servicio1);
+                                SubirCita(Cedula,Institucion3,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
 
                             case 2:
                                 let servicio2 = DataServicios[0].SISALRIL[2].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion3,servicio2)
+                                SubirCita(Cedula,Institucion3,servicio2,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[0].SISALRIL[3].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion3,servicio3)
+                                SubirCita(Cedula,Institucion3,servicio3,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[0].SISALRIL[4].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion3,servicio4)
+                                SubirCita(Cedula,Institucion3,servicio4,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             default:
                                 break;
@@ -471,7 +473,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].TSS[0].ServiciosTSS;
-                                SubirCita(Cedula,Institucion4,servicio)
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             default:
                                 break;
@@ -483,7 +485,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].DMAPS[0].ServiciosDMAPS;
-                                SubirCita(Cedula,Institucion5,servicio)
+                                SubirCita(Cedula,Institucion5,servicio,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             default:
                                 break;
@@ -494,7 +496,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].MINE[0].ServiciosMine;
-                                SubirCita(Cedula,Institucion6,servicio)
+                                SubirCita(Cedula,Institucion6,servicio,HoraseleccionadaData,DiaSeleccionado)
                                 break;
                             default:
                                 break;
@@ -505,15 +507,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].INTRANT[0].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion7,servicio);
+                                SubirCita(Cedula,Institucion7,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[0].INTRANT[1].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion7,servicio1);
+                                SubirCita(Cedula,Institucion7,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[0].INTRANT[2].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion7,servicio2);
+                                SubirCita(Cedula,Institucion7,servicio2,HoraseleccionadaData,DiaSeleccionado);
                             default:
                                 break;
                         }
@@ -523,7 +525,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[0].DGM[0].ServiciosDGM;
-                                SubirCita(Cedula,Institucion8,servicio);
+                                SubirCita(Cedula,Institucion8,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -541,30 +543,30 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[1].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[1].DIDA[1].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio1);
+                                SubirCita(Cedula,Institucion,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[1].DIDA[2].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio2);
+                                SubirCita(Cedula,Institucion,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[1].DIDA[3].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio3);
+                                SubirCita(Cedula,Institucion,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[1].DIDA[4].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio4);
+                                SubirCita(Cedula,Institucion,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 5:
                                 let servicio5 = DataServicios[1].DIDA[5].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio5);
+                                SubirCita(Cedula,Institucion,servicio5,HoraseleccionadaData,DiaSeleccionado);
                                 break;
 
                             default:
@@ -576,7 +578,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[1].PN[0].ServicioPN;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 
                                 break;
                             default:
@@ -589,14 +591,14 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[1].DGP[0].ServicioDGP;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[1].DGP[1].ServicioDGP;
-                                SubirCita(Cedula,Institucion2,servicio1);
+                                SubirCita(Cedula,Institucion2,servicio1,HoraseleccionadaData,DiaSeleccionado);
                             case 2:
                                 let servicio2 = DataServicios[1].DGP[2].ServicioDGP;
-                                SubirCita(Cedula,Institucion2,servicio2);
+                                SubirCita(Cedula,Institucion2,servicio2,HoraseleccionadaData,DiaSeleccionado);
                             default:
                                 break;
                         }
@@ -606,7 +608,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[1].DGM[0].ServiciosDGM;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                         }
                         break;
@@ -615,7 +617,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[1].TSS[0].ServiciosTSS;
-                                SubirCita(Cedula,Institucion4,servicio);
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado);
                             break;
                         }
                         break;
@@ -631,7 +633,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[2].ADESS[0].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -643,11 +645,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[2].ASDE[0].ServiciosASDE;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[2].ASDE[1].ServiciosASDE;
-                                SubirCita(Cedula,Institucion1,servicio1);
+                                SubirCita(Cedula,Institucion1,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -658,11 +660,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[2].DGJP[0].ServiciosDGJP;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[2].DGJP[0].ServiciosDGJP;
-                                SubirCita(Cedula,Institucion2,servicio1);
+                                SubirCita(Cedula,Institucion2,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -673,7 +675,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[2].DGP[0].ServicioDGP;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -690,11 +692,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].ADESS[0].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[3].ADESS[1].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio1);
+                                SubirCita(Cedula,Institucion,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -705,15 +707,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].INTRANT[0].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[3].INTRANT[1].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion1,servicio1);
+                                SubirCita(Cedula,Institucion1,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[3].INTRANT[2].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion1,servicio2);
+                                SubirCita(Cedula,Institucion1,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -724,23 +726,23 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[3].DIDA[1].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio1);
+                                SubirCita(Cedula,Institucion2,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[3].DIDA[2].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio2);
+                                SubirCita(Cedula,Institucion2,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[3].DIDA[3].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio3);
+                                SubirCita(Cedula,Institucion2,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[3].DIDA[4].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio4);
+                                SubirCita(Cedula,Institucion2,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -751,7 +753,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].ASDE[0].ServiciosASDE;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -762,7 +764,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].MIP[0].ServiciosMIP;
-                                SubirCita(Cedula,Institucion4,servicio);
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -773,7 +775,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].PGR[0].ServiciosPGR;
-                                SubirCita(Cedula,Institucion5,servicio);
+                                SubirCita(Cedula,Institucion5,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -784,23 +786,23 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].SISALRIL[0].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion6,servicio);
+                                SubirCita(Cedula,Institucion6,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[3].SISALRIL[1].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion6,servicio1);
+                                SubirCita(Cedula,Institucion6,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[3].SISALRIL[2].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion6,servicio2);
+                                SubirCita(Cedula,Institucion6,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[3].SISALRIL[3].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion6,servicio3);
+                                SubirCita(Cedula,Institucion6,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[3].SISALRIL[4].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion6,servicio4);
+                                SubirCita(Cedula,Institucion6,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -811,7 +813,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].SIE[0].ServiciosSIE;
-                                SubirCita(Cedula,Institucion7,servicio);
+                                SubirCita(Cedula,Institucion7,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -822,19 +824,19 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[3].SUPERATE[0].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion8,servicio);
+                                SubirCita(Cedula,Institucion8,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[3].SUPERATE[1].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion8,servicio1);
+                                SubirCita(Cedula,Institucion8,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[3].SUPERATE[2].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion8,servicio2);
+                                SubirCita(Cedula,Institucion8,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[3].SUPERATE[3].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion8,servicio3);
+                                SubirCita(Cedula,Institucion8,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -851,23 +853,23 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[4].DIDA[1].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio1);
+                                SubirCita(Cedula,Institucion,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[4].DIDA[2].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio2);
+                                SubirCita(Cedula,Institucion,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[4].DIDA[3].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio3);
+                                SubirCita(Cedula,Institucion,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[4].DIDA[4].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion,servicio4);
+                                SubirCita(Cedula,Institucion,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                                 
                             default:
@@ -879,11 +881,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].SISALRIL[0].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[4].SISALRIL[1].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion1,servicio1);
+                                SubirCita(Cedula,Institucion1,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[4].SISALRIL[2].ServiciosSISALRIL;
@@ -891,7 +893,7 @@ export default function Inicio() {
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[4].SISALRIL[3].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion1,servicio3);
+                                SubirCita(Cedula,Institucion1,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -902,7 +904,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].TSS[0].ServiciosTSS;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -913,7 +915,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].SUPERATE[0].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -924,15 +926,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].INTRANT[0].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion4,servicio);
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[4].INTRANT[1].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion4,servicio1);
+                                SubirCita(Cedula,Institucion4,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[4].INTRANT[2].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion4,servicio2);
+                                SubirCita(Cedula,Institucion4,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -943,7 +945,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].DGM[0].ServiciosDGM;
-                                SubirCita(Cedula,Institucion5,servicio);
+                                SubirCita(Cedula,Institucion5,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -954,7 +956,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].MESCYT[0].ServiciosM;
-                                SubirCita(Cedula,Institucion6,servicio);
+                                SubirCita(Cedula,Institucion6,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -965,11 +967,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[4].ADESS[0].ServiciosADESS;
-                                SubirCita(Cedula,Institucion7,servicio);
+                                SubirCita(Cedula,Institucion7,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[4].ADESS[1].ServiciosADESS;
-                                SubirCita(Cedula,Institucion7,servicio1);
+                                SubirCita(Cedula,Institucion7,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -986,15 +988,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[5].INTRANT[0].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[5].INTRANT[1].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion,servicio1);
+                                SubirCita(Cedula,Institucion,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[5].INTRANT[2].ServiciosINTRANT;
-                                SubirCita(Cedula,Institucion,servicio2);
+                                SubirCita(Cedula,Institucion,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1005,7 +1007,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[5].SIE[0].ServiciosSIE;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1016,23 +1018,23 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[5].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[5].DIDA[1].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio1);
+                                SubirCita(Cedula,Institucion2,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[5].DIDA[2].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio2);
+                                SubirCita(Cedula,Institucion2,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[5].DIDA[3].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio3);
+                                SubirCita(Cedula,Institucion2,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[5].DIDA[4].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion2,servicio4);
+                                SubirCita(Cedula,Institucion2,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1043,11 +1045,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[5].TSS[0].ServiciosTSS;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[5].TSS[1].ServiciosTSS;
-                                SubirCita(Cedula,Institucion3,servicio1);
+                                SubirCita(Cedula,Institucion3,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break
                             default:
                                 break;
@@ -1058,19 +1060,19 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[5].ADESS[0].ServiciosADESS;
-                                SubirCita(Cedula,Institucion4,servicio);
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[5].ADESS[1].ServiciosADESS;
-                                SubirCita(Cedula,Institucion4,servicio1);
+                                SubirCita(Cedula,Institucion4,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[5].ADESS[2].ServiciosADESS;
-                                SubirCita(Cedula,Institucion4,servicio2);
+                                SubirCita(Cedula,Institucion4,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[5].ADESS[3].ServiciosADESS;
-                                SubirCita(Cedula,Institucion4,servicio3);
+                                SubirCita(Cedula,Institucion4,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1087,15 +1089,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].ADESS[0].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio);
+                                SubirCita(Cedula,Institucion,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[6].ADESS[1].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio1);
+                                SubirCita(Cedula,Institucion,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[6].ADESS[2].ServiciosADESS;
-                                SubirCita(Cedula,Institucion,servicio2);
+                                SubirCita(Cedula,Institucion,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1106,7 +1108,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].DGM[0].ServiciosDGM;
-                                SubirCita(Cedula,Institucion1,servicio);
+                                SubirCita(Cedula,Institucion1,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1117,7 +1119,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].SUPERATE[0].ServiciosSUPERATE;
-                                SubirCita(Cedula,Institucion2,servicio);
+                                SubirCita(Cedula,Institucion2,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1128,7 +1130,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].TSS[0].ServiciosTSS;
-                                SubirCita(Cedula,Institucion3,servicio);
+                                SubirCita(Cedula,Institucion3,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1139,23 +1141,23 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].DIDA[0].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion4,servicio);
+                                SubirCita(Cedula,Institucion4,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[6].DIDA[1].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion4,servicio1);
+                                SubirCita(Cedula,Institucion4,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[6].DIDA[2].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion4,servicio2);
+                                SubirCita(Cedula,Institucion4,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 3:
                                 let servicio3 = DataServicios[6].DIDA[3].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion4,servicio3);
+                                SubirCita(Cedula,Institucion4,servicio3,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 4:
                                 let servicio4 = DataServicios[6].DIDA[4].ServiciosDIDA;
-                                SubirCita(Cedula,Institucion4,servicio4);
+                                SubirCita(Cedula,Institucion4,servicio4,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1166,15 +1168,15 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].SISALRIL[0].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion5,servicio);
+                                SubirCita(Cedula,Institucion5,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 1:
                                 let servicio1 = DataServicios[6].SISALRIL[1].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion5,servicio1);
+                                SubirCita(Cedula,Institucion5,servicio1,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             case 2:
                                 let servicio2 = DataServicios[6].SISALRIL[2].ServiciosSISALRIL;
-                                SubirCita(Cedula,Institucion5,servicio2);
+                                SubirCita(Cedula,Institucion5,servicio2,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1185,7 +1187,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].MIP[0].ServiciosMIP;
-                                SubirCita(Cedula,Institucion6,servicio);
+                                SubirCita(Cedula,Institucion6,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1196,10 +1198,11 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].MINE[0].ServiciosMine;
-                                SubirCita(Cedula,Institucion7,servicio);
+                                SubirCita(Cedula,Institucion7,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
+                                
                         }
                         break;
                     case 8:
@@ -1207,7 +1210,7 @@ export default function Inicio() {
                         switch(ServicioSeleccionado){
                             case 0:
                                 let servicio = DataServicios[6].SIE[0].ServiciosSIE;
-                                SubirCita(Cedula,Institucion8,servicio);
+                                SubirCita(Cedula,Institucion8,servicio,HoraseleccionadaData,DiaSeleccionado);
                                 break;
                             default:
                                 break;
@@ -1223,11 +1226,11 @@ export default function Inicio() {
         };
     };
 
-    const SubirCita = async (Cedula,Institucion,servicio) => {
+    const SubirCita = async (Cedula,Institucion,servicio,Hora,FechaCita) => {
         fetch('http://localhost:4200/api/citasagendadas',{
             method: 'POST',
             headers: {'content-Type':'application/json'},
-            body: JSON.stringify({InstitucionPublica: Institucion, DescripcionCita: servicio, Cedula: Cedula })
+            body: JSON.stringify({InstitucionPublica: Institucion, DescripcionCita: servicio, Cedula: Cedula, Hora: Hora,FechaCita: FechaCita })
           }).then((respuesta)=> respuesta.json())
           .then(data => {
             console.log('Servicio Agregado',data)
