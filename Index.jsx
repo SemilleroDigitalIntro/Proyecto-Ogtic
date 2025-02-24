@@ -7,6 +7,7 @@ import Registro from "./Components/Registro";
 import Structura from "./Componentes sin usar/Structura";
 import React from 'react';
 import Prueba from "./prueba";
+import InicioAdm from "./Components/InicioAdm";
 
 
 const Routes = createBrowserRouter([
@@ -30,7 +31,10 @@ const Routes = createBrowserRouter([
         path: '/PEPE',
         element: <Prueba/>
     },
-    
+    {
+        path: '/admin',
+        element: <InicioAdm/>
+    }
 ]);
 
 createRoot(document.getElementById('root')).render(
