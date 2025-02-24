@@ -9,10 +9,10 @@ export default function ContactoH() {
             <a href=""><span>Servicio al Cliente: </span>+1(809)-789-8098</a>
         </div>
         <div className='SContactoH__d2'>
-            <div className='SContactoH__d2_Email'>
+            {/* <div className='SContactoH__d2_Email'>
                 <i class='bx bx-envelope' ></i>
-                <a href="mailto:"><span>Email: </span>Company@gmail.com</a>
-            </div>
+                <a href="mailto:"><span>Email: </span>God@.do</a>
+            </div> */}
             <div className='SContactoH__d2_IconoRed'>
                 <a href=""><i class='bx bxl-instagram' ></i></a>
                 <a href=""><i class='bx bxl-linkedin' ></i></a>
