@@ -20,7 +20,7 @@ const DataPuntosGob = [
         Instituciones:'17 Instituciones',
     },
     {
-        img__ubi: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/57/34/96/photo0jpg.jpg?w=1200&h=-1&s=1',
+        img__ubi: 'https://z101digital.com/wp-content/uploads/2024/05/eau99vaw4aepp3e-scaled.jpg',
         img__ubi_descripcion:'Imagen del centro comercial Megacentro',
         NombrePuntoGob:'Punto GOB Megacentro',
         UbicacionPuntoGob:'Av. San Vicente de Paúl 321, Santo Domingo Este',
