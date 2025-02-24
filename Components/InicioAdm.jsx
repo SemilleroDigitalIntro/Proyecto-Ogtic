@@ -1247,9 +1247,15 @@ export default function InicioAdm() {
                 <img src="Components/Img/LogoOffSimbolo.png" alt="" />
             </div>
             <div className='Aside__div2'>
-                <span onClick={Perfil} onPointerOver={Over1} onPointerLeave={Leave1} id='EstiloP'><i class='bx bxs-user' ></i>Perfil</span>
-                <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Citas Agendadas</span>
-                <span onClick={AgendarCitas} onPointerOver={Over3} onPointerLeave={Leave3} id='EstiloAC'><i class='bx bxs-calendar-alt'></i>Agendar Citas</span>
+            <span onClick={Perfil} onPointerOver={Over1} onPointerLeave={Leave1} id='EstiloP'><i class='bx bxs-user' ></i>Perfil administrativo</span>
+                <span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-data-fill" viewBox="0 0 16 16"><path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5"/><path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585q.084.236.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5q.001-.264.085-.5M10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1"/></svg>
+                    Gestión de usuarios</span>
+                <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Gestion de citas</span>
+                <span onClick={AgendarCitas} onPointerOver={Over3} onPointerLeave={Leave3} id='EstiloAC'><i class='bx bxs-calendar-alt'></i>Agendar citas</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pie-chart-fill" viewBox="0 0 16 16"><path d="M15.985 8.5H8.207l-5.5 5.5a8 8 0 0 0 13.277-5.5zM2 13.292A8 8 0 0 1 7.5.015v7.778zM8.5.015V7.5h7.485A8 8 0 0 0 8.5.015"/></svg>
+                    Exportacion de datos</span>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 16 16"><path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001"/></svg>
+                    Reportes</span>
                 <span onClick={CerrarsesionModal} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
             </div>
 
