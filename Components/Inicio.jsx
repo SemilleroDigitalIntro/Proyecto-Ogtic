@@ -683,11 +683,19 @@ export default function Inicio() {
                         break; 
                 }
                 break;
-            case 4:
+            case 4://megacentro
                 switch(InstitucionSeleccionada){
                     case 0:
                         let Institucion = DataPuntoGobs[0].GobMegacentro[0].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].ADESS[0].ServiciosADESS;
+                                SubirCita(Cedula,Institucion,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[3].ADESS[1].ServiciosADESS;
+                                SubirCita(Cedula,Institucion,servicio1);
+                                break;
                             default:
                                 break;
                         }
@@ -695,6 +703,18 @@ export default function Inicio() {
                     case 1:
                         let Institucion1 = DataPuntoGobs[0].GobMegacentro[1].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].INTRANT[0].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion1,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[3].INTRANT[1].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion1,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[3].INTRANT[2].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion1,servicio2);
+                                break;
                             default:
                                 break;
                         }
@@ -702,6 +722,26 @@ export default function Inicio() {
                     case 2:
                         let Institucion2 = DataPuntoGobs[0].GobMegacentro[2].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].DIDA[0].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[3].DIDA[1].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[3].DIDA[2].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[3].DIDA[3].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio3);
+                                break;
+                            case 4:
+                                let servicio4 = DataServicios[3].DIDA[4].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio4);
+                                break;
                             default:
                                 break;
                         }
@@ -709,6 +749,10 @@ export default function Inicio() {
                     case 3:
                         let Institucion3 = DataPuntoGobs[0].GobMegacentro[3].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].ASDE[0].ServiciosASDE;
+                                SubirCita(Cedula,Institucion3,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -716,6 +760,10 @@ export default function Inicio() {
                     case 4:
                         let Institucion4 = DataPuntoGobs[0].GobMegacentro[4].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].MIP[0].ServiciosMIP;
+                                SubirCita(Cedula,Institucion4,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -723,6 +771,10 @@ export default function Inicio() {
                     case 5:
                         let Institucion5 = DataPuntoGobs[0].GobMegacentro[5].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].PGR[0].ServiciosPGR;
+                                SubirCita(Cedula,Institucion5,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -730,6 +782,26 @@ export default function Inicio() {
                     case 6:
                         let Institucion6 = DataPuntoGobs[0].GobMegacentro[6].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].SISALRIL[0].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion6,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[3].SISALRIL[1].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion6,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[3].SISALRIL[2].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion6,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[3].SISALRIL[3].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion6,servicio3);
+                                break;
+                            case 4:
+                                let servicio4 = DataServicios[3].SISALRIL[4].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion6,servicio4);
+                                break;
                             default:
                                 break;
                         }
@@ -737,6 +809,10 @@ export default function Inicio() {
                     case 7:
                         let Institucion7 = DataPuntoGobs[0].GobMegacentro[7].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].SIE[0].ServiciosSIE;
+                                SubirCita(Cedula,Institucion7,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -744,6 +820,22 @@ export default function Inicio() {
                     case 8:
                         let Institucion8 = DataPuntoGobs[0].GobMegacentro[8].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[3].SUPERATE[0].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion8,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[3].SUPERATE[1].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion8,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[3].SUPERATE[2].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion8,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[3].SUPERATE[3].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion8,servicio3);
+                                break;
                             default:
                                 break;
                         }
@@ -752,11 +844,32 @@ export default function Inicio() {
                         break; 
                 }
                 break;
-            case 5:
+            case 5://Santiago
                 switch(InstitucionSeleccionada){
                     case 0:
                         let Institucion = DataPuntoGobs[0].GobSantiago[0].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].DIDA[0].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[4].DIDA[1].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[4].DIDA[2].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[4].DIDA[3].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion,servicio3);
+                                break;
+                            case 4:
+                                let servicio4 = DataServicios[4].DIDA[4].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion,servicio4);
+                                break;
+                                
                             default:
                                 break;
                         }
@@ -764,6 +877,22 @@ export default function Inicio() {
                     case 1:
                         let Institucion1 = DataPuntoGobs[0].GobSantiago[1].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].SISALRIL[0].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion1,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[4].SISALRIL[1].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion1,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[4].SISALRIL[2].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion1,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[4].SISALRIL[3].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion1,servicio3);
+                                break;
                             default:
                                 break;
                         }
@@ -771,6 +900,10 @@ export default function Inicio() {
                     case 2:
                         let Institucion2 = DataPuntoGobs[0].GobSantiago[2].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].TSS[0].ServiciosTSS;
+                                SubirCita(Cedula,Institucion2,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -778,6 +911,10 @@ export default function Inicio() {
                     case 3:
                         let Institucion3 = DataPuntoGobs[0].GobSantiago[3].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].SUPERATE[0].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion3,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -785,6 +922,18 @@ export default function Inicio() {
                     case 4:
                         let Institucion4 = DataPuntoGobs[0].GobSantiago[4].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].INTRANT[0].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion4,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[4].INTRANT[1].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion4,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[4].INTRANT[2].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion4,servicio2);
+                                break;
                             default:
                                 break;
                         }
@@ -792,20 +941,36 @@ export default function Inicio() {
                     case 5:
                         let Institucion5 = DataPuntoGobs[0].GobSantiago[5].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].DGM[0].ServiciosDGM;
+                                SubirCita(Cedula,Institucion5,servicio);
+                                break;
                             default:
                                 break;
                         }
                         break;
                     case 6:
-                        let Institucion6 = DataPuntoGobs[0].GobSantiago[6].Instituciones;
+                        let Institucion6 = DataPuntoGobs[0].GobSantiago[5].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].MESCYT[0].ServiciosM;
+                                SubirCita(Cedula,Institucion6,servicio);
+                                break;
                             default:
                                 break;
                         }
                         break;
                     case 7:
-                        let Institucion7 = DataPuntoGobs[0].GobSantiago[7].Instituciones;
+                        let Institucion7 = DataPuntoGobs[0].GobSantiago[6].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[4].ADESS[0].ServiciosADESS;
+                                SubirCita(Cedula,Institucion7,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[4].ADESS[1].ServiciosADESS;
+                                SubirCita(Cedula,Institucion7,servicio1);
+                                break;
                             default:
                                 break;
                         }
@@ -814,11 +979,23 @@ export default function Inicio() {
                         break; 
                 }
                 break;
-            case 6:
+            case 6://San Cristobal
                 switch(InstitucionSeleccionada){
                     case 0:
                         let Institucion = DataPuntoGobs[0].GobSanCristobal[0].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[5].INTRANT[0].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[5].INTRANT[1].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[5].INTRANT[2].ServiciosINTRANT;
+                                SubirCita(Cedula,Institucion,servicio2);
+                                break;
                             default:
                                 break;
                         }
@@ -826,6 +1003,10 @@ export default function Inicio() {
                     case 1:
                         let Institucion1 = DataPuntoGobs[0].GobSanCristobal[1].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[5].SIE[0].ServiciosSIE;
+                                SubirCita(Cedula,Institucion1,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -833,6 +1014,26 @@ export default function Inicio() {
                     case 2:
                         let Institucion2 = DataPuntoGobs[0].GobSanCristobal[2].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[5].DIDA[0].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[5].DIDA[1].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[5].DIDA[2].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[5].DIDA[3].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio3);
+                                break;
+                            case 4:
+                                let servicio4 = DataServicios[5].DIDA[4].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion2,servicio4);
+                                break;
                             default:
                                 break;
                         }
@@ -840,6 +1041,14 @@ export default function Inicio() {
                     case 3:
                         let Institucion3 = DataPuntoGobs[0].GobSanCristobal[3].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[5].TSS[0].ServiciosTSS;
+                                SubirCita(Cedula,Institucion3,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[5].TSS[1].ServiciosTSS;
+                                SubirCita(Cedula,Institucion3,servicio1);
+                                break
                             default:
                                 break;
                         }
@@ -847,6 +1056,22 @@ export default function Inicio() {
                     case 4:
                         let Institucion4 = DataPuntoGobs[0].GobSanCristobal[4].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[5].ADESS[0].ServiciosADESS;
+                                SubirCita(Cedula,Institucion4,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[5].ADESS[1].ServiciosADESS;
+                                SubirCita(Cedula,Institucion4,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[5].ADESS[2].ServiciosADESS;
+                                SubirCita(Cedula,Institucion4,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[5].ADESS[3].ServiciosADESS;
+                                SubirCita(Cedula,Institucion4,servicio3);
+                                break;
                             default:
                                 break;
                         }
@@ -860,6 +1085,18 @@ export default function Inicio() {
                     case 0:
                         let Institucion = DataPuntoGobs[0].GobColinaCentro[0].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].ADESS[0].ServiciosADESS;
+                                SubirCita(Cedula,Institucion,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[6].ADESS[1].ServiciosADESS;
+                                SubirCita(Cedula,Institucion,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[6].ADESS[2].ServiciosADESS;
+                                SubirCita(Cedula,Institucion,servicio2);
+                                break;
                             default:
                                 break;
                         }
@@ -867,6 +1104,10 @@ export default function Inicio() {
                     case 1:
                         let Institucion1 = DataPuntoGobs[0].GobColinaCentro[1].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].DGM[0].ServiciosDGM;
+                                SubirCita(Cedula,Institucion1,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -874,6 +1115,10 @@ export default function Inicio() {
                     case 2:
                         let Institucion2 = DataPuntoGobs[0].GobColinaCentro[2].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].SUPERATE[0].ServiciosSUPERATE;
+                                SubirCita(Cedula,Institucion2,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -881,6 +1126,10 @@ export default function Inicio() {
                     case 3:
                         let Institucion3 = DataPuntoGobs[0].GobColinaCentro[3].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].TSS[0].ServiciosTSS;
+                                SubirCita(Cedula,Institucion3,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -888,6 +1137,26 @@ export default function Inicio() {
                     case 4:
                         let Institucion4 = DataPuntoGobs[0].GobColinaCentro[4].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].DIDA[0].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion4,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[6].DIDA[1].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion4,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[6].DIDA[2].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion4,servicio2);
+                                break;
+                            case 3:
+                                let servicio3 = DataServicios[6].DIDA[3].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion4,servicio3);
+                                break;
+                            case 4:
+                                let servicio4 = DataServicios[6].DIDA[4].ServiciosDIDA;
+                                SubirCita(Cedula,Institucion4,servicio4);
+                                break;
                             default:
                                 break;
                         }
@@ -895,6 +1164,18 @@ export default function Inicio() {
                     case 5:
                         let Institucion5 = DataPuntoGobs[0].GobColinaCentro[5].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].SISALRIL[0].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion5,servicio);
+                                break;
+                            case 1:
+                                let servicio1 = DataServicios[6].SISALRIL[1].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion5,servicio1);
+                                break;
+                            case 2:
+                                let servicio2 = DataServicios[6].SISALRIL[2].ServiciosSISALRIL;
+                                SubirCita(Cedula,Institucion5,servicio2);
+                                break;
                             default:
                                 break;
                         }
@@ -902,6 +1183,10 @@ export default function Inicio() {
                     case 6:
                         let Institucion6 = DataPuntoGobs[0].GobColinaCentro[6].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].MIP[0].ServiciosMIP;
+                                SubirCita(Cedula,Institucion6,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -909,6 +1194,10 @@ export default function Inicio() {
                     case 7:
                         let Institucion7 = DataPuntoGobs[0].GobColinaCentro[7].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].MINE[0].ServiciosMine;
+                                SubirCita(Cedula,Institucion7,servicio);
+                                break;
                             default:
                                 break;
                         }
@@ -916,6 +1205,10 @@ export default function Inicio() {
                     case 8:
                         let Institucion8 = DataPuntoGobs[0].GobColinaCentro[8].Instituciones;
                         switch(ServicioSeleccionado){
+                            case 0:
+                                let servicio = DataServicios[6].SIE[0].ServiciosSIE;
+                                SubirCita(Cedula,Institucion8,servicio);
+                                break;
                             default:
                                 break;
                         }

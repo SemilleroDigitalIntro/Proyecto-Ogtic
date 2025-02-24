@@ -134,6 +134,7 @@ export default function SeleccionInstitucion() {
             }
             break;
           case 7:
+            for(let I = 0 ; I < 10; I++){
             let Ints = document.createElement('span');
                 Ints.className = `${DataPuntoGobs[0].GobColinaCentro[I].Instituciones}`;
                 Ints.addEventListener('click',()=>{
@@ -147,8 +148,9 @@ export default function SeleccionInstitucion() {
                 
                 Ints.append(Intstext)
                 Institucion__span.append(Ints);
+            
+            }
             break;
-
           default:
             break;
 

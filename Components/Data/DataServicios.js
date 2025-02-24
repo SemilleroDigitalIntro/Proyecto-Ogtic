@@ -322,78 +322,6 @@ const DataServicios = [
         ],
     },
 
-    //Colina Centro
-    {
-        DGM:[
-            {
-                ServiciosDGM: 'Permiso de Salida de Menores de Edad'
-            },
-        ],
-        ADESS : [
-            {
-                ServiciosADESS: 'Solicitud Reemplazo de Tarjeta'
-            },
-            {
-                ServiciosADESS: 'Reclamo por Aplicacion de nomina'
-            },
-            {
-                ServiciosADESS: 'Reclamo por Balance o Fondo no disponible'
-            },
-        ],
-        SUPERATE: [
-            {
-                ServiciosSUPERATE: 'Solicitud de cambio de direccion'
-            },
-        ],
-        TSS: [
-            {
-                ServiciosTSS: 'Información de reclamaciones relacionadas con normalización de RNC, nóminas de trabajadores y períodos omisos.'
-            },
-        ],
-        SISALRIL:[
-            {
-                ServiciosSISALRIL: 'Investigación de Afiliación y/o Traspaso irregular'
-            },
-            {
-                ServiciosSISALRIL: 'Investigación de Traspasos por Alto Costo y/o Cirugía Pendiente'
-            },
-            {
-                ServiciosSISALRIL: 'Respuesta a las Solicitudes y Casos (Revisión de cuenta clínica)'
-            },
-        ],
-        DIDA: [
-            {
-                ServiciosDIDA:'Consultas y entrega de respuestas sobre el SDSS'
-            },
-            {
-                ServiciosDIDA:'Solicitud de corrección de datos personales en la base de datos del Sistema Dominicano de Seguridad Social (SDSS)'
-            },
-            {
-                ServiciosDIDA:'Solicitud de Número de Seguridad Social (NSS)'
-            },
-            {
-                ServiciosDIDA: 'Solicitud de Constancia de Afiliación en el Seguro Familiar de Salud y Afiliación en el Seguro de Pensiones'
-            },
-            {
-                ServiciosDIDA: 'Atención de Reclamaciones'
-            },
-        ],
-        MINE:[
-            {
-                ServiciosMine: 'Certificación de Exequátur'
-            }
-        ],
-        MIP: [
-            {
-            ServiciosMIP: 'Licenciamiento por Tenencia y Porte de Armas de Fuego para Persona Fisica'
-            },
-        ],
-        SIE:[
-            {
-                ServiciosSIE: 'Reclamaciones en Tarifas BTS1 y BTS2'
-            },
-        ],
-    },
     
     //San Cristobal 
     {
@@ -476,6 +404,79 @@ const DataServicios = [
             },
         ],
 
-    }
+    },
+        //Colina Centro
+        {
+            DGM:[
+                {
+                    ServiciosDGM: 'Permiso de Salida de Menores de Edad'
+                },
+            ],
+            ADESS : [
+                {
+                    ServiciosADESS: 'Solicitud Reemplazo de Tarjeta'
+                },
+                {
+                    ServiciosADESS: 'Reclamo por Aplicacion de nomina'
+                },
+                {
+                    ServiciosADESS: 'Reclamo por Balance o Fondo no disponible'
+                },
+            ],
+            SUPERATE: [
+                {
+                    ServiciosSUPERATE: 'Solicitud de cambio de direccion'
+                },
+            ],
+            TSS: [
+                {
+                    ServiciosTSS: 'Información de reclamaciones relacionadas con normalización de RNC, nóminas de trabajadores y períodos omisos.'
+                },
+            ],
+            SISALRIL:[
+                {
+                    ServiciosSISALRIL: 'Investigación de Afiliación y/o Traspaso irregular'
+                },
+                {
+                    ServiciosSISALRIL: 'Investigación de Traspasos por Alto Costo y/o Cirugía Pendiente'
+                },
+                {
+                    ServiciosSISALRIL: 'Respuesta a las Solicitudes y Casos (Revisión de cuenta clínica)'
+                },
+            ],
+            DIDA: [
+                {
+                    ServiciosDIDA:'Consultas y entrega de respuestas sobre el SDSS'
+                },
+                {
+                    ServiciosDIDA:'Solicitud de corrección de datos personales en la base de datos del Sistema Dominicano de Seguridad Social (SDSS)'
+                },
+                {
+                    ServiciosDIDA:'Solicitud de Número de Seguridad Social (NSS)'
+                },
+                {
+                    ServiciosDIDA: 'Solicitud de Constancia de Afiliación en el Seguro Familiar de Salud y Afiliación en el Seguro de Pensiones'
+                },
+                {
+                    ServiciosDIDA: 'Atención de Reclamaciones'
+                },
+            ],
+            MINE:[
+                {
+                    ServiciosMine: 'Certificación de Exequátur'
+                }
+            ],
+            MIP: [
+                {
+                ServiciosMIP: 'Licenciamiento por Tenencia y Porte de Armas de Fuego para Persona Fisica'
+                },
+            ],
+            SIE:[
+                {
+                    ServiciosSIE: 'Reclamaciones en Tarifas BTS1 y BTS2'
+                },
+            ],
+        },
+    
 ];
 export default DataServicios;
