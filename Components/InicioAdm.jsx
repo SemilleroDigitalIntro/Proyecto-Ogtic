@@ -1260,7 +1260,7 @@ export default function InicioAdm() {
                 <span onClick={CerrarsesionModal} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
             </div>
 
-        </aside>
+        </aside>  
         {/* Perfil */}
         <dialog className='ModalCerrarSesion' id='ModalCerrarSesion' open>
             <div className='ModalCerrarSesion_div1'>
