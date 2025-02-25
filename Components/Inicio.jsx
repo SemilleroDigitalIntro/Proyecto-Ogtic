@@ -135,23 +135,23 @@ export default function Inicio() {
 
     
     const ValidacionCitas = async (NombreCompleto,Cedula,CorreoElectronico) => {
-        let prueba;
         const conexion = await fetch('http://localhost:4200/api/citasagendadas');
         const Data = await conexion.json();
         const largoArray = Data.data.length;
         for(let x = 0; x < largoArray; x++){
-            if(Data.data[x].Cedula == Cedula){
+            if(Data.data[x].Cedula === Cedula){
                 GeneralHistoriaCitas(Data.data[x].InstitucionPublica,Data.data[x].DescripcionCita)
             }else{
                 continue;
             }
         };
 
+
+
         
     };
     const GeneralHistoriaCitas = (Institucion,DescripcionCita) => {
-    
-   
+
             let Container_notificaciones = document.getElementById('Container_notificaciones');
             let Notificacion = document.createElement('div');
             Notificacion.className = `Notificacion ${Institucion}`;
@@ -193,8 +193,28 @@ export default function Inicio() {
             
             console.log(`${Notificacion}`)
             Container_notificaciones.append(Notificacion);
-           
+    //        Container_notificaciones.innerHTML = `<div  class='Notificacion ${props.Institucion}'}>
+    //     <span>${Institucion}</span>
+    //     <div className='Notificacion__div1 ${x}'>
+    //         <span id='Asunto_Notificacion'>Cita</span>
+    //         <span id='spangray'>-</span>
+    //         <span id='parte_contenidoN'>${DescripcionCita}</span>
+    //         <div className='Notificacion__div1_d1 ${x}' id='Notificacion__div1_d1'>
+                
+    //             <span><i class='bx bx-envelope-open' id='bx-envelope-open' ></i></span>
+    //             <span><i class='bx bx-time-five'></i></span>
+    //         </div>
+    //     </div>
+    // </div>`;
+    // let bx_envelope_open = document.createElement('span');
+    // bx_envelope_open.innerHTML = `<i class='bx bx-trash' ></i>`;
+    // bx_envelope_open.addEventListener('click',()=>{
+    //     document.querySelector('.Notificacion__div1').remove();
+    // });
 
+    // let Notificacion__div1_d1 = document.getElementById('Notificacion__div1_d1');
+    // Notificacion__div1_d1.insertBefore(document.getElementById('bx-envelope-open'),bx_envelope_open);
+    
 
           
     };
@@ -302,6 +322,10 @@ export default function Inicio() {
             alert('Existe un error');
         }
 
+    };
+
+    const alHome = () => {
+        window.location.href = '/';
     };
 
 
@@ -1271,6 +1295,7 @@ export default function Inicio() {
                 <span onClick={Perfil} onPointerOver={Over1} onPointerLeave={Leave1} id='EstiloP'><i class='bx bxs-user' ></i>Perfil</span>
                 <span onClick={Notificaciones} onPointerOver={Over2} onPointerLeave={Leave2} id='EstiloN'><i class='bx bx-mail-send'></i>Citas Agendadas</span>
                 <span onClick={AgendarCitas} onPointerOver={Over3} onPointerLeave={Leave3} id='EstiloAC'><i class='bx bxs-calendar-alt'></i>Agendar Citas</span>
+                <span onClick={alHome} id='BtnAlHome'><i class='bx bx-arrow-back'></i>Volver al Home</span>
                 <span onClick={CerrarsesionModal} id='CerrarSesion'><i class='bx bx-log-out' ></i>Cerrar sesion</span>
             </div>
 
@@ -1412,16 +1437,18 @@ export default function Inicio() {
                         <Calendario/>
                         <Horario/>
                 </div>
-                <form className='container_btn_confirm' action="https://formsubmit.co/Urpiriojunior2@gmail.com" method="POST" onSubmit={()=>{document.getElementById('InformacionCita').innerText = `Día: ${DiaSeleccionado}
-Hora: ${HoraseleccionadaData}
-Institución: ${InstitucionG}
-Servicio: ${servicioG}
-Costo: No disponible`}} >
+                <form className='container_btn_confirm' action="https://formsubmit.co/Urpiriojunior2@gmail.com" method="POST" onSubmit={(event)=>{ event.preventDefault()
+                document.getElementById('InformacionCita').innerText = `Día: ${DiaSeleccionado}
+                        Hora: ${HoraseleccionadaData}
+                        Institución: ${InstitucionG}
+                        Servicio: ${servicioG}
+                        Costo: No disponible`
+                }} >
                     <button onClick={AgendarCita} className='confirm'>Agendar cita</button>
                     {/* <input  type="text" name='InformacionCita' id='' /> */}
-                    <textarea style={{display: 'none'}} name="InformacionCita" id="InformacionCita">{InstitucionG}</textarea>
-                    <input type="hidden" name="_captcha" value="false"></input>
-                     <input type="hidden" name="_next" value="http://localhost:5173/Inicio"></input>
+                    {/* <textarea style={{display: 'none'}} name="InformacionCita" id="InformacionCita">{InstitucionG}</textarea> */}
+                    {/* <input type="hidden" name="_captcha" value="false"></input> */}
+                     {/* <input type="hidden" name="_next" value="http://localhost:5173/Inicio"></input> */}
                 </form>
                 
             </section>
