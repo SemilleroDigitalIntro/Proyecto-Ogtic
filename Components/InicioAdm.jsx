@@ -145,48 +145,49 @@ export default function InicioAdm() {
     const GeneralHistoriaCitas = (ArrayDatos,Institucion,DescripcionCita, ) => {
     
    
-            let Container_notificaciones = document.getElementById('Container_notificaciones');
-            let Notificacion = document.createElement('div');
-            Notificacion.className = `Notificacion ${Institucion}`;
+            // let Container_notificaciones = document.getElementById('Container_notificaciones');
+            // let Notificacion = document.createElement('div');
+            // Notificacion.className = `Notificacion ${Institucion}`;
 
-            let spanIntitucion = document.createElement('span');
-            spanIntitucion.innerText = `${Institucion}`;
+            // let spanIntitucion = document.createElement('span');
+            // spanIntitucion.innerText = `${Institucion}`;
 
-            let Notificacion__div1 = document.createElement('div');
-            Notificacion__div1.className = `Notificacion__div1`;
+            // let Notificacion__div1 = document.createElement('div');
+            // Notificacion__div1.className = `Notificacion__div1`;
 
-            let Asunto_Notificacion =  document.createElement('span');
-            Asunto_Notificacion.id = 'Asunto_Notificacion';
-            Asunto_Notificacion.innerText = 'Asunto ';
+            // let Asunto_Notificacion =  document.createElement('span');
+            // Asunto_Notificacion.id = 'Asunto_Notificacion';
+            // Asunto_Notificacion.innerText = 'Asunto ';
 
-            let spangray = document.createElement('span');
-            spangray.innerText = '-';
+            // let spangray = document.createElement('span');
+            // spangray.innerText = '-';
 
-            let parte_contenidoN = document.createElement('span');
-            parte_contenidoN.innerText = `${DescripcionCita}`;
-            parte_contenidoN.id = 'parte_contenidoN';
+            // let parte_contenidoN = document.createElement('span');
+            // parte_contenidoN.innerText = `${DescripcionCita}`;
+            // parte_contenidoN.id = 'parte_contenidoN';
 
-            let Notificacion__div1_d1 = document.createElement('div');
-            Notificacion__div1_d1.className = 'Notificacion__div1_d1';
+            // let Notificacion__div1_d1 = document.createElement('div');
+            // Notificacion__div1_d1.className = 'Notificacion__div1_d1';
 
-            let span1 = document.createElement('span');
-            span1.addEventListener('click',()=>{
-                Notificacion.remove()
-            })
-            span1.innerHTML = `<i class='bx bx-trash' ></i>`;
-            let span2 = document.createElement('span');
-            span2.innerHTML = `<i class='bx bx-envelope-open' ></i>`;
-            let span3 = document.createElement('span');
-            span3.innerHTML = `<i class='bx bx-time-five'></i>`;
+            // let span1 = document.createElement('span');
+            // span1.addEventListener('click',()=>{
+            //     Notificacion.remove()
+            // })
+            // span1.innerHTML = `<i class='bx bx-trash' ></i>`;
+            // let span2 = document.createElement('span');
+            // span2.innerHTML = `<i class='bx bx-envelope-open' ></i>`;
+            // let span3 = document.createElement('span');
+            // span3.innerHTML = `<i class='bx bx-time-five'></i>`;
 
-            Notificacion__div1_d1.append(span1,span2,span3);
-            Notificacion__div1.append(Asunto_Notificacion,spangray,parte_contenidoN,Notificacion__div1_d1);
-            Notificacion.append(spanIntitucion,Notificacion__div1)
+            // Notificacion__div1_d1.append(span1,span2,span3);
+            // Notificacion__div1.append(Asunto_Notificacion,spangray,parte_contenidoN,Notificacion__div1_d1);
+            // Notificacion.append(spanIntitucion,Notificacion__div1)
 
             
-            console.log(`${Notificacion}`)
-            Container_notificaciones.append(Notificacion);
-           
+            // console.log(`${Notificacion}`)
+            // Container_notificaciones.append(Notificacion);
+
+                      
 
 
           
