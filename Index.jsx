@@ -8,6 +8,7 @@ import Structura from "./Componentes sin usar/Structura";
 import React from 'react';
 import Prueba from "./prueba";
 import InicioAdm from "./Components/InicioAdm";
+import Forgetpassword from "./Components/ForgetPassword";
 
 
 const Routes = createBrowserRouter([
@@ -34,6 +35,10 @@ const Routes = createBrowserRouter([
     {
         path: '/admin',
         element: <InicioAdm/>
+    },
+    {
+        path: '/Forgetpassword',
+        element: <Forgetpassword/>
     }
 ]);
 
