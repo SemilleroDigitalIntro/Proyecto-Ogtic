@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Inicia_de_Sesion from "./Components/Inicia_de_Sesion";
+import Inicia_de_Sesion from "./Components/Iniciarsesion";
 import Inicio from "./Components/Inicio";
 import Registro from "./Components/Registro";
 import Structura from "./Componentes sin usar/Structura";
