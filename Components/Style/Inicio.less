@@ -48,25 +48,30 @@ select{
         
         #EstiloP{
             background-color: #0b7cc8;
+            transition: 300ms;
         }
         #EstiloN{
             background: #003876;
+            transition: 300ms;
             &:hover{
                 background-color: #0b7cc8;
             }
         }
         #EstiloAC{
             background: #003876;
+            transition: 300ms;
             &:hover{
                 background-color: #0b7cc8;
             }
         }
         #BtnAlHome{
+            transition: 300ms;
             &:hover{
                 background: rgb(174, 174, 174);
             }
         }
         #CerrarSesion{
+            transition: 300ms;
             &:hover{
                 background: #ff2929;
             }
@@ -131,6 +136,7 @@ select{
     z-index: 4;
     display: flex;
     flex-direction: column;
+    animation: opacity1 1s;
     
     .Main1__header{
         width: 100%;
@@ -320,7 +326,7 @@ select{
     height: 99.1vh;
     display: flex;
     flex-direction: column;
-    
+    animation: opacity1 1s;
     .Main2__header{
         width: 100%;
         height: 1.5cm;
@@ -407,6 +413,7 @@ select{
     flex-direction: column;
     overflow-y: scroll;
     scrollbar-width: none;
+    animation: opacity1 1s;
     .Main3__header{
         width: 100%;
         height: 1.5cm;
@@ -777,8 +784,12 @@ select{
     }
 }
 
-
-
-
-//Admin
+@keyframes opacity1 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 

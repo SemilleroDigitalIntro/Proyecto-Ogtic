@@ -69,21 +69,18 @@ export default function Header() {
   const [openlogin,SetOpenlogin] = useState(true)
 
   const Servicios = () =>{
-    scroll(0,600)
+    scroll(0,1100)
   };
   const Novedades = () =>{
-    scroll(0,1000)
+    scroll(0,3350)
+  };
+
+  const PuntosGob = () => {
+    scroll(0,2550)
   };
 
 
-  const Sobrenosotros = () =>{
-    scroll(0,1500)
-  };
 
-  const Home = () =>{
-    scroll(0,0)
-  };
-  
   const Login = () =>{
     window.location.href = '/login';
   };
@@ -101,8 +98,8 @@ export default function Header() {
           {/* <a onClick={Home}>Home</a> */}
           <a onClick={Servicios}>Servicios</a>
           <a onClick={Novedades}>Novedades</a>
-          <a onClick={Sobrenosotros}>Sobre nosotros</a>
-          <a>Ubicaciones</a>
+          {/* <a onClick={Sobrenosotros}>Sobre nosotros</a> */}
+          <a onClick={PuntosGob} >Puntos GOB</a>
         </nav>
        <div className='BtnHeaders' id='BtnHeaders'>
        <button className='Btn1' onClick={Login} >Iniciar Sesion</button>

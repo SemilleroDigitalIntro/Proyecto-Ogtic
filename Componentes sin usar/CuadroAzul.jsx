@@ -10,7 +10,7 @@ export default function CuadroAzul(){
             </div>
         <div className="container">
                 <div>
-                    <h1>Inscribe gratis</h1>
+                    <h1>Inscripción gratuita</h1>
                     <p>
                     Guión Cinematográfico y Documental (Largometraje)
                     </p>

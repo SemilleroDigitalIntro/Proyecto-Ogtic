@@ -2,20 +2,22 @@
 
     height: 100vh;
     width: 98.9vw;
-    background: #EFF7FF;
+    background: linear-gradient(180deg,#01346B,#0a6bac);
     display: flex;
     justify-content: center;
     align-items: center;
+
     
     .Gregistro_div1{
         background: white;
         border-radius: 20px;
-        box-shadow: 1px 1px 10px 5px #8080802b;
+        box-shadow: 1px 1px 80px 10px #80808049;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 60%;
+        animation: Anim1 2s;
         .Gregistro_div1_d1{
             padding: 10px;
             display: flex;
@@ -140,7 +142,9 @@
                     background: #003876;
                     color: white;
                     font-weight: 600;
-                    box-shadow: 1px 1px 5px 5px #9e9e9e2c;
+                    box-shadow: 1px 1px 80px 20px #9e9e9e24;
+                    transition: 300ms;
+                    cursor: pointer;
                     i{
                         border: 2px solid white;
                         border-radius: 100%;
@@ -150,12 +154,21 @@
                         align-items: center;
 
                     }
+                    &:hover{
+                        background: #016aba;
+                        border: 1px solid #016aba;
+                    }
                 }
                 span{
                     a{
                         text-decoration: none;
                         color: blue;
+                        transition: 300ms;
+                        &:hover{
+                            border-bottom: 1px solid blue;
+                        }
                     }
+                   
                 }
             }
         }

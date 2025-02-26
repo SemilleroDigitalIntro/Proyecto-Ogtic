@@ -27,6 +27,7 @@ export default function Structura() {
         <ServMasCon/>
         <AgendaYa/>
         <Centros/>
+        <Novedades/>
         <InfoAdicional/>
         <Footer/>
         

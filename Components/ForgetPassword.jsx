@@ -107,6 +107,9 @@ export default function Forgetpassword() {
       </div>
       
       `;
+      document.getElementById('Cargando').style.fontSize = '20px';
+      document.getElementById('Cargando').style.color = '#01346B';
+      document.getElementById('Cargando').style.fontWeight = '600';
 
       let INt = setInterval(()=>{
        if(Carga == undefined){
@@ -182,8 +185,10 @@ export default function Forgetpassword() {
 
   const VolverAllogin = () => {
     if(document.getElementById('Password').value == '' ){
-    
+      document.getElementById('Avisos').style.color = 'red';
       document.getElementById('Avisos').innerText = 'No pudimos cambiar tu contraseña. Por favor, inténtalo de nuevo.';
+      
+
       document.querySelector('.BtncontinuarF').remove();
       document.getElementById('Password').remove();
       document.getElementById('PasswordConfirm').remove();
@@ -256,8 +261,8 @@ export default function Forgetpassword() {
     Div3Span.innerText = ' con un codigo de verificacion.';
 
     Avisos.replaceChildren(Div1Span,Div2Span,Div3Span)
-    // Div1.append(Div1Span,Div2Span,Div3Span);
     document.getElementById('Email').style.fontWeight = '600';
+    document.getElementById('Email').style.color = '#01346B';
 
 
 
@@ -268,17 +273,7 @@ export default function Forgetpassword() {
     IDuser = ID;
   };
 
-  // const ValidacionPassword = async (confirmacion,ID) => {
-  //   const conexion = await fetch('http://localhost:4000/api/Users')
-  //   const Data = await conexion.json();
-  //   const largoArray = Data.data.length;
-  //   for(let x = 0; x < largoArray; x++){
-  //     ValidacionP(Data.data[x].Password,ID)
-  //   }
-
-  // }
-
-  //
+ 
 
   const Over1 = () => {
     document.getElementById('BtncontinuarF').style.opacity = '0.7';

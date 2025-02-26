@@ -70,7 +70,34 @@ export default function Centros() {
             Instituciones = {DP.Instituciones}
             />
         )
-    })
+    });
+
+    let Scroling;
+    const Right = () => {
+      if(Scroling == undefined){
+        document.getElementById('Centros__div2').scroll(1070,0);
+        Scroling = 1;
+      }else if(Scroling == 1){
+        document.getElementById('Centros__div2').scroll(1400,0);
+        Scroling = 2;
+      }else{
+        document.getElementById('Centros__div2').scroll(0,0);
+        Scroling = undefined;
+      };
+    };
+
+    const Left = () => {
+        if(Scroling == undefined){
+            document.getElementById('Centros__div2').scroll(1400,0);
+            Scroling = 1;
+          }else if(Scroling == 1){
+            document.getElementById('Centros__div2').scroll(1070,0);
+            Scroling = 2;
+          }else{
+            document.getElementById('Centros__div2').scroll(0,0);
+            Scroling = undefined;
+          };
+    };
 
 
 
@@ -84,8 +111,16 @@ export default function Centros() {
             <a href="">Ver todos los Puntos GOB<i class='bx bx-right-arrow-alt'></i></a>
         </div>
         <div className='Centros__div2'>
+            <div className='ControlGobs'>
+                <button onClick={Left}><i class='bx bx-chevron-left' ></i></button>
+                <button onClick={Right}><i class='bx bx-chevron-right'></i></button>
+            </div>
+            <div className='Centros__div2' id='Centros__div2'>
+            
             {DataPuntosGoblist}
         </div>
+        </div>
+        
     </section>
   )
 };

@@ -16,6 +16,7 @@ export default function Registro() {
         Formulario.style.gap = '50px';
         NumeroC_label.style.fontSize = '16px';
         NumeroC_label.style.padding = '0px';
+        NumeroC_label.style.transition = '300ms'
 
 
         
@@ -273,10 +274,22 @@ export default function Registro() {
         let div2_btn = document.createElement('button');
         div2_btn.type = 'submit';
         div2_btn.addEventListener('click',()=>{
-            
+            setTimeout(()=>{
+                div2_btn.disabled = 'true';
+            },5000);
         })
         // let div2_btnText = document.createTextNode('Iniciar Proceso');
         div2_btn.innerText = 'Iniciar Proceso';
+        div2_btn.style.cursor = 'pointer';
+        div2_btn.style.transition = '300ms';
+        div2_btn.addEventListener('pointerover',()=>{
+            div2_btn.style.background = '#016aba';
+            div2_btn.style.border = '1px solid #016aba';
+        });
+        div2_btn.addEventListener('pointerleave',()=>{
+            div2_btn.style.background = '#003876';
+            div2_btn.style.border = '1px solid #003876';
+        })
         div2.append(div2_btn);
 
         formulario.append(div1);
@@ -450,7 +463,7 @@ export default function Registro() {
     };
     
     const RegistroUsuario = (Cedula,Nombre,Apellido) => {
-        alert(Cedula,Nombre,Apellido)
+        // alert(Cedula,Nombre,Apellido)
         ModalCamara.style.display = 'none';
         let ImgVerificacion = document.getElementById('ImgVerificacion');
         ImgVerificacion.remove();
@@ -485,6 +498,7 @@ export default function Registro() {
         let div1 = document.createElement('div');
         div1.id = 'FormularioRegistro_div1';
         let div1_label = document.createElement('label');
+        div1_label.style.transition = '300ms'
         // let div1_labelText = document.createTextNode('Correo Electrónico');
         div1_label.innerText = 'Correo Electrónico';
 
@@ -524,6 +538,7 @@ export default function Registro() {
         let div2 = document.createElement('div');
         div2.id = 'FormularioRegistro_div2';
         let div2_label = document.createElement('label');
+        div2_label.style.transition = '300ms'
         // let div2_labelText = document.createTextNode('Confirma tu Correo Electrónico');
         div2_label.innerText = 'Confirma tu Correo Electrónico';
         div2_label.addEventListener('click',()=>{
@@ -564,6 +579,7 @@ export default function Registro() {
         let div3_label = document.createElement('label');
         // let div3_labelText = document.createTextNode('Contraseña');
         div3_label.innerText = 'Contraseña';
+        div3_label.style.transition = '300ms';
         div3_label.addEventListener('click',()=>{
             div3_label.style.fontSize = '16px';
             div3_label.style.marginBottom = '60px';
@@ -599,6 +615,7 @@ export default function Registro() {
         let div4 = document.createElement('div');
         div4.id = 'FormularioRegistro_div4';
         let div4_label = document.createElement('label');
+        div4_label.style.transition = '300ms'
         let div4_labelText = document.createTextNode('Confirma tu Contraseña');
         div4_label.append(div4_labelText);
         div4_label.addEventListener('click',()=>{
@@ -638,6 +655,13 @@ export default function Registro() {
         BtnCreacuenta.className = 'BtnCreacuenta';
         let BtnCreacuentaText = document.createTextNode = 'CREAR CUENTA UNICA';
         BtnCreacuenta.append(BtnCreacuentaText);
+        BtnCreacuenta.style.transition = '300ms';
+        BtnCreacuenta.addEventListener('pointerover',()=>{
+            BtnCreacuenta.style.background = '#016aba';
+        })
+        BtnCreacuenta.addEventListener('pointerleave',()=>{
+            BtnCreacuenta.style.background = '#003876';
+        })
         BtnCreacuenta.innerHTML += `<i class='bx bx-check' ></i>`;
 
         BtnCreacuenta.addEventListener('click',()=>{
@@ -767,10 +791,10 @@ export default function Registro() {
         btn.style.cursor = 'pointer';
 
         btn.addEventListener('pointerover',()=>{
-            btn.style.opacity = '0.7';
+            btn.style.background = '#016aba';
         });
         btn.addEventListener('pointerleave',()=>{
-            btn.style.opacity = '1';
+            btn.style.background = '#016aba';
         });
         btn.addEventListener('click',()=>{
             window.location.href = '/login';

@@ -125,9 +125,14 @@ export default function Inicia_de_Sesion() {
     }
   }
 
+  const Volver = () => {
+    window.location.href = '/';
+  };
 
   return (
    <section className='Gloginn'>
+     <span onClick={Volver} id='volver' ><i class='bx bx-chevron-left' ></i></span>
+
      <section className='Loginn' id='Loginn'>
       <div className='Login__div11'>
         <div className='Login__div1_dv11'>
@@ -135,17 +140,18 @@ export default function Inicia_de_Sesion() {
         </div>
         <form action="" onSubmit={Sendform}>
             <div className='Form__div11'>
-              <label htmlFor="ID">ID: <span>*</span></label>
+              <label htmlFor="ID">Cédula de identidad: <span>*</span></label>
               <input type="text" name="" id="ID" />
             </div>
             <div className='Form__div22'>
               <label htmlFor="Contraseña">Contraseña: <span>*</span></label>
-              <input type="password" name="" id="Contraseña" />
+              <input type="password" name="" id="Contraseña"  />
             </div>
             <div className='Form__div33'>
               <a href="/Forgetpassword">¿Olvidó su contraseña?</a>
               <button type="submit">Iniciar sesion</button>
               <span>¿No tienes una cuenta?<a href="/Registro"> Registrarse </a></span>
+              
             </div>
         </form>
       </div>

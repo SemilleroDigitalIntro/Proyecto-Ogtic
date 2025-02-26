@@ -39,11 +39,43 @@
         }
     }
     .Centros__div2{
-        width: 97%;
+        width: 98%;
         display: flex;
+        align-items: center;
         overflow: hidden;
         overflow-x: scroll;
         scrollbar-width: none;
+        position: relative;
+        scroll-behavior: smooth;
+        .ControlGobs{
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            button{
+                
+                height: 1.5cm;
+                width: 1.5cm;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid lightblue;
+                border-radius: 100%;
+                background: #f8f9fa;
+                box-shadow: 1px 1px 5px 5px #80808014;
+                font-size: 40px;
+                color: #01346B;
+                z-index: 2;
+                cursor: pointer;
+                transition: 300ms;
+                &:hover{
+                    background: #01346B;
+                    color: #f8f9fa ;
+                }
+                
+                
+            }
+        }
     }
 }
 

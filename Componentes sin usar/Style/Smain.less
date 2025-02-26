@@ -5,7 +5,7 @@
     align-items: center;
     padding-bottom: 60px;
     height: 16cm;
-
+    
     background-color: #F4F7FF;
     .Smain_div1{
         display: flex;
@@ -18,10 +18,19 @@
             margin: 0;
             font-size: 45px;
             color: #1B3F7E;
+            animation: Anim3 2s;
         }
     }
     .h1_gd{
         font-weight: 300;
-        transform: translateY(-15px);
+       
+    }
+}
+@keyframes Anim3 {
+    from{
+        transform: scale(2)
+    }
+    to{
+        transform: scale(1);
     }
 }
