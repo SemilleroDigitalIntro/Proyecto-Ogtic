@@ -78,6 +78,9 @@ export default function Header() {
   const PuntosGob = () => {
     scroll(0,2550)
   };
+  const Citas = () =>{
+    scroll(0,1850)
+  };
 
 
 
@@ -100,6 +103,7 @@ export default function Header() {
           <a onClick={Novedades}>Novedades</a>
           {/* <a onClick={Sobrenosotros}>Sobre nosotros</a> */}
           <a onClick={PuntosGob} >Puntos GOB</a>
+          <a onClick={Citas}>Citas</a>
         </nav>
        <div className='BtnHeaders' id='BtnHeaders'>
        <button className='Btn1' onClick={Login} >Iniciar Sesion</button>
