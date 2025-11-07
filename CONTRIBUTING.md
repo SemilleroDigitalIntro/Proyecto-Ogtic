@@ -122,7 +122,7 @@ git push origin main
 
 #### Formato y Estilo
 
-- **Indentación**: 4 espacios (o 2, según configuración del proyecto)
+- **Indentación**: 4 espacios (este proyecto usa 4 espacios consistentemente)
 - **Comillas**: Simples `'` para strings
 - **Punto y coma**: Usar al final de las declaraciones
 - **Nombres de variables**: camelCase
