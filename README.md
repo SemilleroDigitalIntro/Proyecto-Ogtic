@@ -1,4 +1,4 @@
-# PuntoGob - Sistema de Citas para Servicios Gubernamentales
+# Sistema de Citas para Servicios Gubernamentales
 
 ## 📋 Descripción
 
