@@ -2,7 +2,7 @@
 
 ## 📋 Descripción
 
-PuntoGob es una aplicación web desarrollada en React que permite a los ciudadanos dominicanos agendar citas para servicios gubernamentales de manera digital. El sistema facilita la gestión de citas en diferentes instituciones públicas, reduciendo tiempos de espera y mejorando la experiencia del usuario.
+Es una aplicación web desarrollada en React que permite a los ciudadanos dominicanos agendar citas para servicios gubernamentales de manera digital. El sistema facilita la gestión de citas en diferentes instituciones públicas, reduciendo tiempos de espera y mejorando la experiencia del usuario.
 
 ## ✨ Características Principales
 
